@@ -27,14 +27,15 @@ public class PotController : MonoBehaviour
         for(int i = 0; i < numFruits; i++) {
             int randomIndex = Random.Range(0, fruitPrefabs.Length);
             GameObject newFruit = Instantiate(fruitPrefabs[randomIndex], transform);
-            newFruit.transform.localPosition = new Vector2(Random.Range(-1f, 1f) * potRadius, Random.Range(-1f, 1f) * potRadius);
+            newFruit.transform.position = transform.position + new Vector3(Random.Range(-1f, 1f) * potRadius, Random.Range(-1f, 1f) * potRadius, 0);
         }
     }
 
-    public bool CheckTouchPosition(Vector3 touchPosition) { 
-        //if(Vector3.Distance(transform.position, touchPosition) < potRadius) {
+    public bool CheckTouchPosition(Vector3 touchPosition) {
+        float distance = Vector3.Distance(transform.position, touchPosition);
+        if(distance < potRadius) {
             return true;
-       // }
+        }
         return false;
     }
 
@@ -43,14 +44,14 @@ public class PotController : MonoBehaviour
         float oldPositionAngle = GetTheta(lastPosition);
         float newPositionAngle = GetTheta(newPosition);
         float difference = newPositionAngle - oldPositionAngle;
-        transform.Rotate(Vector3.forward, difference);
         lastPosition = newPosition;
     }
 
     float GetTheta(Vector3 touchPosition) {
         Vector3 adjustedVector = transform.position - touchPosition;
-        return Mathf.Atan(adjustedVector.y / adjustedVector.x) * Mathf.Rad2Deg;
+        return Mathf.Atan2(adjustedVector.y, adjustedVector.x) * Mathf.Rad2Deg;
     }
+
     public void UpdateDragging(bool newDragState) {
         dragging = newDragState;
     }

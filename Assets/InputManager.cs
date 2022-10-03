@@ -16,7 +16,7 @@ public class InputManager : MonoBehaviour
     void Update()
     {
         //if (Input.touchCount > 0) ProcessTouches();
-        if (Input.GetMouseButton(0)) ProcessClicks();
+        ProcessClicks();
     }
 
     void ProcessClicks() {
@@ -25,7 +25,7 @@ public class InputManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             if(pokingStick.CheckTouchPosition(worldPosition)) {
-                pokingStick.PokeStick();
+                pokingStick.BeginAiming(worldPosition);
             }
             else if (potController.CheckTouchPosition(worldPosition))
             {
@@ -34,14 +34,22 @@ public class InputManager : MonoBehaviour
         }
         else if (Input.GetMouseButton(0))
         {
-            if (potController.CheckTouchPosition(worldPosition))
+            if(pokingStick.aiming) {
+                pokingStick.UpdateAim(worldPosition);
+            }
+            else if (potController.CheckTouchPosition(worldPosition))
             {
                 potController.NewDragPosition(worldPosition);
             }
         }
         else if (Input.GetMouseButtonUp(0))
         {
-            potController.UpdateDragging(false);
+            if(pokingStick.aiming) {
+                Debug.Log("mouse up");
+                pokingStick.PokeStick();
+            }
+            else 
+                potController.UpdateDragging(false);
         }
     }
 
@@ -67,6 +75,8 @@ public class InputManager : MonoBehaviour
     }
 
     Vector3 GetWorldPosition(Vector2 screenPosition) {
-        return Camera.main.ScreenToWorldPoint(screenPosition);
+        Vector3 position = Camera.main.ScreenToWorldPoint(screenPosition);
+        position.z = 0;
+        return position;
     }
 }

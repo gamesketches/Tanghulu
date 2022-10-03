@@ -157,7 +157,7 @@ MonoBehaviour:
   - {fileID: 1639696755005859807, guid: 957be7ebda9df49b38ea311bc0274c3a, type: 3}
   - {fileID: 5275885225561914570, guid: 8cb6731dac86f4e888c8d6f9e06c25fb, type: 3}
   numFruits: 10
-  potRadius: 0.35
+  potRadius: 1.5
   dragging: 0
   rotationSpeed: 5
 --- !u!58 &451392757
@@ -235,7 +235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451392755}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.1794379, z: -0.5983887}
+  m_LocalPosition: {x: 0, y: -1.1794379, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
@@ -372,6 +372,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stickLength: 4
+  aiming: 0
+  poking: 0
+  maxFruits: 4
+  rotationLimit: 39
 --- !u!61 &2047685948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -457,7 +461,7 @@ Transform:
   m_GameObject: {fileID: 2047685946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -4.6, z: 0}
-  m_LocalScale: {x: 0.2, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2

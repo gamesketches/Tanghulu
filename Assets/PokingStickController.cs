@@ -5,10 +5,22 @@ using UnityEngine;
 public class PokingStickController : MonoBehaviour
 {
     public float stickLength;
+    public bool aiming;
+    public bool poking;
+    private Vector3 lastFingerPosition;
+    public int maxFruits;
+
+    public float rotationLimit;
+
+    private float rotationProportion;
+
+    private IEnumerator pokingCoroutine;
     // Start is called before the first frame update
     void Start()
     {
-        
+        aiming = false;
+        poking = false;
+        rotationProportion = 0.5f;
     }
 
     // Update is called once per frame
@@ -19,18 +31,33 @@ public class PokingStickController : MonoBehaviour
 
     public bool CheckTouchPosition(Vector3 position)
     {
-        return Mathf.Abs(position.y - transform.position.y) < transform.localScale.y / 2;
+        return position.y < StickEnd(false);
+    }
+
+    public void BeginAiming(Vector3 fingerStartPosition) {
+        aiming = true;
+        lastFingerPosition = fingerStartPosition;
+    }
+
+    public void UpdateAim(Vector3 newFingerPosition) {
+        float touchDistance = newFingerPosition.x - lastFingerPosition.x;
+        lastFingerPosition = newFingerPosition;
+        rotationProportion = Mathf.Clamp(rotationProportion + touchDistance, 0, 1);
+        transform.rotation = Quaternion.Euler(0, 0, Mathf.Lerp(rotationLimit, -rotationLimit, rotationProportion));
     }
 
     public void PokeStick() {
-        StartCoroutine(StickPokingAnimation());
+        aiming = false;
+        if (!poking) {
+            StartCoroutine(StickPokingAnimation());
+        }
     }
 
     private IEnumerator StickPokingAnimation() {
-        Debug.Log("Poking stick");
+        poking = true;
         float stickPokeTime = 1;
         Vector3 startPosition = transform.position;
-        Vector3 endPosition = new Vector3(transform.position.x, transform.position.y + stickLength,
+        Vector3 endPosition = new Vector3(transform.up.x * stickLength, transform.up.y * stickLength,
                                                 transform.position.z);
         for(float t = 0; t < stickPokeTime; t += Time.deltaTime) {
             float proportion = Mathf.PingPong(t, stickPokeTime / 2);
@@ -38,18 +65,28 @@ public class PokingStickController : MonoBehaviour
             yield return null;
         }
         transform.position = startPosition;
+        poking = false;
     }
 
     public void AttachFruit(Transform newFruit) {
         newFruit.parent = transform;
         newFruit.localRotation = Quaternion.identity;
+        while (transform.childCount > maxFruits)
+        {
+            Transform oldFruit = transform.GetChild(0);
+            oldFruit.parent = null;
+            Destroy(oldFruit.gameObject);
+        }
         float pushDistance = 0.1f;
         for (int i = transform.childCount - 1; i > -1; i--) {
             Transform childFruit = transform.GetChild(i);
             Vector3 newFruitPosition = newFruit.localPosition;
             newFruitPosition.x = 0;
             newFruitPosition.y = (StickEnd(true) - pushDistance);
-            pushDistance -= childFruit.lossyScale.y;
+            pushDistance += childFruit.lossyScale.y;
+            Debug.Log(childFruit.name);
+            Debug.Log(pushDistance);
+            Debug.Log(newFruitPosition);
             childFruit.localPosition = newFruitPosition;
         }
     }
