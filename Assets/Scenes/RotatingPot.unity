@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 2017840364}
   - component: {fileID: 2017840363}
   - component: {fileID: 2017840366}
+  - component: {fileID: 2017840367}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -339,6 +340,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potController: {fileID: 451392756}
   pokingStick: {fileID: 2047685947}
+--- !u!114 &2017840367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017840362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9273a04d7101d4370adedb7f51e73744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderPrefab: {fileID: 635106235311155223, guid: e4ec10f1651ef4426b06c5ecebcc01a5,
+    type: 3}
 --- !u!1 &2047685946
 GameObject:
   m_ObjectHideFlags: 0

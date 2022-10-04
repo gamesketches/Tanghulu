@@ -18,7 +18,7 @@ public class StickController : MonoBehaviour
         fruits[pokedFruit].ToggleRenderer(true);
         fruits[pokedFruit].UpdateFruitType(newFruit);
         pokedFruit++;
-        if (pokedFruit >= fruits.Length) GameManager.Instance.VerifyTanghulu();
+        if (pokedFruit >= fruits.Length) GameManagerWordle.Instance.VerifyTanghulu();
     }
 
     public void ClearStick() { 

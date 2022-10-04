@@ -1,27 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public enum ToppingType { RED, GREEN, ORANGE, BLUE, PURPLE};
+public enum FruitType { Strawberry, Kiwi, Lemon };
 public class GameManager : MonoBehaviour
 {
-    public string characterPool;
-    private Dictionary<ToppingType, char> curDictionary;
+    List<OrderBubble> orderBubbles;
 
-    public TextMeshProUGUI promptText;
-    string curPrompt;
+    public GameObject orderPrefab;
 
-    public static GameManager Instance;
+    public static int orderSize = 4;
 
-    public StickController stick;
-
+    public static GameManager instance;
     // Start is called before the first frame update
     void Start()
     {
-        GenerateDictionary();
-        Instance = this;
-        GeneratePrompt();
+        orderBubbles = new List<OrderBubble>();
+        GenerateOrder();
+        instance = this;
     }
 
     // Update is called once per frame
@@ -30,44 +26,38 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void VerifyTanghulu()
-    {
-        string result = "";
-        for(int i = 0; i < stick.fruits.Length; i++) { 
-            if(curDictionary[stick.fruits[i].toppingType] == curPrompt[i]) {
-                result += "✓";
-                Debug.Log("right!");
-            } else if (curPrompt.Contains(curDictionary[stick.fruits[i].toppingType].ToString())){
-                result += "↔";
-                Debug.Log("Exists but misplaced");
-                }
-            else {
-                result += "x";
-                Debug.Log("Wrong");
+    public void VerifyFruit(PokeableFruit[] pokedFruits) {
+        FruitType[] fruitOnStick = new FruitType[orderSize];
+        for(int i = 0; i < orderSize; i++) {
+            fruitOnStick[i] = pokedFruits[i].fruitType;
+        }
+        foreach(OrderBubble orderBubble in orderBubbles) { 
+            if(orderBubble.OrderSatisfied(fruitOnStick)) {
+                Debug.Log("Order satisfied!");
+                orderBubble.gameObject.SetActive(false);
+                break;
             }
         }
-        Debug.Log(result);
-        stick.ClearStick();
-        GeneratePrompt();
+    }
+    
+    void GenerateOrder() {
+        OrderBubble newOrderBubble = GetOrderBubble();
+        FruitType[] newOrder = new FruitType[orderSize];
+        for(int i = 0; i < orderSize; i++) {
+            newOrder[i] = (FruitType)Random.Range(0, 3);
+        }
+        newOrderBubble.SetFruits(newOrder);
     }
 
-    private void GeneratePrompt()
-    {
-        curPrompt = "";
-        for(int i = 0; i < 5; i++) {
-            curPrompt += characterPool[Random.Range(0, characterPool.Length)];
+    OrderBubble GetOrderBubble() { 
+        for(int i = 0; i < orderBubbles.Count; i++) { 
+            if(!orderBubbles[i].gameObject.activeSelf) {
+                orderBubbles[i].gameObject.SetActive(true);
+                return orderBubbles[i];
+            }
         }
-        promptText.text = "Make me a " + curPrompt;
-    }
-
-    void GenerateDictionary() {
-        curDictionary = new Dictionary<ToppingType, char>();
-        List<char> characters = new List<char>(characterPool.ToCharArray());
-
-        for(int i = 0; i < characterPool.Length; i++) {
-            int newIndex = Random.Range(0, characters.Count);
-            curDictionary.Add((ToppingType)i, characters[newIndex]);
-            characters.RemoveAt(newIndex);
-        }
+        OrderBubble newBubble = Instantiate(orderPrefab).GetComponent<OrderBubble>();
+        orderBubbles.Add(newBubble);
+        return newBubble;
     }
 }

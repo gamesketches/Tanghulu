@@ -84,10 +84,11 @@ public class PokingStickController : MonoBehaviour
             newFruitPosition.x = 0;
             newFruitPosition.y = (StickEnd(true) - pushDistance);
             pushDistance += childFruit.lossyScale.y;
-            Debug.Log(childFruit.name);
-            Debug.Log(pushDistance);
-            Debug.Log(newFruitPosition);
             childFruit.localPosition = newFruitPosition;
+        }
+
+        if(transform.childCount == maxFruits) {
+            GameManager.instance.VerifyFruit(gameObject.GetComponentsInChildren<PokeableFruit>());
         }
     }
 

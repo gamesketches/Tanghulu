@@ -44,6 +44,7 @@ public class PotController : MonoBehaviour
         float oldPositionAngle = GetTheta(lastPosition);
         float newPositionAngle = GetTheta(newPosition);
         float difference = newPositionAngle - oldPositionAngle;
+        transform.Rotate(Vector3.forward, difference);
         lastPosition = newPosition;
     }
 
