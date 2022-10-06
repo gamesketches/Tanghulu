@@ -5,9 +5,9 @@ using UnityEngine;
 public enum FruitType { Strawberry, Kiwi, Lemon };
 public class GameManager : MonoBehaviour
 {
-    List<OrderBubble> orderBubbles;
+    List<CustomerController> customerBubbles;
 
-    public GameObject orderPrefab;
+    public GameObject customerPrefab;
 
     public static int orderSize = 4;
 
@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        orderBubbles = new List<OrderBubble>();
+        customerBubbles = new List<CustomerController>();
         GenerateOrder();
         instance = this;
     }
@@ -31,33 +31,33 @@ public class GameManager : MonoBehaviour
         for(int i = 0; i < orderSize; i++) {
             fruitOnStick[i] = pokedFruits[i].fruitType;
         }
-        foreach(OrderBubble orderBubble in orderBubbles) { 
-            if(orderBubble.OrderSatisfied(fruitOnStick)) {
+        foreach(CustomerController customer in customerBubbles) { 
+            if(customer.OrderSatisfied(fruitOnStick)) {
                 Debug.Log("Order satisfied!");
-                orderBubble.gameObject.SetActive(false);
+                customer.gameObject.SetActive(false);
                 break;
             }
         }
     }
     
     void GenerateOrder() {
-        OrderBubble newOrderBubble = GetOrderBubble();
+        CustomerController newCustomer = GetCustomer();
         FruitType[] newOrder = new FruitType[orderSize];
         for(int i = 0; i < orderSize; i++) {
             newOrder[i] = (FruitType)Random.Range(0, 3);
         }
-        newOrderBubble.SetFruits(newOrder);
+        newCustomer.Initialize(newOrder);
     }
 
-    OrderBubble GetOrderBubble() { 
-        for(int i = 0; i < orderBubbles.Count; i++) { 
-            if(!orderBubbles[i].gameObject.activeSelf) {
-                orderBubbles[i].gameObject.SetActive(true);
-                return orderBubbles[i];
+    CustomerController GetCustomer() { 
+        for(int i = 0; i < customerBubbles.Count; i++) { 
+            if(!customerBubbles[i].gameObject.activeSelf) {
+                customerBubbles[i].gameObject.SetActive(true);
+                return customerBubbles[i];
             }
         }
-        OrderBubble newBubble = Instantiate(orderPrefab).GetComponent<OrderBubble>();
-        orderBubbles.Add(newBubble);
-        return newBubble;
+        CustomerController newCustomer = Instantiate(customerPrefab).GetComponent<CustomerController>();
+        customerBubbles.Add(newCustomer);
+        return newCustomer;
     }
 }

@@ -28,24 +28,7 @@ public class OrderBubble : MonoBehaviour
         }
     }
 
-    public bool OrderSatisfied(FruitType[] preparedOrder) {
-        bool success = true;
-        List<FruitType> stickFruits = new List<FruitType>(currentOrder);
-        for(int i = 0; i < GameManager.orderSize; i++) {
-            if (currentOrder[i] == preparedOrder[i]) {
-                Debug.Log("Matched typed and Position");
-            }
-            else if (stickFruits.IndexOf(preparedOrder[i]) > -1) {
-                Debug.Log("Matched type");
-                stickFruits.Remove(preparedOrder[i]);
-            }
-            else {
-                Debug.Log("One fruit is messed up");
-                success = false;
-            }
-        }
-        return success;
-    }
+    
 
     Color GetFruitColor(FruitType fruitType) { 
         switch(fruitType) {
