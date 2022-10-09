@@ -1,21 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public enum FruitType { Strawberry, Kiwi, Lemon };
 public class GameManager : MonoBehaviour
 {
-    List<CustomerController> customerBubbles;
-
-    public GameObject customerPrefab;
-
     public static int orderSize = 4;
 
     public static GameManager instance;
+
+    public TextMeshProUGUI score;
+
     // Start is called before the first frame update
     void Start()
     {
-        customerBubbles = new List<CustomerController>();
         GenerateOrder();
         instance = this;
     }
@@ -31,33 +30,38 @@ public class GameManager : MonoBehaviour
         for(int i = 0; i < orderSize; i++) {
             fruitOnStick[i] = pokedFruits[i].fruitType;
         }
-        foreach(CustomerController customer in customerBubbles) { 
-            if(customer.OrderSatisfied(fruitOnStick)) {
-                Debug.Log("Order satisfied!");
-                customer.gameObject.SetActive(false);
-                break;
-            }
-        }
     }
     
     void GenerateOrder() {
-        CustomerController newCustomer = GetCustomer();
         FruitType[] newOrder = new FruitType[orderSize];
         for(int i = 0; i < orderSize; i++) {
             newOrder[i] = (FruitType)Random.Range(0, 3);
         }
-        newCustomer.Initialize(newOrder);
+        CustomerManager.instance.MakeNewCustomer(newOrder);
     }
 
-    CustomerController GetCustomer() { 
-        for(int i = 0; i < customerBubbles.Count; i++) { 
-            if(!customerBubbles[i].gameObject.activeSelf) {
-                customerBubbles[i].gameObject.SetActive(true);
-                return customerBubbles[i];
-            }
+    void AddPoints(int pointsToAdd) {
+        StartCoroutine(CountUpPoints(pointsToAdd));
+    }
+
+    IEnumerator CountUpPoints(int pointsToAdd) {
+        int startPoints = int.Parse(score.text);
+        int curPoints = startPoints;
+        float countTime = 0.3f;
+        yield return countTime;
+        for(float t = 0; curPoints < startPoints + pointsToAdd; t += countTime) {
+            curPoints++;
+            score.text = curPoints.ToString();
+            yield return countTime;
         }
-        CustomerController newCustomer = Instantiate(customerPrefab).GetComponent<CustomerController>();
-        customerBubbles.Add(newCustomer);
-        return newCustomer;
+        score.text = (startPoints + pointsToAdd).ToString();
+    }
+
+    private void OnEnable() {
+        CustomerManager.ScorePoints += AddPoints;
+    }
+
+    private void OnDisable() {
+        CustomerManager.ScorePoints -= AddPoints;
     }
 }

@@ -99,4 +99,20 @@ public class PokingStickController : MonoBehaviour
         else
             return transform.position.y + yOffset;
     }
+
+    private void ClearStick(int ignore) {
+        for (int i = 0; i < transform.childCount; i++) {
+            Destroy(transform.GetChild(0));
+        }
+    }
+
+    private void OnEnable()
+    {
+        CustomerManager.ScorePoints += ClearStick;
+    }
+    
+    private void OnDisable()
+    {
+        CustomerManager.ScorePoints -= ClearStick;
+    }
 }
