@@ -67,16 +67,14 @@ public class CustomerController : MonoBehaviour
     
     public int OrderSatisfied(FruitType[] preparedOrder) {
         int score = 0;
-        List<FruitType> stickFruits = new List<FruitType>(order);
+        List<FruitType> requestedOrder = new List<FruitType>(order);
         for(int i = 0; i < GameManager.orderSize; i++) {
-            if (order[i] == preparedOrder[i]) {
+            if (requestedOrder[i] == preparedOrder[i]) {
                 score += 2;
-                Debug.Log("Matched typed and Position");
             }
-            else if (stickFruits.IndexOf(preparedOrder[i]) > -1) {
-                Debug.Log("Matched type");
+            else if (requestedOrder.IndexOf(preparedOrder[i]) > -1) {
                 score += 1;
-                stickFruits.Remove(preparedOrder[i]);
+                //requestedOrder.Remove(preparedOrder[i]);
             }
             else {
                 Debug.Log("One fruit is messed up");

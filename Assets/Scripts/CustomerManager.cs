@@ -34,7 +34,9 @@ public class CustomerManager : MonoBehaviour
 
     public bool CustomerServed(FruitType[] curOrder) { 
         foreach(CustomerController customer in customerBubbles) {
+            if (!customer.gameObject.activeSelf) continue;
             int score = customer.OrderSatisfied(curOrder);
+            Debug.Log($"You scored {score} points");
             if(score > 0) {
                 customer.Leave();
                 ScorePoints(score);

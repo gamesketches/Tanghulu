@@ -66,6 +66,9 @@ public class PokingStickController : MonoBehaviour
         }
         transform.position = startPosition;
         poking = false;
+        if(transform.childCount == maxFruits) {
+            GameManager.instance.VerifyFruit(gameObject.GetComponentsInChildren<PokeableFruit>());
+        }
     }
 
     public void AttachFruit(Transform newFruit) {
@@ -87,9 +90,6 @@ public class PokingStickController : MonoBehaviour
             childFruit.localPosition = newFruitPosition;
         }
 
-        if(transform.childCount == maxFruits) {
-            GameManager.instance.VerifyFruit(gameObject.GetComponentsInChildren<PokeableFruit>());
-        }
     }
 
     private float StickEnd(bool local = false) {
@@ -102,7 +102,7 @@ public class PokingStickController : MonoBehaviour
 
     private void ClearStick(int ignore) {
         for (int i = 0; i < transform.childCount; i++) {
-            Destroy(transform.GetChild(0));
+            Destroy(transform.GetChild(i).gameObject);
         }
     }
 

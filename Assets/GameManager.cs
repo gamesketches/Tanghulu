@@ -30,6 +30,11 @@ public class GameManager : MonoBehaviour
         for(int i = 0; i < orderSize; i++) {
             fruitOnStick[i] = pokedFruits[i].fruitType;
         }
+        if(CustomerManager.instance.CustomerServed(fruitOnStick)) {
+            GenerateOrder();
+        } else {
+            Debug.Log("order invalid :(");
+        }
     }
     
     void GenerateOrder() {
