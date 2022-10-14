@@ -154,8 +154,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitPrefabs:
   - {fileID: 7913218392132831280, guid: 37bf19c59dd7b4323af4b617e7fe4540, type: 3}
-  - {fileID: 1639696755005859807, guid: 957be7ebda9df49b38ea311bc0274c3a, type: 3}
+  - {fileID: 7913218392132831280, guid: a74a8ef51002c47b8b87231f48207fbf, type: 3}
   - {fileID: 5275885225561914570, guid: 8cb6731dac86f4e888c8d6f9e06c25fb, type: 3}
+  - {fileID: 5275885225561914570, guid: a8f5fcdc6f61e4d0b8654b10270534cd, type: 3}
+  - {fileID: 7913218392132831280, guid: 3cade00bdfe4041758462bbe426780ab, type: 3}
+  - {fileID: 5275885225561914570, guid: e51fe1af8de7d4de9b319e146a5c1905, type: 3}
+  - {fileID: 5275885225561914570, guid: 0a394e7b371d84cdc879b4ac8c3f3671, type: 3}
   numFruits: 10
   potRadius: 1.5
   dragging: 0
@@ -215,9 +219,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -2189357820385349767, guid: 26da2dccbedf04ef28a18d2d56cf9b2a,
+  m_Sprite: {fileID: -3734414292022278220, guid: 80bc5d391085848e78e84deb022b15c6,
     type: 3}
-  m_Color: {r: 0.8980392, g: 0.76545346, b: 0.27450976, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -236,7 +240,7 @@ Transform:
   m_GameObject: {fileID: 451392755}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.1794379, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -397,6 +401,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1326728343}
   - {fileID: 924105240}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -436,7 +441,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 916418943}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -597,7 +602,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: -9219523786913240395, guid: 26da2dccbedf04ef28a18d2d56cf9b2a,
     type: 3}
-  m_Color: {r: 0.83137256, g: 0.28245223, b: 0.16862746, a: 1}
+  m_Color: {r: 0.78039217, g: 0.23529413, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -679,6 +684,81 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1326728342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1326728343}
+  - component: {fileID: 1326728345}
+  - component: {fileID: 1326728344}
+  m_Layer: 5
+  m_Name: AwningSprites
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1326728343
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326728342}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 916418943}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 28, y: -49.6}
+  m_SizeDelta: {x: 800, y: 98.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1326728344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326728342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -2837174921535753947, guid: 80bc5d391085848e78e84deb022b15c6,
+    type: 3}
+  m_Type: 2
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1326728345
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326728342}
+  m_CullTransparentMesh: 0
 --- !u!1 &2017840362
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,7 +797,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.8941177, g: 0.76470596, b: 0.2784314, a: 0}
+  m_BackGroundColor: {r: 1, g: 0.7647059, b: 0.16078432, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

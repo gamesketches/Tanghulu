@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public enum FruitType { Strawberry, Kiwi, Lemon };
+public enum FruitType { Strawberry, Kiwi, JackFruit, Tangerine, Grape, HawthornBerry, Apple };
 public class GameManager : MonoBehaviour
 {
     public static int orderSize = 4;
