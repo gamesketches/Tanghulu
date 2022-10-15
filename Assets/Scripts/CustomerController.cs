@@ -64,9 +64,14 @@ public class CustomerController : MonoBehaviour
         }
     }
 
+    public void GetDismissed() {
+        StartCoroutine(WalkOffScreen());
+    }
+
     private IEnumerator WalkOffScreen() {
         Vector3 startPos = transform.position;
         Vector3 endPos = transform.position - new Vector3(5, 0, 0);
+        customerBubble.gameObject.SetActive(false);
         for(float t = 0; t <= walkOnTime; t += Time.deltaTime) {
             Vector3 newPos = Vector3.Lerp(startPos, endPos, t / walkOnTime);
             newPos.y += Mathf.Sin(Time.time * bounceSpeed) * bounceRange;
@@ -93,4 +98,5 @@ public class CustomerController : MonoBehaviour
         }
         return score;
     }
+
 }

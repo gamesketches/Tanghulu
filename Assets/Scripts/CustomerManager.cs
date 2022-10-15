@@ -26,12 +26,6 @@ public class CustomerManager : MonoBehaviour
         numCustomers = 0;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public bool CustomerServed(FruitType[] curOrder) { 
         foreach(CustomerController customer in customerBubbles) {
             if (!customer.gameObject.activeSelf) continue;
@@ -61,6 +55,12 @@ public class CustomerManager : MonoBehaviour
         return firstCustomerPosition + new Vector3(customerOffset * numCustomers, 0, 0);
     }
 
+    private void DismissCustomers() { 
+        foreach(CustomerController customer in customerBubbles) {
+            customer.GetDismissed();
+        }
+    }
+    
     CustomerController GetCustomer() { 
         for(int i = 0; i < customerBubbles.Count; i++) { 
             if(!customerBubbles[i].gameObject.activeSelf) {
@@ -72,5 +72,13 @@ public class CustomerManager : MonoBehaviour
         newCustomer.transform.position = firstCustomerPosition + new Vector3(customerOffset * 5, 0, 0);
         customerBubbles.Add(newCustomer);
         return newCustomer;
+    }
+
+    private void OnEnable() {
+        GameManager.EndGame += DismissCustomers;
+    }
+    
+    private void OnDisable() {
+        GameManager.EndGame -= DismissCustomers;
     }
 }

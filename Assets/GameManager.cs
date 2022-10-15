@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
 
     public Image gameStartImage;
 
+    public delegate void EndGameCleanup();
+    public static event EndGameCleanup EndGame;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +47,7 @@ public class GameManager : MonoBehaviour
                 GenerateOrder();
             }
             if(gameTimer < 0) {
-                EndGame();
+                GameOver();
             }
             }
     }
@@ -95,7 +99,8 @@ public class GameManager : MonoBehaviour
         score.text = (startPoints + pointsToAdd).ToString();
     }
 
-    private void EndGame() {
+    private void GameOver() {
+        EndGame();
         gamePlaying = false;
         Debug.Log("ending the game");
     }
