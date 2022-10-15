@@ -28,6 +28,7 @@ public class PotController : MonoBehaviour
             int randomIndex = Random.Range(0, fruitPrefabs.Length);
             GameObject newFruit = Instantiate(fruitPrefabs[randomIndex], transform);
             newFruit.transform.position = transform.position + new Vector3(Random.Range(-1f, 1f) * potRadius, Random.Range(-1f, 1f) * potRadius, 0);
+            newFruit.transform.Rotate(0, 0, Random.Range(-180f, 180f));
         }
     }
 

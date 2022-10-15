@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI score;
 
+    public float gameTime;
+
     // Start is called before the first frame update
     void Start()
     {

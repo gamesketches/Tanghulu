@@ -7,11 +7,15 @@ public class CustomerController : MonoBehaviour
     public OrderBubble customerBubble;
 
     FruitType[] order;
-    public float walkOnTime = 1f;
-    public Vector3 orderPosition;
-
     SpriteRenderer spriteRenderer;
 
+    [Header("Walking on tuning vals")]
+    public float walkOnTime = 1f;
+    public float bounceRange;
+    public float bounceSpeed;
+
+    [Header("Other tuning values")]
+    public float bubbleOpenTime;
 
     void Awake()
     {
@@ -40,7 +44,9 @@ public class CustomerController : MonoBehaviour
     {
         Vector3 startPos = transform.position;
         for(float t = 0; t <= walkOnTime; t += Time.deltaTime) {
-            transform.position = Vector3.Lerp(startPos, positionInLine, t / walkOnTime);
+            Vector3 newPos = Vector3.Lerp(startPos, positionInLine, t / walkOnTime);
+            newPos.y += Mathf.Sin(Time.time * bounceSpeed) * bounceRange;
+            transform.position = newPos;
             yield return null;
         }
         StartCoroutine(OpenBubble());
@@ -48,10 +54,13 @@ public class CustomerController : MonoBehaviour
 
     private IEnumerator OpenBubble() {
         customerBubble.gameObject.SetActive(true);
+        Vector3 startScale = new Vector3(0, 1, 1);
+        customerBubble.transform.localScale = startScale;
         
-        for(float t = 0; t < 0.4f; t += Time.deltaTime) {
+        for(float t = 0; t < bubbleOpenTime; t += Time.deltaTime) {
+            float proportion = Mathf.SmoothStep(0, 1, t / bubbleOpenTime);
+            customerBubble.transform.localScale = Vector3.Lerp(startScale, Vector3.one, proportion);
             yield return null;
-            // Put scaling in or something
         }
     }
 
@@ -59,7 +68,9 @@ public class CustomerController : MonoBehaviour
         Vector3 startPos = transform.position;
         Vector3 endPos = transform.position - new Vector3(5, 0, 0);
         for(float t = 0; t <= walkOnTime; t += Time.deltaTime) {
-            transform.position = Vector3.Lerp(startPos, endPos, t / walkOnTime);
+            Vector3 newPos = Vector3.Lerp(startPos, endPos, t / walkOnTime);
+            newPos.y += Mathf.Sin(Time.time * bounceSpeed) * bounceRange;
+            transform.position = newPos; 
             yield return null;
         }
         gameObject.SetActive(false);

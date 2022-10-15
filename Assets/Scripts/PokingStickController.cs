@@ -73,7 +73,6 @@ public class PokingStickController : MonoBehaviour
 
     public void AttachFruit(Transform newFruit) {
         newFruit.parent = transform;
-        newFruit.localRotation = Quaternion.identity;
         while (transform.childCount > maxFruits)
         {
             Transform oldFruit = transform.GetChild(0);

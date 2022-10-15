@@ -98,7 +98,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerBubble: {fileID: 2332999337245492815}
   walkOnTime: 1
-  orderPosition: {x: 0, y: 0, z: 0}
+  bounceRange: 0.2
+  bounceSpeed: 10
+  bubbleOpenTime: 0.3
 --- !u!1001 &2931882153252105817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -124,12 +126,12 @@ PrefabInstance:
     - target: {fileID: 635106235311155240, guid: e4ec10f1651ef4426b06c5ecebcc01a5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.08
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 635106235311155240, guid: e4ec10f1651ef4426b06c5ecebcc01a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.54
+      value: 1.56
       objectReference: {fileID: 0}
     - target: {fileID: 635106235311155240, guid: e4ec10f1651ef4426b06c5ecebcc01a5,
         type: 3}
