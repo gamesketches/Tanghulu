@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public enum FruitType { Strawberry, Kiwi, JackFruit, Tangerine, Grape, HawthornBerry, Apple };
 public class GameManager : MonoBehaviour
@@ -14,17 +15,46 @@ public class GameManager : MonoBehaviour
 
     public float gameTime;
 
+    private float gameTimer;
+
+    public float baseTimeBetweenCustomers;
+    float customerTimer;
+
+    public static bool gamePlaying;
+
+    public Image gameStartImage;
+
     // Start is called before the first frame update
     void Start()
     {
-        GenerateOrder();
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
         instance = this;
+        StartCoroutine(BeginGameSequence());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(gamePlaying) {
+            customerTimer -= Time.deltaTime;
+            gameTimer -= Time.deltaTime;
+            if(customerTimer <= 0) {
+                GenerateOrder();
+            }
+            if(gameTimer < 0) {
+                EndGame();
+            }
+            }
+    }
+
+    private IEnumerator BeginGameSequence() {
+        gameStartImage.enabled = true;
+        yield return new WaitForSeconds(0.5f);
+        gameStartImage.enabled = false;
+        gameTimer = gameTime;
+        gamePlaying = true;
+        GenerateOrder();
     }
 
     public void VerifyFruit(PokeableFruit[] pokedFruits) {
@@ -45,6 +75,7 @@ public class GameManager : MonoBehaviour
             newOrder[i] = (FruitType)Random.Range(0, 3);
         }
         CustomerManager.instance.MakeNewCustomer(newOrder);
+        customerTimer = baseTimeBetweenCustomers;
     }
 
     void AddPoints(int pointsToAdd) {
@@ -63,6 +94,12 @@ public class GameManager : MonoBehaviour
         }
         score.text = (startPoints + pointsToAdd).ToString();
     }
+
+    private void EndGame() {
+        gamePlaying = false;
+        Debug.Log("ending the game");
+    }
+         
 
     private void OnEnable() {
         CustomerManager.ScorePoints += AddPoints;
