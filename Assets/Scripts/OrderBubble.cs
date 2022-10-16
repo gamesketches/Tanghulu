@@ -7,33 +7,45 @@ public class OrderBubble : MonoBehaviour
 
     public SpriteRenderer[] fruitSprites;
 
-    private FruitType[] currentOrder;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Sprite strawBerrySprite;
+    public Sprite kiwiSprite;
+    public Sprite jackFruitSprite;
+    public Sprite tangerineSprite;
+    public Sprite grapeSprite;
+    public Sprite appleSprite;
+    public Sprite hawthornBerrySprite;
 
     public void SetFruits(FruitType[] fruitTypes) {
-        currentOrder = fruitTypes;
         for(int i = 0; i < fruitSprites.Length; i++) {
-            fruitSprites[i].color = GetFruitColor(fruitTypes[i]);
+            fruitSprites[i].sprite = GetFruitSprite(fruitTypes[i]);
         }
     }
 
-    
+    Sprite GetFruitSprite(FruitType fruitType) {
+        switch (fruitType)
+        {
+            case FruitType.Strawberry:
+                return strawBerrySprite;
+            case FruitType.Kiwi:
+                return kiwiSprite;
+            case FruitType.JackFruit:
+                return jackFruitSprite;
+            case FruitType.Tangerine:
+                return tangerineSprite;
+            case FruitType.Grape:
+                return grapeSprite;
+            case FruitType.Apple:
+                return appleSprite;
+            default:
+            case FruitType.HawthornBerry:
+                return hawthornBerrySprite;
+        }
+
+    } 
 
     Color GetFruitColor(FruitType fruitType) { 
         switch(fruitType) {
             case FruitType.Strawberry:
-                return new Color(0.7725491f, 0.08235294f, 0.05882353f);
             case FruitType.Kiwi:
                 return Color.green;
             case FruitType.JackFruit:
