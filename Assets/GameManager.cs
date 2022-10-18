@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public enum FruitType { Strawberry, Kiwi, JackFruit, Tangerine, Grape, HawthornBerry, Apple };
 public class GameManager : MonoBehaviour
@@ -112,5 +113,13 @@ public class GameManager : MonoBehaviour
 
     private void OnDisable() {
         CustomerManager.ScorePoints -= AddPoints;
+    }
+
+    public void RestartGame() {
+        SceneManager.LoadScene(1);
+    }
+
+    public void BackToHome() {
+        SceneManager.LoadScene(0);
     }
 }
