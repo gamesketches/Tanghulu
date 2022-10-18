@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: b950a0ef4f46e47c8b0ba93df6518e64
+  - enabled: 1
+    path: Assets/Scenes/RotatingPot.unity
+    guid: 59ebd9df60e664d0a82d9c51c341f6c0
   m_configObjects: {}
