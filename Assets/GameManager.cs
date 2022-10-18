@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public delegate void EndGameCleanup();
     public static event EndGameCleanup EndGame;
 
+    public PotController potController;
 
     // Start is called before the first frame update
     void Start()
@@ -75,10 +76,7 @@ public class GameManager : MonoBehaviour
     }
     
     void GenerateOrder() {
-        FruitType[] newOrder = new FruitType[orderSize];
-        for(int i = 0; i < orderSize; i++) {
-            newOrder[i] = (FruitType)Random.Range(0, 3);
-        }
+        FruitType[] newOrder = potController.GetOrder();
         CustomerManager.instance.MakeNewCustomer(newOrder);
         customerTimer = baseTimeBetweenCustomers;
     }

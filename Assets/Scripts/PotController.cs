@@ -57,4 +57,14 @@ public class PotController : MonoBehaviour
     public void UpdateDragging(bool newDragState) {
         dragging = newDragState;
     }
+
+    public FruitType[] GetOrder() { 
+        FruitType[] newOrder = new FruitType[GameManager.orderSize];
+        for (int i = 0; i < GameManager.orderSize; i++) {
+            // Picking from fruits in the pot so there will alwas be some fruits in the order, but not always all fruits
+            Transform randomChild = transform.GetChild(Random.Range(0, transform.childCount));
+            newOrder[i] = randomChild.GetComponent<PokeableFruit>().fruitType;
+        }
+        return newOrder;
+    }
 }
