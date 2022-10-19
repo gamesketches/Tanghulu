@@ -279,8 +279,9 @@ MonoBehaviour:
   - {fileID: 5275885225561914570, guid: 0a394e7b371d84cdc879b4ac8c3f3671, type: 3}
   numFruits: 10
   potRadius: 1.4
-  dragging: 0
   rotationSpeed: 5
+  distanceBetweenFruits: 0.6
+  dragging: 0
 --- !u!58 &451392757
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -7,10 +7,13 @@ public class PotController : MonoBehaviour
     public GameObject[] fruitPrefabs;
     public int numFruits;
     public float potRadius;
-    public bool dragging;
+
     public float rotationSpeed;
+    public float distanceBetweenFruits;
 
     Vector3 lastPosition;
+    [HideInInspector]
+    public bool dragging;
 
     SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
@@ -19,6 +22,7 @@ public class PotController : MonoBehaviour
         FillPot();
         lastPosition = Vector3.forward;
         spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
 
     // Update is called once per frame
@@ -29,11 +33,40 @@ public class PotController : MonoBehaviour
     void FillPot()
     { 
         for(int i = 0; i < numFruits; i++) {
-            int randomIndex = Random.Range(0, fruitPrefabs.Length);
-            GameObject newFruit = Instantiate(fruitPrefabs[randomIndex], transform);
-            newFruit.transform.position = transform.position + new Vector3(Random.Range(-1f, 1f) * potRadius, Random.Range(-1f, 1f) * potRadius, 0);
-            newFruit.transform.Rotate(0, 0, Random.Range(-180f, 180f));
+            AddFruit();
         }
+    }
+
+    private void AddFruit() { 
+        int randomIndex = Random.Range(0, fruitPrefabs.Length);
+        GameObject newFruit = Instantiate(fruitPrefabs[randomIndex], transform);
+        newFruit.transform.position = FindNewFruitPos();
+        //newFruit.transform.position = transform.position + new Vector3(Random.Range(-1f, 1f) * potRadius, Random.Range(-1f, 1f) * potRadius, 0);
+        newFruit.transform.Rotate(0, 0, Random.Range(-180f, 180f));
+    }
+
+    private void AddFruits(int ignore) {
+        for(int i = 0; i < GameManager.orderSize; i++) {
+            AddFruit();
+        }
+    }
+
+    Vector3 FindNewFruitPos() {
+        Vector3 newPos = transform.position + new Vector3(Random.Range(-1f, 1f) * potRadius, Random.Range(-1f, 1f) * potRadius, 0);
+        for(int i = 0; i < 10; i++) {
+            bool noCollisions = true;
+            for(int j = 0; j < transform.childCount; j++) {
+                if(Vector3.Distance(newPos, transform.GetChild(j).position) < distanceBetweenFruits) {
+                    noCollisions = false;
+                    break;
+                }
+            }
+            if (noCollisions) break;
+            else { 
+                newPos = transform.position + new Vector3(Random.Range(-1f, 1f) * potRadius, Random.Range(-1f, 1f) * potRadius, 0);
+            }
+        }
+        return newPos;
     }
 
     public bool CheckTouchPosition(Vector3 touchPosition) {
@@ -62,6 +95,7 @@ public class PotController : MonoBehaviour
 
     public void UpdateDragging(bool newDragState) {
         dragging = newDragState;
+        if (!dragging) lastPosition = Vector3.forward;
     }
 
     public FruitType[] GetOrder() { 
@@ -72,5 +106,13 @@ public class PotController : MonoBehaviour
             newOrder[i] = randomChild.GetComponent<PokeableFruit>().fruitType;
         }
         return newOrder;
+    }
+
+    private void OnEnable() {
+        CustomerManager.ScorePoints += AddFruits;
+    }
+
+    private void OnDisable() {
+        CustomerManager.ScorePoints -= AddFruits; 
     }
 }
