@@ -11,11 +11,14 @@ public class PotController : MonoBehaviour
     public float rotationSpeed;
 
     Vector3 lastPosition;
+
+    SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
         FillPot();
         lastPosition = Vector3.forward;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -34,8 +37,7 @@ public class PotController : MonoBehaviour
     }
 
     public bool CheckTouchPosition(Vector3 touchPosition) {
-        float distance = Vector3.Distance(transform.position, touchPosition);
-        if(distance < potRadius) {
+        if(spriteRenderer.bounds.Contains(touchPosition)) {
             return true;
         }
         return false;
