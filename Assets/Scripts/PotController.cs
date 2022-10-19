@@ -15,6 +15,7 @@ public class PotController : MonoBehaviour
     void Start()
     {
         FillPot();
+        lastPosition = Vector3.forward;
     }
 
     // Update is called once per frame
@@ -42,10 +43,13 @@ public class PotController : MonoBehaviour
 
     public void NewDragPosition(Vector3 newPosition) {
         if (!dragging) return;
-        float oldPositionAngle = GetTheta(lastPosition);
-        float newPositionAngle = GetTheta(newPosition);
-        float difference = newPositionAngle - oldPositionAngle;
-        transform.Rotate(Vector3.forward, difference);
+        else if (lastPosition != Vector3.forward)
+        {
+            float oldPositionAngle = GetTheta(lastPosition);
+            float newPositionAngle = GetTheta(newPosition);
+            float difference = newPositionAngle - oldPositionAngle;
+            transform.Rotate(Vector3.forward, difference);
+        }
         lastPosition = newPosition;
     }
 
