@@ -52,6 +52,10 @@ public class CustomerController : MonoBehaviour
         StartCoroutine(OpenBubble());
     }
 
+    public void MoveToSpotInLine(Vector3 positionInLine) {
+        StartCoroutine(WalkOnScreen(positionInLine));
+    }
+
     private IEnumerator OpenBubble() {
         customerBubble.gameObject.SetActive(true);
         Vector3 startScale = new Vector3(0, 1, 1);

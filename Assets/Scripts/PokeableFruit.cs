@@ -5,6 +5,7 @@ using UnityEngine;
 public class PokeableFruit : MonoBehaviour
 {
     public FruitType fruitType;
+
     // Start is called before the first frame update
     void Start()
     {

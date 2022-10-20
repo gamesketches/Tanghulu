@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CustomerManager : MonoBehaviour
 {
-    List<CustomerController> customerBubbles;
+    List<CustomerController> customerPool;
+    List<CustomerController> activeCustomers;
+
 
     public GameObject customerPrefab;
     public Vector3 firstCustomerPosition;
@@ -22,17 +24,22 @@ public class CustomerManager : MonoBehaviour
     void Start()
     {
         instance = this;
-        customerBubbles = new List<CustomerController>();
+        customerPool = new List<CustomerController>();
+        activeCustomers = new List<CustomerController>();
         numCustomers = 0;
     }
 
     public bool CustomerServed(FruitType[] curOrder) { 
-        foreach(CustomerController customer in customerBubbles) {
+        for(int i = 0; i < activeCustomers.Count; i++) {
+            CustomerController customer = activeCustomers[i];
             if (!customer.gameObject.activeSelf) continue;
             int score = customer.OrderSatisfied(curOrder);
-            Debug.Log($"You scored {score} points");
             if(score > 0) {
                 customer.Leave();
+                activeCustomers.RemoveAt(i);
+                for(int j = i; j < activeCustomers.Count; j++) {
+                    activeCustomers[j].MoveToSpotInLine(GetCustomerPhysicalPosition(j));
+                }
                 ScorePoints(score);
                 numCustomers--;
                 return true;
@@ -43,34 +50,35 @@ public class CustomerManager : MonoBehaviour
 
     public void MakeNewCustomer(FruitType[] newOrder) {
         CustomerController newCustomer = GetCustomer();
-        newCustomer.Initialize(newOrder, GetCustomerSprite(), GetCustomerPositionInLine());
+        newCustomer.Initialize(newOrder, GetCustomerSprite(), GetCustomerPhysicalPosition(numCustomers));
         numCustomers++;
+        activeCustomers.Add(newCustomer);
     }
 
     Sprite GetCustomerSprite() {
         return customerSprites[Random.Range(0, customerSprites.Length)];
     }
-    
-    Vector3 GetCustomerPositionInLine() {
-        return firstCustomerPosition + new Vector3(customerOffset * numCustomers, 0, 0);
+
+    Vector3 GetCustomerPhysicalPosition(int spotInLine) {
+        return firstCustomerPosition + new Vector3(customerOffset * spotInLine, 0, 0);
     }
 
     private void DismissCustomers() { 
-        foreach(CustomerController customer in customerBubbles) {
+        foreach(CustomerController customer in customerPool) {
             customer.GetDismissed();
         }
     }
     
     CustomerController GetCustomer() { 
-        for(int i = 0; i < customerBubbles.Count; i++) { 
-            if(!customerBubbles[i].gameObject.activeSelf) {
-                customerBubbles[i].gameObject.SetActive(true);
-                return customerBubbles[i];
+        for(int i = 0; i < customerPool.Count; i++) { 
+            if(!customerPool[i].gameObject.activeSelf) {
+                customerPool[i].gameObject.SetActive(true);
+                return customerPool[i];
             }
         }
         CustomerController newCustomer = Instantiate(customerPrefab).GetComponent<CustomerController>();
         newCustomer.transform.position = firstCustomerPosition + new Vector3(customerOffset * 5, 0, 0);
-        customerBubbles.Add(newCustomer);
+        customerPool.Add(newCustomer);
         return newCustomer;
     }
 
