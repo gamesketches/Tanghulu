@@ -1,7 +1,310 @@
 fileFormatVersion: 2
 guid: 604a8923fa00f4a508131220584973c3
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6863815925311684837
+    second: intro comic spreadsheet_0
+  - first:
+      213: 1338090827731039896
+    second: intro comic spreadsheet_1
+  - first:
+      213: -521974764592083485
+    second: intro comic spreadsheet_2
+  - first:
+      213: 5048094386528867764
+    second: intro comic spreadsheet_3
+  - first:
+      213: -1792038082820067180
+    second: intro comic spreadsheet_4
+  - first:
+      213: 3729458964997749493
+    second: intro comic spreadsheet_5
+  - first:
+      213: 5687258042791940826
+    second: intro comic spreadsheet_6
+  - first:
+      213: 5491061447146184913
+    second: intro comic spreadsheet_7
+  - first:
+      213: -6210126427615844807
+    second: intro comic spreadsheet_8
+  - first:
+      213: 3741799917297064136
+    second: intro comic spreadsheet_9
+  - first:
+      213: -8232983390903513872
+    second: intro comic spreadsheet_10
+  - first:
+      213: -4890777762797669267
+    second: intro comic spreadsheet_11
+  - first:
+      213: -8631977947364939044
+    second: intro comic spreadsheet_12
+  - first:
+      213: 3812464065065287938
+    second: intro comic spreadsheet_13
+  - first:
+      213: -8619509099431695890
+    second: intro comic spreadsheet_14
+  - first:
+      213: -636917204580046296
+    second: intro comic spreadsheet_15
+  - first:
+      213: -3863745466638260418
+    second: intro comic spreadsheet_16
+  - first:
+      213: -6026582465519404103
+    second: intro comic spreadsheet_17
+  - first:
+      213: 7434969579611556547
+    second: intro comic spreadsheet_18
+  - first:
+      213: -5440657603063925842
+    second: intro comic spreadsheet_19
+  - first:
+      213: -9143371366128656121
+    second: intro comic spreadsheet_20
+  - first:
+      213: -2596412851543335874
+    second: intro comic spreadsheet_21
+  - first:
+      213: 2679091126587074559
+    second: intro comic spreadsheet_22
+  - first:
+      213: -9128344144731735403
+    second: intro comic spreadsheet_23
+  - first:
+      213: -5774350191997947300
+    second: intro comic spreadsheet_24
+  - first:
+      213: 5609988937204254997
+    second: intro comic spreadsheet_25
+  - first:
+      213: 7900079903774068513
+    second: intro comic spreadsheet_26
+  - first:
+      213: -7796104073592337456
+    second: intro comic spreadsheet_27
+  - first:
+      213: 1033165408016615419
+    second: intro comic spreadsheet_28
+  - first:
+      213: -4216995258809487108
+    second: intro comic spreadsheet_29
+  - first:
+      213: -3807667950212131911
+    second: intro comic spreadsheet_30
+  - first:
+      213: -3596932856099340524
+    second: intro comic spreadsheet_31
+  - first:
+      213: -1932680954830394360
+    second: intro comic spreadsheet_32
+  - first:
+      213: -945320250058259331
+    second: intro comic spreadsheet_33
+  - first:
+      213: -313341158397316762
+    second: intro comic spreadsheet_34
+  - first:
+      213: -556554043859642434
+    second: intro comic spreadsheet_35
+  - first:
+      213: -2725325674913541427
+    second: intro comic spreadsheet_36
+  - first:
+      213: 1897846968104817711
+    second: intro comic spreadsheet_37
+  - first:
+      213: 4403436757236315452
+    second: intro comic spreadsheet_38
+  - first:
+      213: -193472164275136862
+    second: intro comic spreadsheet_39
+  - first:
+      213: -4908683514285173448
+    second: intro comic spreadsheet_40
+  - first:
+      213: -4477448286484788350
+    second: intro comic spreadsheet_41
+  - first:
+      213: -5467373012318528850
+    second: intro comic spreadsheet_42
+  - first:
+      213: -7218361866599336965
+    second: intro comic spreadsheet_43
+  - first:
+      213: 649608238667860322
+    second: intro comic spreadsheet_44
+  - first:
+      213: -1746195750316754584
+    second: intro comic spreadsheet_45
+  - first:
+      213: -4488026858027629157
+    second: intro comic spreadsheet_46
+  - first:
+      213: -3387798651689173025
+    second: intro comic spreadsheet_47
+  - first:
+      213: 6738188744287357904
+    second: intro comic spreadsheet_48
+  - first:
+      213: 1827004987930271780
+    second: intro comic spreadsheet_49
+  - first:
+      213: 8045514084687649905
+    second: intro comic spreadsheet_50
+  - first:
+      213: -6509073910357553580
+    second: intro comic spreadsheet_51
+  - first:
+      213: 1053435503105204182
+    second: intro comic spreadsheet_52
+  - first:
+      213: 6811207667870301258
+    second: intro comic spreadsheet_53
+  - first:
+      213: 8334491906291823021
+    second: intro comic spreadsheet_54
+  - first:
+      213: 5978155181234879711
+    second: intro comic spreadsheet_55
+  - first:
+      213: 4232474636476468620
+    second: intro comic spreadsheet_56
+  - first:
+      213: 6427925612877680911
+    second: intro comic spreadsheet_57
+  - first:
+      213: -8141664390993498124
+    second: intro comic spreadsheet_58
+  - first:
+      213: 8213830505309908228
+    second: intro comic spreadsheet_59
+  - first:
+      213: 4358294634240083033
+    second: intro comic spreadsheet_60
+  - first:
+      213: -1072943813164215544
+    second: intro comic spreadsheet_61
+  - first:
+      213: 5677615864948061690
+    second: intro comic spreadsheet_62
+  - first:
+      213: -2408539684020206755
+    second: intro comic spreadsheet_63
+  - first:
+      213: 2559284071209119289
+    second: intro comic spreadsheet_64
+  - first:
+      213: 2100536814968419782
+    second: intro comic spreadsheet_65
+  - first:
+      213: 6209021679790615800
+    second: intro comic spreadsheet_66
+  - first:
+      213: -4983841725218432975
+    second: intro comic spreadsheet_67
+  - first:
+      213: -2849840836979585952
+    second: intro comic spreadsheet_68
+  - first:
+      213: 1322341152328193249
+    second: intro comic spreadsheet_69
+  - first:
+      213: 3793737704406942714
+    second: intro comic spreadsheet_70
+  - first:
+      213: -1370555476797837973
+    second: intro comic spreadsheet_71
+  - first:
+      213: 6300958016053124110
+    second: intro comic spreadsheet_72
+  - first:
+      213: -2004436818322404926
+    second: intro comic spreadsheet_73
+  - first:
+      213: -1679809686278998404
+    second: intro comic spreadsheet_74
+  - first:
+      213: 1967055100973969458
+    second: intro comic spreadsheet_75
+  - first:
+      213: 268379053288886555
+    second: intro comic spreadsheet_76
+  - first:
+      213: 1038434676928419459
+    second: intro comic spreadsheet_77
+  - first:
+      213: -468298354342342734
+    second: intro comic spreadsheet_78
+  - first:
+      213: 7798905914814847
+    second: intro comic spreadsheet_79
+  - first:
+      213: 7007689201828410603
+    second: intro comic spreadsheet_80
+  - first:
+      213: 6314788428896427601
+    second: intro comic spreadsheet_81
+  - first:
+      213: 3144707508682719811
+    second: intro comic spreadsheet_82
+  - first:
+      213: 6118743094421754102
+    second: intro comic spreadsheet_83
+  - first:
+      213: 2028416722635360922
+    second: intro comic spreadsheet_84
+  - first:
+      213: 6881095325318277340
+    second: intro comic spreadsheet_85
+  - first:
+      213: 2296443520343721534
+    second: intro comic spreadsheet_86
+  - first:
+      213: -1647089340146000384
+    second: intro comic spreadsheet_87
+  - first:
+      213: 7069756603963090490
+    second: intro comic spreadsheet_88
+  - first:
+      213: 5630571755383206229
+    second: intro comic spreadsheet_89
+  - first:
+      213: 8184234762347652625
+    second: intro comic spreadsheet_90
+  - first:
+      213: 6493138947302003472
+    second: intro comic spreadsheet_91
+  - first:
+      213: 898215069369718539
+    second: intro comic spreadsheet_92
+  - first:
+      213: 7385997392603140464
+    second: intro comic spreadsheet_93
+  - first:
+      213: 5143226525890155478
+    second: intro comic spreadsheet_94
+  - first:
+      213: -3906708703664414074
+    second: intro comic spreadsheet_95
+  - first:
+      213: -8002874542751153422
+    second: intro comic spreadsheet_96
+  - first:
+      213: 8278073375463832641
+    second: intro comic spreadsheet_97
+  - first:
+      213: -3361466132623622316
+    second: intro comic spreadsheet_98
+  - first:
+      213: -9015678204852350527
+    second: intro comic spreadsheet_99
+  - first:
+      213: -564564491741217265
+    second: intro comic spreadsheet_100
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,12 +343,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,9 +374,2154 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: intro comic spreadsheet_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 2083
+        width: 1050
+        height: 1998
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1fb02038c3deb0a0800000000000000
+      internalID: -6863815925311684837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_1
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 1786
+        width: 1
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896fd10b48ad19210800000000000000
+      internalID: 1338090827731039896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_2
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 1987
+        width: 1396
+        height: 2109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed45c697b291c8f0800000000000000
+      internalID: -521974764592083485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_3
+      rect:
+        serializedVersion: 2
+        x: 2593
+        y: 1667
+        width: 1
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b552bd391f6e0640800000000000000
+      internalID: 5048094386528867764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_4
+      rect:
+        serializedVersion: 2
+        x: 2579
+        y: 1738
+        width: 93
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 490b989bbd66127e0800000000000000
+      internalID: -1792038082820067180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_5
+      rect:
+        serializedVersion: 2
+        x: 2650
+        y: 1653
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa361d4b23b1c330800000000000000
+      internalID: 3729458964997749493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_6
+      rect:
+        serializedVersion: 2
+        x: 2579
+        y: 1745
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2d89abe033dee40800000000000000
+      internalID: 5687258042791940826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_7
+      rect:
+        serializedVersion: 2
+        x: 2571
+        y: 1731
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0adf41b4b243c40800000000000000
+      internalID: 5491061447146184913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_8
+      rect:
+        serializedVersion: 2
+        x: 2621
+        y: 1731
+        width: 65
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93621bfaae231d9a0800000000000000
+      internalID: -6210126427615844807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_9
+      rect:
+        serializedVersion: 2
+        x: 2571
+        y: 1695
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8d31b233b8de330800000000000000
+      internalID: 3741799917297064136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_10
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 1653
+        width: 8
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc4187e9319ebd80800000000000000
+      internalID: -8232983390903513872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_11
+      rect:
+        serializedVersion: 2
+        x: 2650
+        y: 1695
+        width: 36
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64b0158987702cb0800000000000000
+      internalID: -4890777762797669267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_12
+      rect:
+        serializedVersion: 2
+        x: 2607
+        y: 1695
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdaae428acd053880800000000000000
+      internalID: -8631977947364939044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_13
+      rect:
+        serializedVersion: 2
+        x: 2579
+        y: 1745
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201882d2ed798e430800000000000000
+      internalID: 3812464065065287938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_14
+      rect:
+        serializedVersion: 2
+        x: 2571
+        y: 1681
+        width: 1
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee96026642a516880800000000000000
+      internalID: -8619509099431695890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_15
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1852
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82aebad4d273927f0800000000000000
+      internalID: -636917204580046296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_16
+      rect:
+        serializedVersion: 2
+        x: 2543
+        y: 1774
+        width: 1
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37208618f7316ac0800000000000000
+      internalID: -3863745466638260418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_17
+      rect:
+        serializedVersion: 2
+        x: 2731
+        y: 3677
+        width: 532
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb3e158d274d5ca0800000000000000
+      internalID: -6026582465519404103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_18
+      rect:
+        serializedVersion: 2
+        x: 3453
+        y: 3677
+        width: 570
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca0594c0715e2760800000000000000
+      internalID: 7434969579611556547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_19
+      rect:
+        serializedVersion: 2
+        x: 2543
+        y: 1752
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3b8d06cb6ee74b0800000000000000
+      internalID: -5440657603063925842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_20
+      rect:
+        serializedVersion: 2
+        x: 2507
+        y: 1760
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7016c68af283c1180800000000000000
+      internalID: -9143371366128656121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_21
+      rect:
+        serializedVersion: 2
+        x: 2564
+        y: 1731
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c10859440b7fbd0800000000000000
+      internalID: -2596412851543335874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_22
+      rect:
+        serializedVersion: 2
+        x: 2543
+        y: 1781
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7af196f2b0e2520800000000000000
+      internalID: 2679091126587074559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_23
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 3391
+        width: 356
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a7fb94d5b915180800000000000000
+      internalID: -9128344144731735403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_24
+      rect:
+        serializedVersion: 2
+        x: 3097
+        y: 3435
+        width: 350
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52f04d18136ddfa0800000000000000
+      internalID: -5774350191997947300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_25
+      rect:
+        serializedVersion: 2
+        x: 3585
+        y: 3391
+        width: 322
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5194ee3273faadd40800000000000000
+      internalID: 5609988937204254997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_26
+      rect:
+        serializedVersion: 2
+        x: 2522
+        y: 1781
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12fc7a9e0d8b2ad60800000000000000
+      internalID: 7900079903774068513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_27
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 1724
+        width: 1
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db8d8d86acaec390800000000000000
+      internalID: -7796104073592337456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_28
+      rect:
+        serializedVersion: 2
+        x: 2564
+        y: 1752
+        width: 7
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf74d03f67a865e00800000000000000
+      internalID: 1033165408016615419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_29
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 1674
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0772b97293a75c0800000000000000
+      internalID: -4216995258809487108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_30
+      rect:
+        serializedVersion: 2
+        x: 2721
+        y: 2977
+        width: 644
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b357f45c22782bc0800000000000000
+      internalID: -3807667950212131911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_31
+      rect:
+        serializedVersion: 2
+        x: 3427
+        y: 2893
+        width: 638
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f744fef90251ec0800000000000000
+      internalID: -3596932856099340524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_32
+      rect:
+        serializedVersion: 2
+        x: 2522
+        y: 1781
+        width: 8
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ceb2f49ecbd25e0800000000000000
+      internalID: -1932680954830394360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_33
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 1710
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d744b48bd3c81e2f0800000000000000
+      internalID: -945320250058259331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_34
+      rect:
+        serializedVersion: 2
+        x: 2522
+        y: 1731
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661f73860e9c6abf0800000000000000
+      internalID: -313341158397316762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_35
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 1767
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7507dbb09b648f0800000000000000
+      internalID: -556554043859642434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_36
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1795
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2d681fcb2bd2ad0800000000000000
+      internalID: -2725325674913541427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_37
+      rect:
+        serializedVersion: 2
+        x: 2579
+        y: 1724
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2490f323c1865a10800000000000000
+      internalID: 1897846968104817711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_38
+      rect:
+        serializedVersion: 2
+        x: 2557
+        y: 1674
+        width: 16
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c35f7f976662c1d30800000000000000
+      internalID: 4403436757236315452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_39
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 1807
+        width: 9
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a654767716a05df0800000000000000
+      internalID: -193472164275136862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_40
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 1843
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8355730e95ad0ebb0800000000000000
+      internalID: -4908683514285173448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_41
+      rect:
+        serializedVersion: 2
+        x: 2557
+        y: 1760
+        width: 8
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b84e78188ecd1c0800000000000000
+      internalID: -4477448286484788350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_42
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 1760
+        width: 101
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa5232763dff14b0800000000000000
+      internalID: -5467373012318528850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_43
+      rect:
+        serializedVersion: 2
+        x: 2543
+        y: 1802
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf3fe19702a33db90800000000000000
+      internalID: -7218361866599336965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_44
+      rect:
+        serializedVersion: 2
+        x: 2614
+        y: 1738
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26907f4504fd30900800000000000000
+      internalID: 649608238667860322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_45
+      rect:
+        serializedVersion: 2
+        x: 2493
+        y: 1760
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869b212873444c7e0800000000000000
+      internalID: -1746195750316754584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_46
+      rect:
+        serializedVersion: 2
+        x: 2508
+        y: 1760
+        width: 7
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95c9d8e95357b1c0800000000000000
+      internalID: -4488026858027629157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_47
+      rect:
+        serializedVersion: 2
+        x: 2571
+        y: 1724
+        width: 51
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdff48b531f1cf0d0800000000000000
+      internalID: -3387798651689173025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_48
+      rect:
+        serializedVersion: 2
+        x: 2529
+        y: 1788
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db88c466fad28d50800000000000000
+      internalID: 6738188744287357904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_49
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 1738
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420637c4b53da5910800000000000000
+      internalID: 1827004987930271780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_50
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 1795
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c953dde6867af60800000000000000
+      internalID: 8045514084687649905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_51
+      rect:
+        serializedVersion: 2
+        x: 2522
+        y: 1731
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e006cd3cf1ba5a0800000000000000
+      internalID: -6509073910357553580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_52
+      rect:
+        serializedVersion: 2
+        x: 2731
+        y: 2479
+        width: 532
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dfde5c320e8e9e00800000000000000
+      internalID: 1053435503105204182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_53
+      rect:
+        serializedVersion: 2
+        x: 3453
+        y: 2479
+        width: 534
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c73de5945468e50800000000000000
+      internalID: 6811207667870301258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_54
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 1667
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da174e11b301aa370800000000000000
+      internalID: 8334491906291823021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_55
+      rect:
+        serializedVersion: 2
+        x: 2564
+        y: 1717
+        width: 1
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc7aa5b67ca6f250800000000000000
+      internalID: 5978155181234879711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_56
+      rect:
+        serializedVersion: 2
+        x: 2472
+        y: 1817
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8dc70cd145ccba30800000000000000
+      internalID: 4232474636476468620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_57
+      rect:
+        serializedVersion: 2
+        x: 2543
+        y: 1717
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f01953ec944943950800000000000000
+      internalID: 6427925612877680911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_58
+      rect:
+        serializedVersion: 2
+        x: 2543
+        y: 1660
+        width: 94
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ffa26e6f5ff20f80800000000000000
+      internalID: -8141664390993498124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_59
+      rect:
+        serializedVersion: 2
+        x: 3333
+        y: 2649
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40da34a63536df170800000000000000
+      internalID: 8213830505309908228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_60
+      rect:
+        serializedVersion: 2
+        x: 2778
+        y: 1496
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9540f5ce0e5cb7c30800000000000000
+      internalID: 4358294634240083033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_61
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 1724
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803d46069432c11f0800000000000000
+      internalID: -1072943813164215544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_62
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 1644
+        width: 56
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5f9514c81face40800000000000000
+      internalID: 5677615864948061690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_63
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1817
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d534b8a1be5239ed0800000000000000
+      internalID: -2408539684020206755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_64
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1745
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e2cb79d47648320800000000000000
+      internalID: 2559284071209119289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_65
+      rect:
+        serializedVersion: 2
+        x: 2685
+        y: 2201
+        width: 314
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5b2d5aa1b962d10800000000000000
+      internalID: 2100536814968419782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_66
+      rect:
+        serializedVersion: 2
+        x: 3041
+        y: 2301
+        width: 56
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc6e9a2250ea2650800000000000000
+      internalID: 6209021679790615800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_67
+      rect:
+        serializedVersion: 2
+        x: 3173
+        y: 2231
+        width: 350
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138d59f3b56d5dab0800000000000000
+      internalID: -4983841725218432975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_68
+      rect:
+        serializedVersion: 2
+        x: 3585
+        y: 2201
+        width: 322
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c0e6d9bd45378d0800000000000000
+      internalID: -2849840836979585952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_69
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 1771
+        width: 708
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e41760a546e95210800000000000000
+      internalID: 1322341152328193249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_70
+      rect:
+        serializedVersion: 2
+        x: 2701
+        y: 1995
+        width: 52
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af38e22975016a430800000000000000
+      internalID: 3793737704406942714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_71
+      rect:
+        serializedVersion: 2
+        x: 2825
+        y: 1809
+        width: 540
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6daf7c2e0fcafce0800000000000000
+      internalID: -1370555476797837973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_72
+      rect:
+        serializedVersion: 2
+        x: 3427
+        y: 1703
+        width: 638
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c1f738eef717750800000000000000
+      internalID: 6300958016053124110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_73
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 599
+        width: 1062
+        height: 1062
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9cd2d655fce24e0800000000000000
+      internalID: -2004436818322404926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_74
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 585
+        width: 1062
+        height: 1062
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7674178dfd10b8e0800000000000000
+      internalID: -1679809686278998404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_75
+      rect:
+        serializedVersion: 2
+        x: 3158
+        y: 970
+        width: 744
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2307c2341326c4b10800000000000000
+      internalID: 1967055100973969458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_76
+      rect:
+        serializedVersion: 2
+        x: 2662
+        y: 1532
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b119078b35979b300800000000000000
+      internalID: 268379053288886555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_77
+      rect:
+        serializedVersion: 2
+        x: 2651
+        y: 1577
+        width: 12
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38614c836d2496e00800000000000000
+      internalID: 1038434676928419459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_78
+      rect:
+        serializedVersion: 2
+        x: 2503
+        y: 1595
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf468cb0254089f0800000000000000
+      internalID: -468298354342342734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_79
+      rect:
+        serializedVersion: 2
+        x: 2553
+        y: 1607
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7170b84015bb1000800000000000000
+      internalID: 7798905914814847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_80
+      rect:
+        serializedVersion: 2
+        x: 2638
+        y: 1559
+        width: 10
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4b2536330504160800000000000000
+      internalID: 7007689201828410603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_81
+      rect:
+        serializedVersion: 2
+        x: 2620
+        y: 1595
+        width: 8
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e5e107e92a2a750800000000000000
+      internalID: 6314788428896427601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_82
+      rect:
+        serializedVersion: 2
+        x: 2653
+        y: 1508
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342898951de34ab20800000000000000
+      internalID: 3144707508682719811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_83
+      rect:
+        serializedVersion: 2
+        x: 2676
+        y: 1570
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f012e60d642ae450800000000000000
+      internalID: 6118743094421754102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_84
+      rect:
+        serializedVersion: 2
+        x: 2635
+        y: 1521
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9a84212342662c10800000000000000
+      internalID: 2028416722635360922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_85
+      rect:
+        serializedVersion: 2
+        x: 2635
+        y: 1546
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd86233adbf8e7f50800000000000000
+      internalID: 6881095325318277340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_86
+      rect:
+        serializedVersion: 2
+        x: 2601
+        y: 1512
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36c5d4f63b9edf10800000000000000
+      internalID: 2296443520343721534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_87
+      rect:
+        serializedVersion: 2
+        x: 2658
+        y: 1538
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ed347c8fc5429e0800000000000000
+      internalID: -1647089340146000384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_88
+      rect:
+        serializedVersion: 2
+        x: 2631
+        y: 1661
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3621b39c22dc1260800000000000000
+      internalID: 7069756603963090490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_89
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 1636
+        width: 46
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551b6f1fd2fc32e40800000000000000
+      internalID: 5630571755383206229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_90
+      rect:
+        serializedVersion: 2
+        x: 2605
+        y: 1688
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 116a228872e349170800000000000000
+      internalID: 8184234762347652625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_91
+      rect:
+        serializedVersion: 2
+        x: 2634
+        y: 1626
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013903f68734c1a50800000000000000
+      internalID: 6493138947302003472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_92
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 1620
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b075fadb8d9177c00800000000000000
+      internalID: 898215069369718539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_93
+      rect:
+        serializedVersion: 2
+        x: 2623
+        y: 1616
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0715212fe75508660800000000000000
+      internalID: 7385997392603140464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_94
+      rect:
+        serializedVersion: 2
+        x: 2630
+        y: 1602
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d39c0b7649606740800000000000000
+      internalID: 5143226525890155478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_95
+      rect:
+        serializedVersion: 2
+        x: 2631
+        y: 1622
+        width: 8
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682e725f12598c9c0800000000000000
+      internalID: -3906708703664414074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_96
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 1577
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f20d41210410f090800000000000000
+      internalID: -8002874542751153422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_97
+      rect:
+        serializedVersion: 2
+        x: 2676
+        y: 1543
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14cf32930ef91e270800000000000000
+      internalID: 8278073375463832641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_98
+      rect:
+        serializedVersion: 2
+        x: 2989
+        y: 489
+        width: 1074
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f7678bc5ca951d0800000000000000
+      internalID: -3361466132623622316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_99
+      rect:
+        serializedVersion: 2
+        x: 3249
+        y: 63
+        width: 548
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c15b869070e1e280800000000000000
+      internalID: -9015678204852350527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intro comic spreadsheet_100
+      rect:
+        serializedVersion: 2
+        x: 2593
+        y: 1774
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e37f006934a28f0800000000000000
+      internalID: -564564491741217265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
