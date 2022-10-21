@@ -985,7 +985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerPrefab: {fileID: 7437237936247001040, guid: 3a8e264d2fd2244448fd194cb7197fde,
     type: 3}
-  firstCustomerPosition: {x: -2, y: 2.16, z: 0}
+  firstCustomerPosition: {x: -2, y: 1.7, z: 0}
   customerOffset: 2
   customerSprites:
   - {fileID: 4254994746908264793, guid: 4d979ae883358494c96a828deba96ca1, type: 3}

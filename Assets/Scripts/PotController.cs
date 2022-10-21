@@ -33,21 +33,21 @@ public class PotController : MonoBehaviour
     void FillPot()
     { 
         for(int i = 0; i < numFruits; i++) {
-            AddFruit();
+            AddFruit(i);
         }
     }
 
-    private void AddFruit() { 
+    private void AddFruit(int delayMultiplier = 0) { 
         int randomIndex = Random.Range(0, fruitPrefabs.Length);
-        GameObject newFruit = Instantiate(fruitPrefabs[randomIndex], transform);
+        PokeableFruit newFruit = Instantiate(fruitPrefabs[randomIndex], transform).GetComponent<PokeableFruit>();
         newFruit.transform.position = FindNewFruitPos();
-        //newFruit.transform.position = transform.position + new Vector3(Random.Range(-1f, 1f) * potRadius, Random.Range(-1f, 1f) * potRadius, 0);
         newFruit.transform.Rotate(0, 0, Random.Range(-180f, 180f));
+        newFruit.Appear(delayMultiplier * 0.1f);
     }
 
     private void AddFruits(int ignore) {
-        for(int i = 0; i < GameManager.orderSize; i++) {
-            AddFruit();
+        for(int i = transform.childCount; i < numFruits; i++) {
+            AddFruit(i);
         }
     }
 
