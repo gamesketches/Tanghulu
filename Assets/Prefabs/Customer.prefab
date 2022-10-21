@@ -98,8 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerBubble: {fileID: 2332999337245492815}
   walkOnTime: 1
-  bounceRange: 0.2
-  bounceSpeed: 10
+  bounceRange: 0.1
+  bounceSpeed: 15
   bubbleOpenTime: 0.3
 --- !u!1001 &2931882153252105817
 PrefabInstance:
