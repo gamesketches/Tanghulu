@@ -238,6 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 134364378}
   scoreText: {fileID: 708468527}
+  countUpTime: 0.4
 --- !u!1 &451392755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,10 +1533,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9273a04d7101d4370adedb7f51e73744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 924105241}
+  scoreDisplay: {fileID: 924105241}
   gameTime: 50
   baseTimeBetweenCustomers: 5
   gameStartImage: {fileID: 1018104704}
+  resultScreen: {fileID: 134364380}
   potController: {fileID: 451392756}
 --- !u!1 &2047685946
 GameObject:

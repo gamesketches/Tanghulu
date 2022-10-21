@@ -9,6 +9,8 @@ public class ResultScreenController : MonoBehaviour
     public Canvas canvas;
 
     public TextMeshProUGUI scoreText;
+    
+    public float countUpTime;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,21 @@ public class ResultScreenController : MonoBehaviour
 
     private void OpenResultScreen() {
         canvas.enabled = true;
-        scoreText.text = "100";
+    }
+
+    public void CountUpScore(int playerScore) {
+        StartCoroutine(CountUpPoints(playerScore));
+    }
+    
+    IEnumerator CountUpPoints(int totalScore) {
+        int pointCount = 0;
+        yield return countUpTime;
+        for(float t = 0; pointCount < totalScore; t += countUpTime) {
+            pointCount++;
+            scoreText.text = pointCount.ToString();
+            yield return countUpTime;
+        }
+        scoreText.text = totalScore.ToString();
     }
 
     private void OnEnable() {

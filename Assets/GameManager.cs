@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
-    public TextMeshProUGUI score;
+    public TextMeshProUGUI scoreDisplay;
 
     public float gameTime;
 
@@ -24,11 +24,14 @@ public class GameManager : MonoBehaviour
     public static bool gamePlaying;
 
     public Image gameStartImage;
+    public ResultScreenController resultScreen;
 
     public delegate void EndGameCleanup();
     public static event EndGameCleanup EndGame;
 
     public PotController potController;
+
+    int score;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +39,7 @@ public class GameManager : MonoBehaviour
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 60;
         instance = this;
+        score = 0;
         StartCoroutine(BeginGameSequence());
     }
 
@@ -82,26 +86,27 @@ public class GameManager : MonoBehaviour
     }
 
     void AddPoints(int pointsToAdd) {
-        StartCoroutine(CountUpPoints(pointsToAdd));
+        score += pointsToAdd;
+        StartCoroutine(CountUpPoints());
     }
 
-    IEnumerator CountUpPoints(int pointsToAdd) {
-        int startPoints = int.Parse(score.text);
+    IEnumerator CountUpPoints() {
+        int startPoints = int.Parse(scoreDisplay.text);
         int curPoints = startPoints;
         float countTime = 0.3f;
         yield return countTime;
-        for(float t = 0; curPoints < startPoints + pointsToAdd; t += countTime) {
+        for(float t = 0; curPoints < score; t += countTime) {
             curPoints++;
-            score.text = curPoints.ToString();
+            scoreDisplay.text = curPoints.ToString();
             yield return countTime;
         }
-        score.text = (startPoints + pointsToAdd).ToString();
+        scoreDisplay.text = score.ToString();
     }
 
     private void GameOver() {
         EndGame();
         gamePlaying = false;
-        Debug.Log("ending the game");
+        resultScreen.CountUpScore(score);
     }
          
 
