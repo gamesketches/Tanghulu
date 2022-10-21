@@ -74,7 +74,7 @@ public class CustomerController : MonoBehaviour
 
     private IEnumerator WalkOffScreen() {
         Vector3 startPos = transform.position;
-        Vector3 endPos = transform.position - new Vector3(5, 0, 0);
+        Vector3 endPos = transform.position - new Vector3(Camera.main.orthographicSize, 0, 0);
         customerBubble.gameObject.SetActive(false);
         for(float t = 0; t <= walkOnTime; t += Time.deltaTime) {
             Vector3 newPos = Vector3.Lerp(startPos, endPos, t / walkOnTime);
@@ -82,6 +82,7 @@ public class CustomerController : MonoBehaviour
             transform.position = newPos; 
             yield return null;
         }
+        transform.position = transform.position + new Vector3(Camera.main.orthographicSize * 3, 0, 0);
         gameObject.SetActive(false);
     }
     
