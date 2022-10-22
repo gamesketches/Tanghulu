@@ -96,10 +96,10 @@ public class GameManager : MonoBehaviour
         yield return countTime;
         for(float t = 0; curPoints < score; t += countTime) {
             curPoints++;
-            scoreDisplay.text = curPoints.ToString();
+            scoreDisplay.text = curPoints.ToString("000");
             yield return countTime;
         }
-        scoreDisplay.text = score.ToString();
+        scoreDisplay.text = score.ToString("000");
     }
 
     private void GameOver() {
