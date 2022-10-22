@@ -8,23 +8,24 @@ using UnityEngine.SceneManagement;
 public enum FruitType { Strawberry, Kiwi, JackFruit, Tangerine, Grape, HawthornBerry, Apple };
 public class GameManager : MonoBehaviour
 {
+    // Static variables
     public static int orderSize = 4;
-
     public static GameManager instance;
 
+    // UI stuff
     public TextMeshProUGUI scoreDisplay;
+    public RoundStartController gameStartImage;
 
+    public ResultScreenController resultScreen;
+
+    // Game tuning stuff
     public float gameTime;
-
     private float gameTimer;
 
     public float baseTimeBetweenCustomers;
     float customerTimer;
 
     public static bool gamePlaying;
-
-    public Image gameStartImage;
-    public ResultScreenController resultScreen;
 
     public delegate void EndGameCleanup();
     public static event EndGameCleanup EndGame;
@@ -59,9 +60,7 @@ public class GameManager : MonoBehaviour
     }
 
     private IEnumerator BeginGameSequence() {
-        gameStartImage.enabled = true;
-        yield return new WaitForSeconds(0.5f);
-        gameStartImage.enabled = false;
+        yield return StartCoroutine(gameStartImage.DoRoundStart());
         gameTimer = gameTime;
         gamePlaying = true;
         GenerateOrder();

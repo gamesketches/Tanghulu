@@ -45,7 +45,7 @@ public class CustomerController : MonoBehaviour
         Vector3 startPos = transform.position;
         for(float t = 0; t <= walkOnTime; t += Time.deltaTime) {
             Vector3 newPos = Vector3.Lerp(startPos, positionInLine, t / walkOnTime);
-            newPos.y += Mathf.Sin(Time.time * bounceSpeed) * bounceRange;
+            newPos.y += Mathf.Abs(Mathf.Sin(Time.time * bounceSpeed) * bounceRange);
             transform.position = newPos;
             yield return null;
         }
