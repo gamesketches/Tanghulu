@@ -1,8 +1,8 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class ComicController : MonoBehaviour
 {
@@ -21,11 +21,9 @@ public class ComicController : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public void LoadGameplayScene() {
+        SceneManager.LoadScene(2);
+        }
 }
 
 [Serializable]

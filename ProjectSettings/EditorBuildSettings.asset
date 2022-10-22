@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScreen.unity
     guid: b950a0ef4f46e47c8b0ba93df6518e64
   - enabled: 1
+    path: Assets/Scenes/ComicScene.unity
+    guid: aa2f0765785e44a128c29730def656c1
+  - enabled: 1
     path: Assets/Scenes/RotatingPot.unity
     guid: 59ebd9df60e664d0a82d9c51c341f6c0
   m_configObjects: {}
