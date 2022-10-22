@@ -5,6 +5,7 @@ using UnityEngine;
 public class PokingStickController : MonoBehaviour
 {
     public float stickLength;
+    public float pokeDistance;
     public bool aiming;
     public bool poking;
     private Vector3 lastFingerPosition;
@@ -14,6 +15,8 @@ public class PokingStickController : MonoBehaviour
 
     private float rotationProportion;
 
+    public AnimationCurve pokingCurve;
+
     private IEnumerator pokingCoroutine;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +24,7 @@ public class PokingStickController : MonoBehaviour
         aiming = false;
         poking = false;
         rotationProportion = 0.5f;
+        pokingCurve.postWrapMode = WrapMode.PingPong;
     }
 
     // Update is called once per frame
@@ -55,12 +59,12 @@ public class PokingStickController : MonoBehaviour
 
     private IEnumerator StickPokingAnimation() {
         poking = true;
-        float stickPokeTime = 1;
         Vector3 startPosition = transform.position;
-        Vector3 endPosition = new Vector3(transform.up.x * stickLength, transform.up.y * stickLength,
+        Vector3 endPosition = startPosition + new Vector3(transform.up.x * pokeDistance, transform.up.y * pokeDistance,
                                                 transform.position.z);
-        for(float t = 0; t < stickPokeTime; t += Time.deltaTime) {
-            float proportion = Mathf.PingPong(t, stickPokeTime / 2);
+        float pokingTime = pokingCurve.keys[pokingCurve.length - 1].time;
+        for(float t = 0; t < pokingTime * 2; t += Time.deltaTime) {
+            float proportion = pokingCurve.Evaluate(t);
             transform.position = Vector3.Lerp(startPosition, endPosition, proportion);
             yield return null;
         }
@@ -92,7 +96,7 @@ public class PokingStickController : MonoBehaviour
     }
 
     private float StickEnd(bool local = false) {
-        float yOffset = stickLength / 2;
+        float yOffset = stickLength;
         if (local)
             return yOffset;
         else

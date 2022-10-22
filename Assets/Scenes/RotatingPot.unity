@@ -1571,11 +1571,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91b4410c6da4c4b9c8b3bda6c425fbdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stickLength: 4
+  stickLength: 2
+  pokeDistance: 4
   aiming: 0
   poking: 0
   maxFruits: 4
   rotationLimit: 39
+  pokingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.7
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!61 &2047685948
 BoxCollider2D:
   m_ObjectHideFlags: 0
