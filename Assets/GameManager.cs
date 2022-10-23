@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     // UI stuff
     public TextMeshProUGUI scoreDisplay;
     public RoundStartController gameStartImage;
+    public ClockController clockController;
 
     public ResultScreenController resultScreen;
 
@@ -50,9 +51,11 @@ public class GameManager : MonoBehaviour
         if(gamePlaying) {
             customerTimer -= Time.deltaTime;
             gameTimer -= Time.deltaTime;
-            if(customerTimer <= 0) {
+            if (customerTimer <= 0)
+            {
                 GenerateOrder();
             }
+            else clockController.UpdateClockProportion(gameTimer / gameTime);
             if(gameTimer < 0) {
                 GameOver();
             }
