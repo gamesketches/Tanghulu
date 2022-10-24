@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 public class ComicController : MonoBehaviour
 {
     public ComicImage[] comicImages;
+    public int particleSystemFirePoint;
+
+    public ParticleSystem fruitParticles;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,9 +18,10 @@ public class ComicController : MonoBehaviour
     }
 
     IEnumerator PlayComic() { 
-        foreach(ComicImage panel in comicImages) {
-            panel.image.enabled = true;
-            yield return new WaitForSeconds(panel.playTime);
+        for(int i = 0; i < comicImages.Length; i++) {
+            if (i == particleSystemFirePoint) fruitParticles.Play();
+            comicImages[i].image.enabled = true;
+            yield return new WaitForSeconds(comicImages[i].playTime);
         }
     }
 
