@@ -2,7 +2,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-using UnityEngine.SceneManagement;
 
 public class ComicController : MonoBehaviour
 {
@@ -26,7 +25,7 @@ public class ComicController : MonoBehaviour
     }
 
     public void LoadGameplayScene() {
-        SceneManager.LoadScene(2);
+        LoadingScreenManager.instance.LoadScene(SceneType.RotatingPot);
         }
 }
 

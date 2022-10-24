@@ -1,0 +1,63 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+public enum SceneType { Preload, TitleScreen, ComicScene, RotatingPot};
+public class LoadingScreenManager : MonoBehaviour
+{
+    public static LoadingScreenManager instance;
+
+    public Canvas canvas;
+    public RectTransform curtainRect;
+
+    public float curtainMoveTime;
+    public float curtainHoldTime;
+
+    // Start is called before the first frame update
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+        instance = this;
+        curtainRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, -Screen.height, Screen.height);
+        LoadScene(SceneType.TitleScreen, false);
+    }
+
+    public void LoadScene(SceneType screenType, bool curtainDown = true, bool curtainUp = true) {
+        StartCoroutine(LoadScreenWithCurtain(screenType, curtainDown, curtainUp));
+    }
+
+    private IEnumerator LoadScreenWithCurtain(SceneType screenType, bool curtainDown = true, bool curtainUp = true) {
+
+        canvas.enabled = true;
+        AsyncOperation sceneLoadHandle = SceneManager.LoadSceneAsync(screenType.ToString());
+
+        sceneLoadHandle.allowSceneActivation = false;
+
+        if (curtainDown) yield return MoveCurtain(true);
+
+        while (sceneLoadHandle.progress < 0.9f)
+        {
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(curtainHoldTime);
+        sceneLoadHandle.allowSceneActivation = true;
+
+        if (curtainUp) yield return MoveCurtain(false);
+        
+        canvas.enabled = false;
+    }
+
+    private IEnumerator MoveCurtain(bool curtainDown) {
+        float proportion;
+        for(float t = 0; t < curtainMoveTime; t += Time.deltaTime) {
+            if (curtainDown) proportion = Mathf.SmoothStep(-Screen.height, 0, t / curtainMoveTime);
+            else proportion = Mathf.SmoothStep(0, -Screen.height, t / curtainMoveTime);
+
+            curtainRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, proportion, curtainRect.rect.size.y);
+            yield return null;
+        }
+    }
+}

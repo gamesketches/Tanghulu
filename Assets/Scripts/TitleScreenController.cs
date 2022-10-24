@@ -16,6 +16,6 @@ public class TitleScreenController : MonoBehaviour
     }
 
     public void StartGame() {
-        SceneManager.LoadScene(1);
+        LoadingScreenManager.instance.LoadScene(SceneType.ComicScene);
     }
 }
