@@ -7,30 +7,43 @@ public class PokeableFruit : MonoBehaviour
     public FruitType fruitType;
 
     public float appearTime = 0.4f;
+
+    public float scaleAmount = 0.1f;
+    public float scaleSpeed;
+    public float timeOffset;
+
+    bool floating = false;
+
+    ParticleSystem particles;
     // Start is called before the first frame update
     void Start()
     {
-        
+        particles = GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(floating) {
+            transform.localScale = Vector3.one + 
+                (Mathf.Sin((timeOffset + Time.time) * scaleSpeed) * new Vector3(scaleAmount, scaleAmount, scaleAmount));
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Stick")) {
-            other.GetComponent<PokingStickController>().AttachFruit(transform);
-            /*transform.parent = other.transform;
-            Vector3 currentPosition = transform.localPosition;
-            currentPosition.x = 0;
-            transform.localPosition = currentPosition;*/
+            if (other.GetComponent<PokingStickController>().AttachFruit(transform))
+            {
+                transform.localScale = Vector3.one;
+                floating = false;
+                particles.Play();
+            }
         }
     }
 
     public void Appear(float delay = 0) {
         StartCoroutine(BobInFruit(delay));
+        timeOffset = Random.value;
     }
 
     IEnumerator BobInFruit(float delay = 0)
@@ -44,6 +57,7 @@ public class PokeableFruit : MonoBehaviour
             yield return null;
         }
         transform.localScale = Vector3.one;
+        floating = true;
     }
 
 }

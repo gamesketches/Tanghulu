@@ -75,7 +75,8 @@ public class PokingStickController : MonoBehaviour
         }
     }
 
-    public void AttachFruit(Transform newFruit) {
+    public bool AttachFruit(Transform newFruit) {
+        if (transform.childCount == maxFruits) return false;
         newFruit.parent = transform;
         while (transform.childCount > maxFruits)
         {
@@ -92,7 +93,7 @@ public class PokingStickController : MonoBehaviour
             pushDistance += childFruit.lossyScale.y;
             childFruit.localPosition = newFruitPosition;
         }
-
+        return true;
     }
 
     private float StickEnd(bool local = false) {

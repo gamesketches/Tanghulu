@@ -10,6 +10,7 @@ public class PotController : MonoBehaviour
 
     public float rotationSpeed;
     public float distanceBetweenFruits;
+    public int placementRetries;
 
     Vector3 lastPosition;
     [HideInInspector]
@@ -53,7 +54,7 @@ public class PotController : MonoBehaviour
 
     Vector3 FindNewFruitPos() {
         Vector3 newPos = transform.position + new Vector3(Random.Range(-1f, 1f) * potRadius, Random.Range(-1f, 1f) * potRadius, 0);
-        for(int i = 0; i < 10; i++) {
+        for(int i = 0; i < placementRetries; i++) {
             bool noCollisions = true;
             for(int j = 0; j < transform.childCount; j++) {
                 if(Vector3.Distance(newPos, transform.GetChild(j).position) < distanceBetweenFruits) {

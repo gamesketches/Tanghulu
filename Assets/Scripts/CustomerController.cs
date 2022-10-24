@@ -40,7 +40,7 @@ public class CustomerController : MonoBehaviour
         StartCoroutine(WalkOffScreen());
     }
 
-    private IEnumerator WalkOnScreen(Vector3 positionInLine)
+    private IEnumerator WalkOnScreen(Vector3 positionInLine, bool openBubble = true)
     {
         Vector3 startPos = transform.position;
         for(float t = 0; t <= walkOnTime; t += Time.deltaTime) {
@@ -49,11 +49,12 @@ public class CustomerController : MonoBehaviour
             transform.position = newPos;
             yield return null;
         }
-        StartCoroutine(OpenBubble());
+        if(openBubble) 
+            StartCoroutine(OpenBubble());
     }
 
     public void MoveToSpotInLine(Vector3 positionInLine) {
-        StartCoroutine(WalkOnScreen(positionInLine));
+        StartCoroutine(WalkOnScreen(positionInLine, false));
     }
 
     private IEnumerator OpenBubble() {
