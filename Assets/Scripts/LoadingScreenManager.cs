@@ -21,6 +21,10 @@ public class LoadingScreenManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         instance = this;
         curtainRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, -Screen.height, Screen.height);
+    }
+
+    void Start()
+    { 
         LoadScene(SceneType.TitleScreen, false);
     }
 
