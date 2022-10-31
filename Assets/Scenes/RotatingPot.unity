@@ -1836,6 +1836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stickLength: 2
   pokeDistance: 4
+  serveTime: 1
   aiming: 0
   poking: 0
   maxFruits: 4

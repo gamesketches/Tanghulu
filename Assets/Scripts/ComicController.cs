@@ -16,6 +16,17 @@ public class ComicController : MonoBehaviour
         StartCoroutine(PlayComic());
     }
 
+    void Update()
+    {
+        if (Input.touchCount > 0 || Input.GetMouseButtonDown(0))
+        {
+            foreach(ComicImage comicImage in comicImages) {
+                comicImage.image.enabled = true;
+            }
+            StopCoroutine(PlayComic());
+        }
+    }
+
     IEnumerator PlayComic() { 
         for(int i = 0; i < comicImages.Length; i++) {
             if (i == particleSystemFirePoint) fruitParticles.Play();

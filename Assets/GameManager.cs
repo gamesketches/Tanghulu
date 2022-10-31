@@ -69,16 +69,12 @@ public class GameManager : MonoBehaviour
         GenerateOrder();
     }
 
-    public void VerifyFruit(PokeableFruit[] pokedFruits) {
+    public CustomerController VerifyFruit(PokeableFruit[] pokedFruits) {
         FruitType[] fruitOnStick = new FruitType[orderSize];
         for(int i = 0; i < orderSize; i++) {
             fruitOnStick[i] = pokedFruits[i].fruitType;
         }
-        if(CustomerManager.instance.CustomerServed(fruitOnStick)) {
-            GenerateOrder();
-        } else {
-            Debug.Log("order invalid :(");
-        }
+        return CustomerManager.instance.SatisfiesCustomer(fruitOnStick);
     }
     
     void GenerateOrder() {

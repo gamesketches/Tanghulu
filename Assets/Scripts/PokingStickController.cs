@@ -6,6 +6,7 @@ public class PokingStickController : MonoBehaviour
 {
     public float stickLength;
     public float pokeDistance;
+    public float serveTime;
     public bool aiming;
     public bool poking;
     private Vector3 lastFingerPosition;
@@ -71,8 +72,26 @@ public class PokingStickController : MonoBehaviour
         transform.position = startPosition;
         poking = false;
         if(transform.childCount == maxFruits) {
-            GameManager.instance.VerifyFruit(gameObject.GetComponentsInChildren<PokeableFruit>());
+            CustomerController customer = GameManager.instance.VerifyFruit(gameObject.GetComponentsInChildren<PokeableFruit>());
+            if(customer != null) {
+                StartCoroutine(ServeCustomer(customer));
+            }
         }
+    }
+
+    private IEnumerator ServeCustomer(CustomerController customer) {
+        Vector3 targetPosition = customer.transform.position;
+        Vector3 startPosition = transform.position;
+
+        for(float t = 0; t < serveTime; t += Time.deltaTime) {
+            float proportion = Mathf.SmoothStep(0, 1, t / serveTime);
+            transform.position = Vector3.Lerp(startPosition, targetPosition, proportion);
+            yield return null;
+        }
+
+        CustomerManager.instance.ServeCustomer(customer, GetFruits());
+        transform.position = startPosition;
+
     }
 
     public bool AttachFruit(Transform newFruit) {
@@ -108,6 +127,17 @@ public class PokingStickController : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++) {
             Destroy(transform.GetChild(i).gameObject);
         }
+    }
+
+    public FruitType[] GetFruits() {
+        PokeableFruit[] fruits = gameObject.GetComponentsInChildren<PokeableFruit>();
+        FruitType[] fruitTypes = new FruitType[fruits.Length];
+
+        for(int i = 0; i < fruits.Length; i++) {
+            fruitTypes[i] = fruits[i].fruitType;
+        }
+
+        return fruitTypes;
     }
 
     private void OnEnable()

@@ -29,6 +29,33 @@ public class CustomerManager : MonoBehaviour
         numCustomers = 0;
     }
 
+    public CustomerController SatisfiesCustomer(FruitType[] curOrder)
+    {
+        for (int i = 0; i < activeCustomers.Count; i++)
+        {
+            CustomerController customer = activeCustomers[i];
+            if (!customer.gameObject.activeSelf) continue;
+            int score = customer.OrderSatisfied(curOrder);
+            if (score > 0)
+            {
+                return activeCustomers[i];
+            }
+        }
+        return null;
+    }
+
+    public void ServeCustomer(CustomerController customer, FruitType[] curOrder) {
+        int customerIndex = activeCustomers.IndexOf(customer);
+        int score = customer.OrderSatisfied(curOrder);
+        customer.Leave();
+        activeCustomers.RemoveAt(customerIndex);
+        for(int i = customerIndex; i < activeCustomers.Count; i++) {
+            activeCustomers[i].MoveToSpotInLine(GetCustomerPhysicalPosition(i));
+        }
+        ScorePoints(score);
+        numCustomers--;
+    }
+
     public bool CustomerServed(FruitType[] curOrder) { 
         for(int i = 0; i < activeCustomers.Count; i++) {
             CustomerController customer = activeCustomers[i];
