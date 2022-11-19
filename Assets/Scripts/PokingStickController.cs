@@ -58,12 +58,13 @@ public class PokingStickController : MonoBehaviour
 
     public void PokeStick() {
         aiming = false;
-        if (!poking) {
+        if (!poking && GameManager.gamePlaying) {
             StartCoroutine(StickPokingAnimation());
         }
     }
 
     private IEnumerator StickPokingAnimation() {
+        transform.GetChild(0).gameObject.SetActive(false);
         poking = true;
         Vector3 startPosition = transform.position;
         Vector3 endPosition = startPosition + new Vector3(transform.up.x * pokeDistance, transform.up.y * pokeDistance,
@@ -76,11 +77,17 @@ public class PokingStickController : MonoBehaviour
         }
         transform.position = startPosition;
         poking = false;
-        if(transform.childCount == maxFruits) {
+        if (transform.childCount == maxFruits + 1)
+        {
             CustomerController customer = GameManager.instance.VerifyFruit(gameObject.GetComponentsInChildren<PokeableFruit>());
-            if(customer != null) {
+            if (customer != null)
+            {
                 StartCoroutine(ServeCustomer(customer));
             }
+        }
+        else
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
         }
     }
 
@@ -93,7 +100,7 @@ public class PokingStickController : MonoBehaviour
         }
         float pushDistance = 0.1f;
         fruitTransform.parent = transform;
-        for (int i = transform.childCount - 1; i > -1; i--) {
+        for (int i = transform.childCount - 1; i > 0; i--) {
             Transform childFruit = transform.GetChild(i);
             Vector3 newFruitPosition = childFruit.localPosition;
             newFruitPosition.y = (StickEnd(true) - pushDistance);
@@ -132,10 +139,11 @@ public class PokingStickController : MonoBehaviour
         CustomerManager.instance.ServeCustomer(customer, GetFruits());
         transform.position = startPosition;
         transform.localScale = Vector3.one;
+        transform.GetChild(0).gameObject.SetActive(true);
     }
 
     public bool AttachFruit(Transform newFruit) {
-        if (transform.childCount == maxFruits) return false;
+        if (transform.childCount == maxFruits + 1) return false;
         //newFruit.parent = transform;
         StartCoroutine(PierceFruit(0.1f, newFruit));
         return true;
@@ -150,7 +158,7 @@ public class PokingStickController : MonoBehaviour
     }
 
     private void ClearStick(int ignore) {
-        for (int i = 0; i < transform.childCount; i++) {
+        for (int i = 1; i < transform.childCount; i++) {
             Destroy(transform.GetChild(i).gameObject);
         }
     }
