@@ -3,10 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class TitleScreenController : MonoBehaviour
 {
+    bool gameStarted;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameStarted = false;
     }
 
     // Update is called once per frame
@@ -16,6 +17,10 @@ public class TitleScreenController : MonoBehaviour
     }
 
     public void StartGame() {
-        LoadingScreenManager.instance.LoadScene(SceneType.ComicScene);
+        if (!gameStarted)
+        {
+            gameStarted = true;
+            LoadingScreenManager.instance.LoadScene(SceneType.ComicScene);
+        }
     }
 }

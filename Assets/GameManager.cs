@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = 60;
         instance = this;
         score = 0;
+        ScaleCamera();
         StartCoroutine(BeginGameSequence());
     }
 
@@ -107,6 +108,14 @@ public class GameManager : MonoBehaviour
         resultScreen.CountUpScore(score);
     }
          
+    private void ScaleCamera() {
+        float inGameSize = 5.5f;
+        float unitsPerPixel = inGameSize / Screen.width;
+
+        float desiredHalfHeight = 0.5f * unitsPerPixel * Screen.height;
+
+        Camera.main.orthographicSize = desiredHalfHeight;
+    }
 
     private void OnEnable() {
         CustomerManager.ScorePoints += AddPoints;

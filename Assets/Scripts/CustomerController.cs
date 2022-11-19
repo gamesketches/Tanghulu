@@ -43,6 +43,7 @@ public class CustomerController : MonoBehaviour
     private IEnumerator WalkOnScreen(Vector3 positionInLine, bool openBubble = true)
     {
         Vector3 startPos = transform.position;
+        StartCoroutine(SFXManager.instance.PlayFootstep(walkOnTime));
         for(float t = 0; t <= walkOnTime; t += Time.deltaTime) {
             Vector3 newPos = Vector3.Lerp(startPos, positionInLine, t / walkOnTime);
             newPos.y += Mathf.Abs(Mathf.Sin(Time.time * bounceSpeed) * bounceRange);
@@ -77,6 +78,7 @@ public class CustomerController : MonoBehaviour
         Vector3 startPos = transform.position;
         Vector3 endPos = transform.position - new Vector3(Camera.main.orthographicSize, 0, 0);
         customerBubble.gameObject.SetActive(false);
+        StartCoroutine(SFXManager.instance.PlayFootstep(walkOnTime / 2));
         for(float t = 0; t <= walkOnTime; t += Time.deltaTime) {
             Vector3 newPos = Vector3.Lerp(startPos, endPos, t / walkOnTime);
             newPos.y += Mathf.Sin(Time.time * bounceSpeed) * bounceRange;

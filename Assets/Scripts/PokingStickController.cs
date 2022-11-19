@@ -7,6 +7,7 @@ public class PokingStickController : MonoBehaviour
     public float stickLength;
     public float pokeDistance;
     public float serveTime;
+    public float serveEndingScale;
     public bool aiming;
     public bool poking;
     private Vector3 lastFingerPosition;
@@ -82,16 +83,18 @@ public class PokingStickController : MonoBehaviour
     private IEnumerator ServeCustomer(CustomerController customer) {
         Vector3 targetPosition = customer.transform.position;
         Vector3 startPosition = transform.position;
+        Vector3 targetScale = new Vector3(serveEndingScale, serveEndingScale, serveEndingScale);
 
         for(float t = 0; t < serveTime; t += Time.deltaTime) {
             float proportion = Mathf.SmoothStep(0, 1, t / serveTime);
             transform.position = Vector3.Lerp(startPosition, targetPosition, proportion);
+            transform.localScale = Vector3.Lerp(Vector3.one, targetScale, proportion);
             yield return null;
         }
 
         CustomerManager.instance.ServeCustomer(customer, GetFruits());
         transform.position = startPosition;
-
+        transform.localScale = Vector3.one;
     }
 
     public bool AttachFruit(Transform newFruit) {

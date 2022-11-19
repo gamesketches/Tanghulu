@@ -47,6 +47,7 @@ public class CustomerManager : MonoBehaviour
     public void ServeCustomer(CustomerController customer, FruitType[] curOrder) {
         int customerIndex = activeCustomers.IndexOf(customer);
         int score = customer.OrderSatisfied(curOrder);
+        SFXManager.instance.PlaySoundEffect(SoundEffectType.Success);
         customer.Leave();
         activeCustomers.RemoveAt(customerIndex);
         for(int i = customerIndex; i < activeCustomers.Count; i++) {

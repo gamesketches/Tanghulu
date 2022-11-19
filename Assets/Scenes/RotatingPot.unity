@@ -1837,6 +1837,7 @@ MonoBehaviour:
   stickLength: 2
   pokeDistance: 4
   serveTime: 1
+  serveEndingScale: 0.7
   aiming: 0
   poking: 0
   maxFruits: 4

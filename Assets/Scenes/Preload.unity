@@ -237,6 +237,61 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &221377355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 221377357}
+  - component: {fileID: 221377356}
+  m_Layer: 0
+  m_Name: SFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &221377356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221377355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2ebf3385b29434db042c755fd3ea95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokeClips:
+  - {fileID: 8300000, guid: f7c566b97be404d9eb969352e1de2174, type: 3}
+  - {fileID: 8300000, guid: 015d3bb009fa84308aaeae0fc2d4a78d, type: 3}
+  - {fileID: 8300000, guid: cfb865d89be644bf0bfb9a79d8c6e339, type: 3}
+  - {fileID: 8300000, guid: bc92f4c3e19f140b9b258ab4f96a0307, type: 3}
+  - {fileID: 8300000, guid: ea1ba261d74e245e387969a7ff7f35c8, type: 3}
+  - {fileID: 8300000, guid: d8bf034cbc5ef4673b2ab0850072818a, type: 3}
+  - {fileID: 8300000, guid: cfd533a70d4974cd8a90ff10f50cb141, type: 3}
+  - {fileID: 8300000, guid: 508dbff3db78445719c3bc63dd0720fd, type: 3}
+  - {fileID: 8300000, guid: 8443edd73407b4bfb86cdf927f6cf165, type: 3}
+  successClip: {fileID: 8300000, guid: e5f06aa2461774a74a26eee0be8907bc, type: 3}
+  walkingClip: {fileID: 8300000, guid: 7744d692e3c1c472e84f42ae10560262, type: 3}
+--- !u!4 &221377357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221377355}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 227.09627, y: 1641.217, z: -1671.544}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &897086890
 GameObject:
   m_ObjectHideFlags: 0

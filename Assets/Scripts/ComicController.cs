@@ -8,12 +8,15 @@ public class ComicController : MonoBehaviour
     public ComicImage[] comicImages;
     public int particleSystemFirePoint;
 
+    bool gameStarted;
+
     public ParticleSystem fruitParticles;
     // Start is called before the first frame update
     void Start()
     {
         foreach (ComicImage panel in comicImages) panel.image.enabled = false;
         StartCoroutine(PlayComic());
+        gameStarted = false;
     }
 
     void Update()
@@ -36,8 +39,12 @@ public class ComicController : MonoBehaviour
     }
 
     public void LoadGameplayScene() {
-        LoadingScreenManager.instance.LoadScene(SceneType.RotatingPot);
+        if (!gameStarted)
+        {
+            LoadingScreenManager.instance.LoadScene(SceneType.RotatingPot);
+            gameStarted = true;
         }
+    }
 }
 
 [Serializable]
