@@ -50,6 +50,7 @@ public class PokingStickController : MonoBehaviour
     }
 
     public void UpdateAim(Vector3 newFingerPosition) {
+        if (poking) return;
         float touchDistance = newFingerPosition.x - lastFingerPosition.x;
         lastFingerPosition = newFingerPosition;
         rotationProportion = Mathf.Clamp(rotationProportion + touchDistance, 0, 1);
