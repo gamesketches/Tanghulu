@@ -106,6 +106,7 @@ public class GameManager : MonoBehaviour
         EndGame();
         gamePlaying = false;
         resultScreen.CountUpScore(score);
+        SaveDataManager.instance.UpdatePlayerCoins(score);
     }
          
     private void ScaleCamera() {
