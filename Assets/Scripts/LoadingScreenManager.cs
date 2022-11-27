@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public enum SceneType { Preload, TitleScreen, ComicScene, RotatingPot};
+public enum SceneType { Preload, TitleScreen, ComicScene, RotatingPot, StoreScreen};
 public class LoadingScreenManager : MonoBehaviour
 {
     public static LoadingScreenManager instance;
@@ -15,12 +15,15 @@ public class LoadingScreenManager : MonoBehaviour
     public float curtainMoveTime;
     public float curtainHoldTime;
 
+    bool loading;
+
     // Start is called before the first frame update
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
         instance = this;
         curtainRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, -Screen.height, Screen.height);
+        loading = false;
     }
 
     void Start()
@@ -29,7 +32,11 @@ public class LoadingScreenManager : MonoBehaviour
     }
 
     public void LoadScene(SceneType screenType, bool curtainDown = true, bool curtainUp = true) {
-        StartCoroutine(LoadScreenWithCurtain(screenType, curtainDown, curtainUp));
+        if (!loading)
+        {
+            loading = true;
+            StartCoroutine(LoadScreenWithCurtain(screenType, curtainDown, curtainUp));
+        }
     }
 
     private IEnumerator LoadScreenWithCurtain(SceneType screenType, bool curtainDown = true, bool curtainUp = true) {
@@ -52,6 +59,7 @@ public class LoadingScreenManager : MonoBehaviour
         if (curtainUp) yield return MoveCurtain(false);
         
         canvas.enabled = false;
+        loading = false;
     }
 
     private IEnumerator MoveCurtain(bool curtainDown) {
