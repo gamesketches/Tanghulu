@@ -7,6 +7,7 @@ public class PotController : MonoBehaviour
     public GameObject[] fruitPrefabs;
     public int numFruits;
     public float potRadius;
+    private List<PokeableFruit> fruitBag;
 
     public float rotationSpeed;
     public float distanceBetweenFruits;
@@ -20,6 +21,7 @@ public class PotController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FillFruitBag();
         FillPot();
         lastPosition = Vector3.forward;
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -38,12 +40,16 @@ public class PotController : MonoBehaviour
         }
     }
 
-    private void AddFruit(int delayMultiplier = 0) { 
-        int randomIndex = Random.Range(0, fruitPrefabs.Length);
-        PokeableFruit newFruit = Instantiate(fruitPrefabs[randomIndex], transform).GetComponent<PokeableFruit>();
+    private void AddFruit(int delayMultiplier = 0) {
+        int randomIndex = Random.Range(0, fruitBag.Count);
+        PokeableFruit newFruit = fruitBag[randomIndex];
+        newFruit.gameObject.SetActive(true);
+        newFruit.transform.parent = transform;
+        fruitBag.RemoveAt(randomIndex);
         newFruit.transform.position = FindNewFruitPos();
         newFruit.transform.Rotate(0, 0, Random.Range(-180f, 180f));
         newFruit.Appear(delayMultiplier * 0.1f);
+        if (fruitBag.Count == 0) FillFruitBag();
     }
 
     private void AddFruits(int ignore) {
@@ -107,6 +113,15 @@ public class PotController : MonoBehaviour
             newOrder[i] = randomChild.GetComponent<PokeableFruit>().fruitType;
         }
         return newOrder;
+    }
+
+    private void FillFruitBag() {
+        fruitBag = new List<PokeableFruit>();
+        foreach (GameObject obj in fruitPrefabs) {
+            PokeableFruit newFruit = Instantiate(obj).GetComponent<PokeableFruit>();
+            fruitBag.Add(newFruit);
+            newFruit.gameObject.SetActive(false);
+        }
     }
 
     private void OnEnable() {
