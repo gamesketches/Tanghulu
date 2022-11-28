@@ -1,13 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CustomerManager : MonoBehaviour
 {
     List<CustomerController> customerPool;
     List<CustomerController> activeCustomers;
 
+    [Header("Point Text Stuff")]
+    public TextMeshProUGUI pointText;
+    public float pointFloatTime;
+    public float pointFloatDistance;
 
+    [Header("Customer stuff")]
     public GameObject customerPrefab;
     public Vector3 firstCustomerPosition;
     public float customerOffset;
@@ -27,6 +33,7 @@ public class CustomerManager : MonoBehaviour
         customerPool = new List<CustomerController>();
         activeCustomers = new List<CustomerController>();
         numCustomers = 0;
+        pointText.enabled = false;
     }
 
     public CustomerController SatisfiesCustomer(FruitType[] curOrder)
@@ -47,6 +54,7 @@ public class CustomerManager : MonoBehaviour
     public void ServeCustomer(CustomerController customer, FruitType[] curOrder) {
         int customerIndex = activeCustomers.IndexOf(customer);
         int score = customer.OrderSatisfied(curOrder);
+        StartCoroutine(ShowPointsScored(customer.transform.position, score));
         SFXManager.instance.PlaySoundEffect(SoundEffectType.Success);
         customer.Leave();
         activeCustomers.RemoveAt(customerIndex);
@@ -55,6 +63,17 @@ public class CustomerManager : MonoBehaviour
         }
         ScorePoints(score);
         numCustomers--;
+    }
+
+    IEnumerator ShowPointsScored(Vector3 startPoint, int pointsScored) {
+        pointText.transform.position = startPoint;
+        pointText.text = pointsScored.ToString();
+        pointText.enabled = true;
+        for(float t = 0; t < 1; t += Time.deltaTime) {
+            pointText.transform.position = Vector3.Lerp(startPoint, startPoint + Vector3.up, t);
+            yield return null;
+        }
+        pointText.enabled = false;
     }
 
     public bool CustomerServed(FruitType[] curOrder) { 
