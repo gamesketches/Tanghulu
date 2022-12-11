@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     // Game tuning stuff
     public float gameTime;
     private float gameTimer;
+    public int sticksPerGame;
+    public static int sticksRemaining;
 
     public float baseTimeBetweenCustomers;
     float customerTimer;
@@ -34,14 +36,19 @@ public class GameManager : MonoBehaviour
     public PotController potController;
 
     int score;
+    int customersGenerated;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    void Awake() { 
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 60;
         instance = this;
         score = 0;
+        customersGenerated = 0;
+        sticksRemaining = sticksPerGame;
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
         ScaleCamera();
         StartCoroutine(BeginGameSequence());
     }
@@ -51,26 +58,26 @@ public class GameManager : MonoBehaviour
     {
         if(gamePlaying) {
             customerTimer -= Time.deltaTime;
-            gameTimer -= Time.deltaTime;
-            if (customerTimer <= 0)
+            if (customerTimer <= 0 && customersGenerated < sticksPerGame)
             {
                 GenerateOrder();
             }
-            else clockController.UpdateClockProportion(gameTimer / gameTime);
-            if(gameTimer < 0) {
+            //else clockController.UpdateClockProportion(gameTimer / gameTime);
+            /*if(gameTimer < 0) {
                 GameOver();
-            }
+            }*/
             }
     }
 
     private IEnumerator BeginGameSequence() {
         yield return StartCoroutine(gameStartImage.DoRoundStart());
-        gameTimer = gameTime;
+        //gameTimer = gameTime;
         gamePlaying = true;
         GenerateOrder();
     }
 
     public CustomerController VerifyFruit(PokeableFruit[] pokedFruits) {
+        sticksRemaining--;
         FruitType[] fruitOnStick = new FruitType[orderSize];
         for(int i = 0; i < orderSize; i++) {
             fruitOnStick[i] = pokedFruits[i].fruitType;
@@ -82,11 +89,13 @@ public class GameManager : MonoBehaviour
         FruitType[] newOrder = potController.GetOrder();
         CustomerManager.instance.MakeNewCustomer(newOrder);
         customerTimer = baseTimeBetweenCustomers;
+        customersGenerated++;
     }
 
     void AddPoints(int pointsToAdd) {
         score += pointsToAdd;
         StartCoroutine(CountUpPoints());
+        if (sticksRemaining == 0) GameOver();
     }
 
     IEnumerator CountUpPoints() {

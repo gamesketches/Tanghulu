@@ -8,6 +8,7 @@ public class PokingStickController : MonoBehaviour
     public float pokeDistance;
     public float serveTime;
     public float serveEndingScale;
+    public float stickTouchHeight;
     public bool aiming;
     public bool poking;
     private Vector3 lastFingerPosition;
@@ -22,6 +23,7 @@ public class PokingStickController : MonoBehaviour
     public AnimationCurve pokingCurve;
     public float fruitSlidingTime;
 
+    public StickCounter stickCounter;
     private IEnumerator pokingCoroutine;
     // Start is called before the first frame update
     void Start()
@@ -41,7 +43,7 @@ public class PokingStickController : MonoBehaviour
 
     public bool CheckTouchPosition(Vector3 position)
     {
-        return position.y < StickEnd(false);
+        return position.y < stickTouchHeight;
     }
 
     public void BeginAiming(Vector3 fingerStartPosition) {
@@ -137,10 +139,14 @@ public class PokingStickController : MonoBehaviour
             yield return null;
         }
 
+        stickCounter.RemoveStick();
         CustomerManager.instance.ServeCustomer(customer, GetFruits());
-        transform.position = startPosition;
-        transform.localScale = Vector3.one;
-        transform.GetChild(0).gameObject.SetActive(true);
+        if (GameManager.sticksRemaining > 0)
+        {
+            transform.position = startPosition;
+            transform.localScale = Vector3.one;
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
 
     public bool AttachFruit(Transform newFruit) {

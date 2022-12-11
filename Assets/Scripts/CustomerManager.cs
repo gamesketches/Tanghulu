@@ -38,17 +38,22 @@ public class CustomerManager : MonoBehaviour
 
     public CustomerController SatisfiesCustomer(FruitType[] curOrder)
     {
+        int highestScore = -1;
+        int highestScoringCustomer = -1;
         for (int i = 0; i < activeCustomers.Count; i++)
         {
             CustomerController customer = activeCustomers[i];
             if (!customer.gameObject.activeSelf) continue;
             int score = customer.OrderSatisfied(curOrder);
-            if (score > 0)
+            if (score > highestScore)
             {
-                return activeCustomers[i];
+                highestScore = score;
+                highestScoringCustomer = i;
+                //return activeCustomers[i];
             }
         }
-        return null;
+        if (highestScoringCustomer > -1) return activeCustomers[highestScoringCustomer];
+        else return null;
     }
 
     public void ServeCustomer(CustomerController customer, FruitType[] curOrder) {
