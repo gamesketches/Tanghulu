@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
@@ -16,6 +17,21 @@ public class SaveDataManager : MonoBehaviour
         playerData.numCoins += coins;
         if (playerData.numCoins < 0) playerData.numCoins = 0;
         SaveSaveData();
+    }
+
+    public int GetPlayerCoins() {
+        return playerData.numCoins;
+    }
+
+    public void UpdateOwnedColorSchemes(int newColorScheme) {
+        List<int> previouslyOwnedPalettes = new List<int>(playerData.unlockedPalettes);
+        previouslyOwnedPalettes.Add(newColorScheme);
+        playerData.unlockedPalettes = previouslyOwnedPalettes.ToArray();
+        SaveSaveData();
+    }
+
+    public int GetPlayerPreferredColorScheme() {
+        return playerData.preferredColorScheme;
     }
 
     void SaveSaveData() {
@@ -54,8 +70,12 @@ public class SaveDataManager : MonoBehaviour
 [System.Serializable]
 public class PlayerData {
     public int numCoins;
+    public int preferredColorScheme;
+    public int[] unlockedPalettes;
 
     public PlayerData() {
         numCoins = 0;
+        preferredColorScheme = 0;
+        unlockedPalettes = new int[] { 0 };
     }
 }

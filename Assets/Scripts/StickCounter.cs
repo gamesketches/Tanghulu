@@ -20,7 +20,7 @@ public class StickCounter : MonoBehaviour
     }
 
     public void RemoveStick() {
-        // Note to self: there's some complicated off by one stuff here
+        // Note to self: there's some complicated off by one stuff here in terms of when the game manager removes the stick
         transform.GetChild(GameManager.sticksRemaining).GetComponent<Image>().enabled = false;
     }
 
