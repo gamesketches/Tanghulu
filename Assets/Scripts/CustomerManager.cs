@@ -18,7 +18,7 @@ public class CustomerManager : MonoBehaviour
     public Vector3 firstCustomerPosition;
     public float customerOffset;
     
-    public Sprite[] customerSprites;
+    public CustomerSpritePack[] customerSprites;
 
     public static CustomerManager instance;
     public delegate void PointsScored(int points);
@@ -44,7 +44,7 @@ public class CustomerManager : MonoBehaviour
         {
             CustomerController customer = activeCustomers[i];
             if (!customer.gameObject.activeSelf) continue;
-            int score = customer.OrderSatisfied(curOrder);
+            int score = customer.CalculateSatisfaction(curOrder);
             if (score > highestScore)
             {
                 highestScore = score;
@@ -58,7 +58,8 @@ public class CustomerManager : MonoBehaviour
 
     public void ServeCustomer(CustomerController customer, FruitType[] curOrder) {
         int customerIndex = activeCustomers.IndexOf(customer);
-        int score = customer.OrderSatisfied(curOrder);
+        int score = customer.CalculateSatisfaction(curOrder);
+        customer.UpdateSprite(score);
         StartCoroutine(ShowPointsScored(customer.transform.position, score));
         SFXManager.instance.PlaySoundEffect(SoundEffectType.Success);
         customer.Leave();
@@ -85,7 +86,7 @@ public class CustomerManager : MonoBehaviour
         for(int i = 0; i < activeCustomers.Count; i++) {
             CustomerController customer = activeCustomers[i];
             if (!customer.gameObject.activeSelf) continue;
-            int score = customer.OrderSatisfied(curOrder);
+            int score = customer.CalculateSatisfaction(curOrder);
             if(score > 0) {
                 customer.Leave();
                 activeCustomers.RemoveAt(i);
@@ -107,7 +108,7 @@ public class CustomerManager : MonoBehaviour
         activeCustomers.Add(newCustomer);
     }
 
-    Sprite GetCustomerSprite() {
+    CustomerSpritePack GetCustomerSprite() {
         return customerSprites[Random.Range(0, customerSprites.Length)];
     }
 

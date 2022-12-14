@@ -1256,16 +1256,16 @@ MonoBehaviour:
   firstCustomerPosition: {x: -2, y: 1.7, z: 0}
   customerOffset: 2
   customerSprites:
-  - {fileID: 4254994746908264793, guid: 4d979ae883358494c96a828deba96ca1, type: 3}
-  - {fileID: -8957823173422029907, guid: 4d979ae883358494c96a828deba96ca1, type: 3}
-  - {fileID: -2666705911920010413, guid: 4d979ae883358494c96a828deba96ca1, type: 3}
-  - {fileID: -6834272413800167586, guid: 4d979ae883358494c96a828deba96ca1, type: 3}
-  - {fileID: 6911158398033672493, guid: 4d979ae883358494c96a828deba96ca1, type: 3}
-  - {fileID: -5985663410534813282, guid: 4d979ae883358494c96a828deba96ca1, type: 3}
-  - {fileID: 4820120139282011669, guid: 4d979ae883358494c96a828deba96ca1, type: 3}
-  - {fileID: 1986475423377746558, guid: 4d979ae883358494c96a828deba96ca1, type: 3}
-  - {fileID: -5144648261289185322, guid: 4d979ae883358494c96a828deba96ca1, type: 3}
-  - {fileID: -5450669063227653842, guid: 4d979ae883358494c96a828deba96ca1, type: 3}
+  - {fileID: 11400000, guid: 0f1a7587e2d6c4a1d9366b738092d2a9, type: 2}
+  - {fileID: 11400000, guid: 14f7972751f3c41c5848efb8d7de26b1, type: 2}
+  - {fileID: 11400000, guid: 4dde5a468383647d9b48ee8804ef84f0, type: 2}
+  - {fileID: 11400000, guid: 6255ce18f3161455eb4c938fbce9ac28, type: 2}
+  - {fileID: 11400000, guid: 6a277424390004e4380e33038ac52b0f, type: 2}
+  - {fileID: 11400000, guid: 8464777a391d848d5a115ff86475b7d3, type: 2}
+  - {fileID: 11400000, guid: 4d686fc48cdc04909874d167ffcbe57b, type: 2}
+  - {fileID: 11400000, guid: 2f638738da7c442e6b2a4c8ab7524013, type: 2}
+  - {fileID: 11400000, guid: c31b6b3bceefa4813bf86f21b7563100, type: 2}
+  - {fileID: 11400000, guid: eab1e88a0c9a340658ebbcf850d41ee5, type: 2}
 --- !u!4 &1106014420
 Transform:
   m_ObjectHideFlags: 0

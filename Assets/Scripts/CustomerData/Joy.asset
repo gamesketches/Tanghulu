@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b92bf45b71e24ecba192759ee9d2177, type: 3}
+  m_Name: Joy
+  m_EditorClassIdentifier: 
+  excitedSprite: {fileID: -6781490208328415575, guid: 9824e4c5c226d4be29e77b0205c79f14,
+    type: 3}
+  happySprite: {fileID: -3109077305928578903, guid: 9824e4c5c226d4be29e77b0205c79f14,
+    type: 3}
+  normalSprite: {fileID: 4820120139282011669, guid: 4d979ae883358494c96a828deba96ca1,
+    type: 3}
+  sadSprite: {fileID: 1841514015165474942, guid: 9824e4c5c226d4be29e77b0205c79f14,
+    type: 3}

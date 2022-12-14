@@ -7,6 +7,7 @@ public class CustomerController : MonoBehaviour
     public OrderBubble customerBubble;
 
     FruitType[] order;
+    CustomerSpritePack spritePack;
     SpriteRenderer spriteRenderer;
 
     [Header("Walking on tuning vals")]
@@ -29,11 +30,12 @@ public class CustomerController : MonoBehaviour
         
     }
 
-    public void Initialize(FruitType[] customerOrder, Sprite customerSprite, Vector3 positionInLine) {
+    public void Initialize(FruitType[] customerOrder, CustomerSpritePack customerSprites, Vector3 positionInLine) {
         customerBubble.SetFruits(customerOrder);
         order = customerOrder;
         StartCoroutine(WalkOnScreen(positionInLine));
-        spriteRenderer.sprite = customerSprite;
+        spritePack = customerSprites;
+        spriteRenderer.sprite = customerSprites.normalSprite;
     }
 
     public void Leave() {
@@ -88,8 +90,20 @@ public class CustomerController : MonoBehaviour
         transform.position = transform.position + new Vector3(Camera.main.orthographicSize * 3, 0, 0);
         gameObject.SetActive(false);
     }
+
+    public void UpdateSprite(int score) { 
+        if(score > 6) {
+            spriteRenderer.sprite = spritePack.excitedSprite;
+        } else if(score > 4) {
+            spriteRenderer.sprite = spritePack.happySprite;
+        } else if(score > 2) {
+            spriteRenderer.sprite = spritePack.normalSprite;
+        } else {
+            spriteRenderer.sprite = spritePack.sadSprite;
+        }
+    }
     
-    public int OrderSatisfied(FruitType[] preparedOrder) {
+    public int CalculateSatisfaction(FruitType[] preparedOrder) {
         int score = 0;
         List<FruitType> requestedOrder = new List<FruitType>(order);
         for(int i = 0; i < GameManager.orderSize; i++) {
@@ -104,6 +118,7 @@ public class CustomerController : MonoBehaviour
                 Debug.Log("One fruit is messed up");
             }
         }
+        
         return score;
     }
 
