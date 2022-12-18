@@ -44,6 +44,9 @@ TextureImporter:
   - first:
       213: -1071777963536759667
     second: theme_assets_13
+  - first:
+      213: -2489834569576086134
+    second: theme_assets_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -429,6 +432,27 @@ TextureImporter:
       name: theme_assets_13
       rect:
         serializedVersion: 2
+        x: 45
+        y: 1776
+        width: 91
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84cc45ee974021f0800000000000000
+      internalID: -1071777963536759667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theme_assets_14
+      rect:
+        serializedVersion: 2
         x: 3555
         y: 1799
         width: 479
@@ -440,8 +464,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d84cc45ee974021f0800000000000000
-      internalID: -1071777963536759667
+      spriteID: a850ee296a4527dd0800000000000000
+      internalID: -2489834569576086134
       vertices: []
       indices: 
       edges: []

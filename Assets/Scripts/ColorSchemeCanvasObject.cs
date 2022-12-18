@@ -34,6 +34,9 @@ public class ColorSchemeCanvasObject : MonoBehaviour
                 Debug.LogWarning("Canvas object set to pot top, mistake?");
                 coloredObject.sprite = curColorScheme.potTop;
                 break;
+            case ColorSchemeObject.MainColor:
+                coloredObject.sprite = curColorScheme.mainColorSprite;
+                break;
         }
     }
 }

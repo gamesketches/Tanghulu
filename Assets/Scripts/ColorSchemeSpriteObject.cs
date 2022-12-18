@@ -31,6 +31,9 @@ public class ColorSchemeSpriteObject : MonoBehaviour
             case ColorSchemeObject.PotTop:
                 coloredObject.sprite = curColorScheme.potTop;
                 break;
+            case ColorSchemeObject.MainColor:
+                coloredObject.sprite = curColorScheme.mainColorSprite;
+                break;
         }
     }
 

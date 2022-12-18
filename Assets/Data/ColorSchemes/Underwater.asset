@@ -20,3 +20,5 @@ MonoBehaviour:
   potTop: {fileID: -1523056884686397683, guid: a01bb956b745d425e95bfec6d54b74e0, type: 3}
   potBottom: {fileID: 8621030546158270299, guid: a01bb956b745d425e95bfec6d54b74e0,
     type: 3}
+  mainColorSprite: {fileID: -1071777963536759667, guid: a01bb956b745d425e95bfec6d54b74e0,
+    type: 3}
