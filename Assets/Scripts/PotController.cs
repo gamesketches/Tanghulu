@@ -52,6 +52,12 @@ public class PotController : MonoBehaviour
         if (fruitBag.Count == 0) FillFruitBag();
     }
 
+    private void AddFruits() {
+        for (int i = transform.childCount; i < numFruits; i++) {
+            AddFruit(i);
+        }
+    }
+
     private void AddFruits(int ignore) {
         for(int i = transform.childCount; i < numFruits; i++) {
             AddFruit(i);
@@ -126,9 +132,11 @@ public class PotController : MonoBehaviour
 
     private void OnEnable() {
         CustomerManager.ScorePoints += AddFruits;
+        PokingStickController.StickFinishedPoking += AddFruits;
     }
 
     private void OnDisable() {
         CustomerManager.ScorePoints -= AddFruits; 
+        PokingStickController.StickFinishedPoking -= AddFruits;
     }
 }

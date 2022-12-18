@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ab3273001d448b8a3a9cf179736995, type: 3}
+  m_Name: Default
+  m_EditorClassIdentifier: 
+  banner: {fileID: -5925636670622259787, guid: a01bb956b745d425e95bfec6d54b74e0, type: 3}
+  background: {fileID: 6348842829084591218, guid: a01bb956b745d425e95bfec6d54b74e0,
+    type: 3}
+  tableSprite: {fileID: 6032927595609670785, guid: a01bb956b745d425e95bfec6d54b74e0,
+    type: 3}
+  potTop: {fileID: 3598769467827381985, guid: a01bb956b745d425e95bfec6d54b74e0, type: 3}
+  potBottom: {fileID: -6249295469806484922, guid: a01bb956b745d425e95bfec6d54b74e0,
+    type: 3}

@@ -7,6 +7,7 @@ public class SaveDataManager : MonoBehaviour
 {
     public static SaveDataManager instance;
     PlayerData playerData;
+
     void Awake()
     {
         instance = this;
@@ -16,7 +17,7 @@ public class SaveDataManager : MonoBehaviour
     public void UpdatePlayerCoins(int coins) {
         playerData.numCoins += coins;
         if (playerData.numCoins < 0) playerData.numCoins = 0;
-        SaveSaveData();
+        SavePlayerData();
     }
 
     public int GetPlayerCoins() {
@@ -27,14 +28,19 @@ public class SaveDataManager : MonoBehaviour
         List<int> previouslyOwnedPalettes = new List<int>(playerData.unlockedPalettes);
         previouslyOwnedPalettes.Add(newColorScheme);
         playerData.unlockedPalettes = previouslyOwnedPalettes.ToArray();
-        SaveSaveData();
+        SavePlayerData();
     }
 
     public int GetPlayerPreferredColorScheme() {
         return playerData.preferredColorScheme;
     }
 
-    void SaveSaveData() {
+    public void SetPlayerPreferredColorScheme(int newColorScheme) {
+        playerData.preferredColorScheme = newColorScheme;
+        SavePlayerData();
+    }
+
+    void SavePlayerData() {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/playerData.gd");
         bf.Serialize(file, playerData);
@@ -59,11 +65,11 @@ public class SaveDataManager : MonoBehaviour
 
     private void OnApplicationPause(bool pause)
     {
-        if (pause) SaveSaveData();
+        if (pause) SavePlayerData();
     }
 
     private void OnApplicationQuit() {
-        SaveSaveData();
+        SavePlayerData();
     }
 }
 

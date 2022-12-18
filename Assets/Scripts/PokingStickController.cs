@@ -25,6 +25,10 @@ public class PokingStickController : MonoBehaviour
 
     public StickCounter stickCounter;
     private IEnumerator pokingCoroutine;
+
+    public delegate void StickPoked();
+    public static event StickPoked StickFinishedPoking;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -92,6 +96,7 @@ public class PokingStickController : MonoBehaviour
         {
             transform.GetChild(0).gameObject.SetActive(true);
         }
+        StickFinishedPoking();
     }
 
     private IEnumerator PierceFruit(float duration, Transform fruitTransform)
@@ -146,6 +151,9 @@ public class PokingStickController : MonoBehaviour
             transform.position = startPosition;
             transform.localScale = Vector3.one;
             transform.GetChild(0).gameObject.SetActive(true);
+        } else
+        {
+            transform.position = new Vector3(1000, 0);
         }
     }
 
