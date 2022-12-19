@@ -11,9 +11,14 @@ public class SaveDataManager : MonoBehaviour
     void Awake()
     {
         instance = this;
+        MakeCleanPlayerData();
         LoadSaveData();
     }
 
+    /// <summary>
+    /// Changes number of coins player has by value
+    /// </summary>
+    /// <param name="coins">Amount to be added to coins (can be negative)</param>
     public void UpdatePlayerCoins(int coins) {
         playerData.numCoins += coins;
         if (playerData.numCoins < 0) playerData.numCoins = 0;
@@ -29,6 +34,14 @@ public class SaveDataManager : MonoBehaviour
         previouslyOwnedPalettes.Add(newColorScheme);
         playerData.unlockedPalettes = previouslyOwnedPalettes.ToArray();
         SavePlayerData();
+    }
+
+    public bool PlayerOwnsScheme(int colorScheme) {
+        for (int i = 0; i < playerData.unlockedPalettes.Length; i++)
+        {
+            if (playerData.unlockedPalettes[i] == colorScheme) return true;
+        }
+        return false;
     }
 
     public int GetPlayerPreferredColorScheme() {
@@ -69,6 +82,11 @@ public class SaveDataManager : MonoBehaviour
     }
 
     private void OnApplicationQuit() {
+        SavePlayerData();
+    }
+
+    private void MakeCleanPlayerData() {
+        playerData = new PlayerData();
         SavePlayerData();
     }
 }

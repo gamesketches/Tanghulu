@@ -7,11 +7,9 @@ public class ColorSchemeCanvasObject : MonoBehaviour
 
     Image coloredObject;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         coloredObject = GetComponent<Image>();
-        ColorSchemeManager.ColorSchemeChanged += UpdateColorScheme;
-        UpdateColorScheme();
     }
 
     void UpdateColorScheme() {
@@ -38,5 +36,15 @@ public class ColorSchemeCanvasObject : MonoBehaviour
                 coloredObject.sprite = curColorScheme.mainColorSprite;
                 break;
         }
+    }
+    
+    void OnEnable() { 
+        ColorSchemeManager.ColorSchemeChanged += UpdateColorScheme;
+        UpdateColorScheme();
+    }
+
+    void OnDisable()
+    {
+        ColorSchemeManager.ColorSchemeChanged -= UpdateColorScheme;
     }
 }
