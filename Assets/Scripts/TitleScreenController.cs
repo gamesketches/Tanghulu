@@ -15,7 +15,7 @@ public class TitleScreenController : MonoBehaviour
     }
 
     public void StartGame() {
-        LoadingScreenManager.instance.LoadScene(SceneType.ComicScene);
+        LoadingScreenManager.instance.LoadScene(SceneType.RotatingPot);
     }
 
     public void OpenShop() {

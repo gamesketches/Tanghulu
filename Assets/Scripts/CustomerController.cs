@@ -6,7 +6,7 @@ public class CustomerController : MonoBehaviour
 {
     public OrderBubble customerBubble;
 
-    FruitType[] order;
+    public FruitType[] order;
     CustomerSpritePack spritePack;
     SpriteRenderer spriteRenderer;
 
@@ -22,12 +22,6 @@ public class CustomerController : MonoBehaviour
     {
         customerBubble.gameObject.SetActive(false);
         spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void Initialize(FruitType[] customerOrder, CustomerSpritePack customerSprites, Vector3 positionInLine) {
