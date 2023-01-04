@@ -64,6 +64,7 @@ public class CustomerController : MonoBehaviour
             customerBubble.transform.localScale = Vector3.Lerp(startScale, Vector3.one, proportion);
             yield return null;
         }
+        customerBubble.ShowFruits();
     }
 
     public void GetDismissed() {

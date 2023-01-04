@@ -117,6 +117,40 @@ MonoBehaviour:
     type: 3}
   hawthornBerrySprite: {fileID: -5468382926927977060, guid: d79553e82e7ff46ab8d10ebbe3d42c98,
     type: 3}
+  popCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 5.360329
+      outSlope: 5.360329
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.2
+      value: 1.0720658
+      inSlope: 2.3998387
+      outSlope: 2.3998387
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.3285394
+      value: 1
+      inSlope: -0.56065166
+      outSlope: -0.56065166
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  timeBetween: 0.05
 --- !u!1 &635106235962896763
 GameObject:
   m_ObjectHideFlags: 0
