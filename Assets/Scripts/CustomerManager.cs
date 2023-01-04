@@ -148,6 +148,7 @@ public class CustomerManager : MonoBehaviour
 
     private void OnEnable() {
         GameManager.EndGame += DismissCustomers;
+        //PokingStickController.StickFinishedPoking += DecreasePokeBonus;
     }
     
     private void OnDisable() {

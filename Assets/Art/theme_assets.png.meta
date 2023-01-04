@@ -47,6 +47,27 @@ TextureImporter:
   - first:
       213: -2489834569576086134
     second: theme_assets_14
+  - first:
+      213: -367506044433683386
+    second: theme_assets_15
+  - first:
+      213: -4359262844707204175
+    second: theme_assets_16
+  - first:
+      213: 7819310854443915288
+    second: theme_assets_17
+  - first:
+      213: -1751078424933825143
+    second: theme_assets_18
+  - first:
+      213: 5154890415122813054
+    second: theme_assets_19
+  - first:
+      213: 3012514380880272217
+    second: theme_assets_20
+  - first:
+      213: -7733765195639418229
+    second: theme_assets_21
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -159,8 +180,8 @@ TextureImporter:
       name: theme_assets_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3898
+        x: 45
+        y: 3850
         width: 466
         height: 198
       alignment: 0
@@ -180,8 +201,8 @@ TextureImporter:
       name: theme_assets_1
       rect:
         serializedVersion: 2
-        x: 557
-        y: 4019
+        x: 561
+        y: 3969
         width: 90
         height: 77
       alignment: 0
@@ -246,7 +267,7 @@ TextureImporter:
         x: 3555
         y: 3586
         width: 463
-        height: 464
+        height: 463
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,9 +307,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3555
-        y: 3036
+        y: 3035
         width: 479
-        height: 480
+        height: 481
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,7 +327,7 @@ TextureImporter:
       name: theme_assets_7
       rect:
         serializedVersion: 2
-        x: 51
+        x: 45
         y: 2668
         width: 466
         height: 198
@@ -411,10 +432,10 @@ TextureImporter:
       name: theme_assets_12
       rect:
         serializedVersion: 2
-        x: 3553
-        y: 2343
-        width: 463
-        height: 463
+        x: 3554
+        y: 2339
+        width: 464
+        height: 468
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -466,6 +487,153 @@ TextureImporter:
       bones: []
       spriteID: a850ee296a4527dd0800000000000000
       internalID: -2489834569576086134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theme_assets_15
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1315
+        width: 465
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ca8b0233b56eaf0800000000000000
+      internalID: -367506044433683386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theme_assets_16
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 1427
+        width: 89
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b31ba20a89c083c0800000000000000
+      internalID: -4359262844707204175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theme_assets_17
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 211
+        width: 1239
+        height: 1239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8185c7b2bc5c38c60800000000000000
+      internalID: 7819310854443915288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theme_assets_18
+      rect:
+        serializedVersion: 2
+        x: 2156
+        y: 222
+        width: 1235
+        height: 1238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98508fb337be2b7e0800000000000000
+      internalID: -1751078424933825143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theme_assets_19
+      rect:
+        serializedVersion: 2
+        x: 3538
+        y: 970
+        width: 464
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7016715589d98740800000000000000
+      internalID: 5154890415122813054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theme_assets_20
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1101
+        width: 115
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95bdf115ed99ec920800000000000000
+      internalID: 3012514380880272217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theme_assets_21
+      rect:
+        serializedVersion: 2
+        x: 3530
+        y: 428
+        width: 479
+        height: 479
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8212a1a7852ca490800000000000000
+      internalID: -7733765195639418229
       vertices: []
       indices: 
       edges: []
