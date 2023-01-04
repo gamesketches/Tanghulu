@@ -132,10 +132,10 @@ public class GameManager : MonoBehaviour
     }
 
     public void RestartGame() {
-        SceneManager.LoadScene(2);
+        LoadingScreenManager.instance.LoadScene(SceneType.RotatingPot, false, true);
     }
 
     public void BackToHome() {
-        SceneManager.LoadScene(0);
+        LoadingScreenManager.instance.LoadScene(SceneType.RotatingPot, false, true);
     }
 }
