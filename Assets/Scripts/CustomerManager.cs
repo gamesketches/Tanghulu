@@ -121,6 +121,17 @@ public class CustomerManager : MonoBehaviour
             customer.GetDismissed();
         }
     }
+
+    public FruitType[] GetNeededFruits() {
+        List<FruitType> neededFruits;
+        neededFruits = new List<FruitType>();
+        for(int i = 0; i < activeCustomers.Count; i++) { 
+            for(int j = 0; j < GameManager.orderSize; j++) {
+                neededFruits.Add(activeCustomers[i].order[j]);
+            }
+        }
+        return neededFruits.ToArray();
+    }
     
     CustomerController GetCustomer() { 
         for(int i = 0; i < customerPool.Count; i++) { 

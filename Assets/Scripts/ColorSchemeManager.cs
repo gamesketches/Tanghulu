@@ -14,7 +14,8 @@ public class ColorSchemeManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        UpdateColorScheme(SaveDataManager.instance.GetPlayerPreferredColorScheme());
+        int targetColorScheme = SaveDataManager.instance.GetPlayerPreferredColorScheme();
+        currentColorScheme = colorSchemes[targetColorScheme];
         DontDestroyOnLoad(gameObject);
     }
 

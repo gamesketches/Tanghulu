@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PotController : MonoBehaviour 
+public class PotController : MonoBehaviour
 {
     public GameObject[] fruitPrefabs;
     public int numFruits;
@@ -34,33 +34,53 @@ public class PotController : MonoBehaviour
     }
 
     void FillPot()
-    { 
-        for(int i = 0; i < numFruits; i++) {
-            AddFruit(i);
+    {
+        for (int i = 0; i < numFruits; i++) {
+            AddRandomFruit(i);
         }
     }
 
-    private void AddFruit(int delayMultiplier = 0) {
-        int randomIndex = Random.Range(0, fruitBag.Count);
-        PokeableFruit newFruit = fruitBag[randomIndex];
+    private void AddFruit(int bagIndex, int delayMultiplier = 0) {
+        PokeableFruit newFruit = fruitBag[bagIndex];
         newFruit.gameObject.SetActive(true);
         newFruit.transform.parent = transform;
-        fruitBag.RemoveAt(randomIndex);
+        fruitBag.RemoveAt(bagIndex);
         newFruit.transform.position = FindNewFruitPos();
         newFruit.transform.Rotate(0, 0, Random.Range(-180f, 180f));
         newFruit.Appear(delayMultiplier * 0.1f);
         if (fruitBag.Count == 0) FillFruitBag();
     }
 
-    private void AddFruits() {
+    private void AddRandomFruit(int delayMultiplier = 0) {
+        int randomIndex = Random.Range(0, fruitBag.Count);
+        AddFruit(randomIndex, delayMultiplier);        
+    }
+
+    private void AddNeededFruit(FruitType[] neededFruits, int delayMultiplier = 0) { 
+        for(int i = Random.Range(0, GameManager.orderSize); i < neededFruits.Length; i += GameManager.orderSize) { 
+            for(int j = 0; j < fruitBag.Count; j++) {
+                if (fruitBag[j].fruitType == neededFruits[i]) {
+                    AddFruit(j, delayMultiplier);
+                    return;
+                }
+            }
+        }
+        AddRandomFruit(delayMultiplier);
+    }
+
+    private void AddFruitsAfterPoke() {
+        FruitType[] neededFruits = CustomerManager.instance.GetNeededFruits();
+        int delayCounter = 0;
         for (int i = transform.childCount; i < numFruits; i++) {
-            AddFruit(i);
+            AddNeededFruit(neededFruits, delayCounter);
+            delayCounter++;
         }
     }
 
     private void AddFruits(int ignore) {
+        FruitType[] neededFruits = CustomerManager.instance.GetNeededFruits();
         for(int i = transform.childCount; i < numFruits; i++) {
-            AddFruit(i);
+            AddRandomFruit(i);
         }
     }
 
@@ -132,11 +152,11 @@ public class PotController : MonoBehaviour
 
     private void OnEnable() {
         CustomerManager.ScorePoints += AddFruits;
-        PokingStickController.StickFinishedPoking += AddFruits;
+        PokingStickController.StickFinishedPoking += AddFruitsAfterPoke;
     }
 
     private void OnDisable() {
         CustomerManager.ScorePoints -= AddFruits; 
-        PokingStickController.StickFinishedPoking -= AddFruits;
+        PokingStickController.StickFinishedPoking -= AddFruitsAfterPoke;
     }
 }

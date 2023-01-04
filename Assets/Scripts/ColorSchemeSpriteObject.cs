@@ -5,15 +5,12 @@ public class ColorSchemeSpriteObject : MonoBehaviour
     public ColorSchemeObject schemeObject;
     SpriteRenderer coloredObject;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         coloredObject = GetComponent<SpriteRenderer>();
-        ColorSchemeManager.ColorSchemeChanged += UpdateColorScheme;
-        UpdateColorScheme();
     }
 
     void UpdateColorScheme() {
-        Debug.Log("updating color scheme from " + gameObject.name.ToString());
         ColorScheme curColorScheme = ColorSchemeManager.currentColorScheme;
         switch(schemeObject) {
             case ColorSchemeObject.Banner:
@@ -37,4 +34,12 @@ public class ColorSchemeSpriteObject : MonoBehaviour
         }
     }
 
+    void OnEnable() { 
+        ColorSchemeManager.ColorSchemeChanged += UpdateColorScheme;
+        UpdateColorScheme();
+    }
+
+    void OnDisable() { 
+        ColorSchemeManager.ColorSchemeChanged -= UpdateColorScheme;
+    }
 }

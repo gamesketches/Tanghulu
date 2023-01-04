@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
 
+public enum coinPurchaseLevels { fiveThousandCoins, fiftyThousandCoins, fiveHundredThousandCoins};
 public class IAPManager : MonoBehaviour, IStoreListener
 {
 	public static IAPManager instance;
@@ -35,7 +36,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
 		return storeController != null && storeExtensionProvider != null;
 	}
 
-	public void BuyProductID(string productId) {
+	public void BuyProductID(coinPurchaseLevels purchaseLevel) {
+		string productId = GetPurchaseString(purchaseLevel);
 		if(IsInitialized()) {
 			Product product = storeController.products.WithID(productId);
 			if(product != null && product.availableToPurchase) {
@@ -52,7 +54,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
 	}
 
 	public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs args) {
-		if(String.Equals(args.purchasedProduct.definition.id, fiveThousandCoins, StringComparison.Ordinal)) {
+		if(String.Equals(args.purchasedProduct.definition.id, GetPurchaseString(coinPurchaseLevels.fiveThousandCoins), StringComparison.Ordinal)) {
 			Debug.Log("Bought five k");
 		}
 		/*if(String.Equals(args.purchasedProduct.definition.id, jlpt5, StringComparison.Ordinal)) {
@@ -95,5 +97,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
 	public void OnInitializeFailed(InitializationFailureReason error) {
 		Debug.Log("IStoreController initialization failed: " + error);
+	}
+
+	public string GetPurchaseString(coinPurchaseLevels purchaseLevel) {
+		return "com.bluesphere.tanghulu." + purchaseLevel.ToString();
 	}
 }

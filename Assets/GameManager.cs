@@ -62,11 +62,7 @@ public class GameManager : MonoBehaviour
             {
                 GenerateOrder();
             }
-            //else clockController.UpdateClockProportion(gameTimer / gameTime);
-            /*if(gameTimer < 0) {
-                GameOver();
-            }*/
-            }
+        }
     }
 
     private IEnumerator BeginGameSequence() {
