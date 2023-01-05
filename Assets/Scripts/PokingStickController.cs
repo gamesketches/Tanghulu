@@ -16,6 +16,7 @@ public class PokingStickController : MonoBehaviour
     public int maxFruits;
 
     public float rotationLimit;
+    public float touchLimit;
 
     private float rotationProportion;
 
@@ -64,10 +65,13 @@ public class PokingStickController : MonoBehaviour
         float touchDistance = newFingerPosition.x - lastFingerPosition.x;
         lastFingerPosition = newFingerPosition;
         rotationProportion = Mathf.Clamp(rotationProportion + touchDistance, 0, 1);
-        transform.rotation = Quaternion.Euler(0, 0, Mathf.Lerp(rotationLimit, -rotationLimit, rotationProportion));
+        float rotationAmount = Mathf.Lerp(rotationLimit, -rotationLimit, rotationProportion);
+        transform.rotation = Quaternion.Euler(0, 0, rotationAmount);
     }
 
-    public void PokeStick() {
+    public void PokeStick(Vector3 newFingerPosition) {
+        Debug.Log(newFingerPosition.x - transform.position.x);
+        if (Mathf.Abs(newFingerPosition.x - transform.position.x) > touchLimit) return;
         aiming = false;
         if (!poking && GameManager.gamePlaying) {
             StartCoroutine(StickPokingAnimation());

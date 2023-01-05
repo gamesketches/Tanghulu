@@ -45,8 +45,7 @@ public class InputManager : MonoBehaviour
         else if (Input.GetMouseButtonUp(0))
         {
             if(pokingStick.aiming) {
-                Debug.Log("mouse up");
-                pokingStick.PokeStick();
+                pokingStick.PokeStick(worldPosition);
             }
             else 
                 potController.UpdateDragging(false);

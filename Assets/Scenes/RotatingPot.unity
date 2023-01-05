@@ -2615,7 +2615,8 @@ MonoBehaviour:
   aiming: 0
   poking: 0
   maxFruits: 4
-  rotationLimit: 39
+  rotationLimit: 23
+  touchLimit: 2.5
   pokingCurve:
     serializedVersion: 2
     m_Curve:
