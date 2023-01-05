@@ -11,6 +11,7 @@ public class PokingStickController : MonoBehaviour
     public float stickTouchHeight;
     public bool aiming;
     public bool poking;
+    BoxCollider2D stickCollider;
     private Vector3 lastFingerPosition;
     public int maxFruits;
 
@@ -25,6 +26,7 @@ public class PokingStickController : MonoBehaviour
 
     public StickCounter stickCounter;
     private IEnumerator pokingCoroutine;
+    bool fruitBehavior;
 
     public delegate void StickPoked();
     public static event StickPoked StickFinishedPoking;
@@ -37,6 +39,8 @@ public class PokingStickController : MonoBehaviour
         pokeMultiplier = 1;
         rotationProportion = 0.5f;
         pokingCurve.postWrapMode = WrapMode.PingPong;
+        stickCollider = GetComponent<BoxCollider2D>();
+        stickCollider.enabled = false;
     }
 
     // Update is called once per frame
@@ -71,6 +75,7 @@ public class PokingStickController : MonoBehaviour
     }
 
     private IEnumerator StickPokingAnimation() {
+        stickCollider.enabled = true;
         transform.GetChild(0).gameObject.SetActive(false);
         poking = true;
         Vector3 startPosition = transform.position;
@@ -96,6 +101,7 @@ public class PokingStickController : MonoBehaviour
         {
             transform.GetChild(0).gameObject.SetActive(true);
         }
+        stickCollider.enabled = false;
         StickFinishedPoking();
     }
 
@@ -151,6 +157,7 @@ public class PokingStickController : MonoBehaviour
             transform.position = startPosition;
             transform.localScale = Vector3.one;
             transform.GetChild(0).gameObject.SetActive(true);
+            stickCollider.enabled = true;
         } else
         {
             transform.position = new Vector3(1000, 0);

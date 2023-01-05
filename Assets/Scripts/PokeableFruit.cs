@@ -39,6 +39,9 @@ public class PokeableFruit : MonoBehaviour
                 particles.Play();
                 SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeFruit);
             }
+            else {
+                StartCoroutine(KnockFruitOff());
+            }
         }
     }
 
@@ -61,4 +64,12 @@ public class PokeableFruit : MonoBehaviour
         floating = true;
     }
 
+    IEnumerator KnockFruitOff() { 
+        for(float t = 0; t < appearTime; t += Time.deltaTime) {
+            transform.Translate(10 * Time.deltaTime, 10 * Time.deltaTime, 0, Space.World);
+            yield return null;
+        }
+
+        Destroy(gameObject);
+    }
 }
