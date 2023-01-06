@@ -48,6 +48,8 @@ public class CustomerController : MonoBehaviour
         }
         if(openBubble) 
             StartCoroutine(OpenBubble());
+
+        transform.position = positionInLine;
     }
 
     public void MoveToSpotInLine(Vector3 positionInLine) {

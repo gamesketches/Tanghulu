@@ -70,8 +70,8 @@ public class PokingStickController : MonoBehaviour
     }
 
     public void PokeStick(Vector3 newFingerPosition) {
-        if (Mathf.Abs(newFingerPosition.x - transform.position.x) > touchLimit) return;
         aiming = false;
+        if (Mathf.Abs(newFingerPosition.x - transform.position.x) > touchLimit) return;
         if (!poking && GameManager.gamePlaying) {
             StartCoroutine(StickPokingAnimation());
         }

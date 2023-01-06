@@ -75,8 +75,9 @@ public class CustomerManager : MonoBehaviour
         pointText.transform.position = startPoint;
         pointText.text = pointsScored.ToString();
         pointText.enabled = true;
-        for(float t = 0; t < 1; t += Time.deltaTime) {
-            pointText.transform.position = Vector3.Lerp(startPoint, startPoint + Vector3.up, t);
+        Vector3 endPoint = startPoint + (Vector3.up * pointFloatDistance);
+        for(float t = 0; t < pointFloatTime; t += Time.deltaTime) {
+            pointText.transform.position = Vector3.Lerp(startPoint, endPoint, t);
             yield return null;
         }
         pointText.enabled = false;
