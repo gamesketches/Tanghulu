@@ -1,0 +1,656 @@
+fileFormatVersion: 2
+guid: ee76b13e1f31b42b5b070a3dd2663563
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6415566415900043984
+    second: button_arrow_instruction_0
+  - first:
+      213: 4143500264818170798
+    second: button_arrow_instruction_1
+  - first:
+      213: 3075816147839287844
+    second: button_arrow_instruction_2
+  - first:
+      213: 6046696845969733527
+    second: button_arrow_instruction_3
+  - first:
+      213: -404398826176644661
+    second: button_arrow_instruction_4
+  - first:
+      213: 2740886585100119556
+    second: button_arrow_instruction_5
+  - first:
+      213: 4427609598159511124
+    second: button_arrow_instruction_6
+  - first:
+      213: -4116632423317668125
+    second: button_arrow_instruction_7
+  - first:
+      213: -7769657327190445557
+    second: button_arrow_instruction_8
+  - first:
+      213: -2796553188984511867
+    second: button_arrow_instruction_9
+  - first:
+      213: 690074923775679384
+    second: button_arrow_instruction_10
+  - first:
+      213: 3231235607384757189
+    second: button_arrow_instruction_11
+  - first:
+      213: 3234105249463820655
+    second: button_arrow_instruction_12
+  - first:
+      213: -3470786434873756782
+    second: button_arrow_instruction_13
+  - first:
+      213: -8516337386469792689
+    second: button_arrow_instruction_14
+  - first:
+      213: -7770696596073833573
+    second: button_arrow_instruction_15
+  - first:
+      213: -453128883656667423
+    second: button_arrow_instruction_16
+  - first:
+      213: 9203635690744766299
+    second: button_arrow_instruction_17
+  - first:
+      213: -1889302213770047606
+    second: button_arrow_instruction_18
+  - first:
+      213: -3617833729326798153
+    second: button_arrow_instruction_19
+  - first:
+      213: -1611614279622682344
+    second: button_arrow_instruction_20
+  - first:
+      213: 8303069375818379285
+    second: button_arrow_instruction_21
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: button_arrow_instruction_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 656
+        width: 941
+        height: 1379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dae5a40aaba80950800000000000000
+      internalID: 6415566415900043984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_1
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 1915
+        width: 450
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab5933a98ba08930800000000000000
+      internalID: 4143500264818170798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_2
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 1915
+        width: 450
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4220f567d7e7faa20800000000000000
+      internalID: 3075816147839287844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_3
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 1776
+        width: 450
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7973080aebe2ae350800000000000000
+      internalID: 6046696845969733527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_4
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 1776
+        width: 450
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9f7220969436af0800000000000000
+      internalID: -404398826176644661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_5
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 1640
+        width: 450
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ea68ac3d5990620800000000000000
+      internalID: 2740886585100119556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_6
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 1640
+        width: 450
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e58669877027d30800000000000000
+      internalID: 4427609598159511124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_7
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 1499
+        width: 450
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee7b413f98ced6c0800000000000000
+      internalID: -4116632423317668125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_8
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 1499
+        width: 450
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b027d4a83d1ac2490800000000000000
+      internalID: -7769657327190445557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_9
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 1361
+        width: 450
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582a71ff0b5a039d0800000000000000
+      internalID: -2796553188984511867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_10
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 1360
+        width: 450
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89bdd0cac73a39900800000000000000
+      internalID: 690074923775679384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_11
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 1225
+        width: 450
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c313c34aa7a7dc20800000000000000
+      internalID: 3231235607384757189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_12
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 1224
+        width: 450
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f616480e699d1ec20800000000000000
+      internalID: 3234105249463820655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_13
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 1092
+        width: 451
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293fa12602a45dfc0800000000000000
+      internalID: -3470786434873756782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_14
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 1091
+        width: 450
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44e61cb444efc980800000000000000
+      internalID: -8516337386469792689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_15
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 871
+        width: 199
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b9ea5ed90f82490800000000000000
+      internalID: -7770696596073833573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_16
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 853
+        width: 199
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eecc2c5ea926b9f0800000000000000
+      internalID: -453128883656667423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_17
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 965
+        width: 129
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5fd2f4d5e1e9bf70800000000000000
+      internalID: 9203635690744766299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_18
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 966
+        width: 129
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f80e285a9d7c5e0800000000000000
+      internalID: -1889302213770047606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_19
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 363
+        width: 688
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7baac0b246fdacdc0800000000000000
+      internalID: -3617833729326798153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_20
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 6
+        width: 941
+        height: 842
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8199424f95562a9e0800000000000000
+      internalID: -1611614279622682344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_arrow_instruction_21
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 129
+        width: 655
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51034131b9d6a3370800000000000000
+      internalID: 8303069375818379285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -11,7 +11,7 @@ public class SaveDataManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        MakeCleanPlayerData();
+        //MakeCleanPlayerData();
         LoadSaveData();
     }
 

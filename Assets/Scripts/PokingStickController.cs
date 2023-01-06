@@ -70,7 +70,6 @@ public class PokingStickController : MonoBehaviour
     }
 
     public void PokeStick(Vector3 newFingerPosition) {
-        Debug.Log(newFingerPosition.x - transform.position.x);
         if (Mathf.Abs(newFingerPosition.x - transform.position.x) > touchLimit) return;
         aiming = false;
         if (!poking && GameManager.gamePlaying) {
@@ -116,6 +115,8 @@ public class PokingStickController : MonoBehaviour
             pokeMultiplier = Mathf.SmoothStep(1, 0, t / initialSlowDown);
             yield return null;
         }
+        // WHY does this break stuff
+        //yield return new WaitForSeconds(0.3f);
         float pushDistance = 0.1f;
         fruitTransform.parent = transform;
         for (int i = transform.childCount - 1; i > 0; i--) {
@@ -125,9 +126,15 @@ public class PokingStickController : MonoBehaviour
             pushDistance += childFruit.lossyScale.y;
             StartCoroutine(SlideFruitOnStick(childFruit, childFruit.localPosition, newFruitPosition));
         }
-        yield return new WaitForSeconds(fruitSlidingTime);
+        //yield return new WaitForSeconds(fruitSlidingTime);
+        Vector3 squishVector = new Vector3(0.8f, 0.8f, 0.8f);
+        for(float t = 0; t < fruitSlidingTime; t += Time.deltaTime) { 
+            fruitTransform.localScale = Vector3.Lerp(Vector3.one, squishVector, t / fruitSlidingTime);
+        }
+
         for(float t = 0; t < duration; t += Time.deltaTime) {
             pokeMultiplier = Mathf.SmoothStep(0, 1, t / duration);
+            fruitTransform.localScale = Vector3.Lerp(squishVector, Vector3.one, t / duration);
             yield return null;
         }
 
@@ -171,7 +178,7 @@ public class PokingStickController : MonoBehaviour
     public bool AttachFruit(Transform newFruit) {
         if (transform.childCount == maxFruits + 1) return false;
         //newFruit.parent = transform;
-        StartCoroutine(PierceFruit(0.1f, newFruit));
+        StartCoroutine(PierceFruit(0.15f, newFruit));
         return true;
     }
 

@@ -1292,8 +1292,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goSprite: {fileID: -9015678204852350527, guid: 604a8923fa00f4a508131220584973c3,
     type: 3}
-  readyTime: 0.5
-  goTime: 0.3
+  readyTime: 1
+  goTime: 0.4
 --- !u!1 &1027676426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,7 +2041,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4022794248516343452, guid: bc9094ff64360488799d1f8d50ac267d,
+  m_Sprite: {fileID: -3617833729326798153, guid: ee76b13e1f31b42b5b070a3dd2663563,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -2171,7 +2171,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2238071853132060438, guid: bc9094ff64360488799d1f8d50ac267d,
+  m_Sprite: {fileID: 8303069375818379285, guid: ee76b13e1f31b42b5b070a3dd2663563,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -2641,7 +2641,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  fruitSlidingTime: 0.08
+  fruitSlidingTime: 0.2
   stickCounter: {fileID: 765114435}
 --- !u!61 &2047685948
 BoxCollider2D:

@@ -22,7 +22,7 @@ public class LoadingScreenManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         instance = this;
-        curtainRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, -Screen.height, Screen.height);
+        curtainRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 0, Screen.height);
         loading = false;
     }
 
