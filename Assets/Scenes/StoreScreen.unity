@@ -2587,7 +2587,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 44.9}
-  m_SizeDelta: {x: 470.5, y: 689.5}
+  m_SizeDelta: {x: 941, y: 842}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1512406317
 MonoBehaviour:
@@ -2608,7 +2608,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8813334860933716992, guid: bc9094ff64360488799d1f8d50ac267d,
+  m_Sprite: {fileID: -1611614279622682344, guid: ee76b13e1f31b42b5b070a3dd2663563,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -3627,7 +3627,6 @@ MonoBehaviour:
   colorSchemeManager: {fileID: 759328299}
   coinPurchaseMenu: {fileID: 73338596}
   schemePurchaseMenu: {fileID: 1512406319}
-  schemePrice: 100
   colorSchemes:
   - {fileID: 11400000, guid: 2733beb54b4864f30b24fcf54beacb51, type: 2}
   - {fileID: 11400000, guid: 7480730c9984b4203813ac4d1bcfed57, type: 2}
