@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+public enum SchemePricePoint { FiveHundred, OneThousand, TwoThousand, ThreeThousand, FourThousand, FiveThousand};
 public class StoreScreenController : MonoBehaviour
 {
     public Transform schemeButtons;
@@ -13,9 +14,12 @@ public class StoreScreenController : MonoBehaviour
     public ColorSchemeManager colorSchemeManager;
 
     public Image coinPurchaseMenu;
-    public Image schemePurchaseMenu;
+    public PurchaseSchemeView schemePurchaseMenu;
 
-    public int schemePrice;
+    int currentInspectedScheme;
+
+    public ColorScheme[] colorSchemes;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,10 +46,11 @@ public class StoreScreenController : MonoBehaviour
 
     public void OpenSchemeMenu(int schemeId) {
         if (SaveDataManager.instance.PlayerOwnsScheme(schemeId)) UpdateSelectedScheme(schemeId);
-        else {
-            SaveDataManager.instance.SetPlayerPreferredColorScheme(schemeId);
-            colorSchemeManager.UpdateColorScheme(schemeId);
+        else
+        {
             schemePurchaseMenu.gameObject.SetActive(true);
+            schemePurchaseMenu.SetPurchaseButton(GetSchemePriceType(schemeId));
+            currentInspectedScheme = schemeId;
         }
     }
 
@@ -53,12 +58,13 @@ public class StoreScreenController : MonoBehaviour
         schemePurchaseMenu.gameObject.SetActive(false);
     }
 
-    public void PurchaseScheme(int schemeId) {
+    public void PurchaseScheme() {
         int numCoins = int.Parse(currentCoins.text);
+        int schemePrice = GetSchemePrice(currentInspectedScheme); 
         if (numCoins > schemePrice) {
-            SaveDataManager.instance.UpdateOwnedColorSchemes(schemeId);
+            SaveDataManager.instance.UpdateOwnedColorSchemes(currentInspectedScheme);
             SaveDataManager.instance.UpdatePlayerCoins(schemePrice);
-            UpdateSelectedScheme(schemeId);
+            UpdateSelectedScheme(currentInspectedScheme);
         } else {
             Debug.Log("Not enough coins :<");
         }
@@ -67,6 +73,29 @@ public class StoreScreenController : MonoBehaviour
     void UpdateSelectedScheme(int schemeId) { 
         SaveDataManager.instance.SetPlayerPreferredColorScheme(schemeId);
         colorSchemeManager.UpdateColorScheme(schemeId);
+    }
+
+    SchemePricePoint GetSchemePriceType(int schemeId) {
+        return colorSchemes[schemeId].pricePoint;
+    }
+
+    int GetSchemePrice(int schemeId) { 
+        switch(colorSchemes[schemeId].pricePoint) {
+            case SchemePricePoint.FiveHundred:
+                return 500;
+            case SchemePricePoint.OneThousand:
+                return 1000;
+            case SchemePricePoint.TwoThousand:
+                return 2000;
+            case SchemePricePoint.ThreeThousand:
+                return 3000;
+            case SchemePricePoint.FourThousand:
+                return 4000;
+            case SchemePricePoint.FiveThousand:
+                return 5000;
+            default:
+                return 0;
+        }
     }
 
     public void Purchase5kCoins() {
@@ -83,4 +112,5 @@ public class StoreScreenController : MonoBehaviour
         iapManager.BuyProductID(coinPurchaseLevels.fiveHundredThousandCoins);
         coinPurchaseMenu.gameObject.SetActive(false);
     }
+
 }

@@ -22,3 +22,4 @@ MonoBehaviour:
     type: 3}
   mainColorSprite: {fileID: -4359262844707204175, guid: a01bb956b745d425e95bfec6d54b74e0,
     type: 3}
+  pricePoint: 2

@@ -17,4 +17,6 @@ public class ColorScheme : ScriptableObject
     public Sprite potBottom;
 
     public Sprite mainColorSprite;
+
+    public SchemePricePoint pricePoint;
 }
