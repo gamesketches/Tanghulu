@@ -159,7 +159,9 @@ public class PokingStickController : MonoBehaviour
             yield return null;
         }
 
+        
         stickCounter.RemoveStick();
+        yield return customer.ShowSatisfaction(GetFruits());
         CustomerManager.instance.ServeCustomer(customer, GetFruits());
         if (GameManager.sticksRemaining > 0)
         {

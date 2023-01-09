@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ScoreType { Bad, Misplaced, Correct};
 public class CustomerController : MonoBehaviour
 {
     public OrderBubble customerBubble;
@@ -69,6 +70,10 @@ public class CustomerController : MonoBehaviour
         customerBubble.ShowFruits();
     }
 
+    public IEnumerator ShowSatisfaction(FruitType[] preparedOrder) {
+        yield return customerBubble.ServeAnimation(CalculateSatisfactionReport(preparedOrder));
+    }
+
     public void GetDismissed() {
         StartCoroutine(WalkOffScreen());
     }
@@ -102,21 +107,40 @@ public class CustomerController : MonoBehaviour
     
     public int CalculateSatisfaction(FruitType[] preparedOrder) {
         int score = 0;
-        List<FruitType> requestedOrder = new List<FruitType>(order);
-        for(int i = 0; i < GameManager.orderSize; i++) {
-            if (requestedOrder[i] == preparedOrder[i]) {
-                score += 2;
-            }
-            else if (requestedOrder.IndexOf(preparedOrder[i]) > -1) {
-                score += 1;
-                //requestedOrder.Remove(preparedOrder[i]);
-            }
-            else {
-                Debug.Log("One fruit is messed up");
+        
+        ScoreType[] scoreReport = CalculateSatisfactionReport(preparedOrder);
+        foreach(ScoreType fruitScore in scoreReport) { 
+            switch(fruitScore) {
+                case ScoreType.Correct:
+                    score += 2;
+                    break;
+                case ScoreType.Misplaced:
+                    score += 1;
+                    break;
+                case ScoreType.Bad:
+                    score += 0;
+                    break;
             }
         }
         
         return score;
+    }
+
+    public ScoreType[] CalculateSatisfactionReport(FruitType[] preparedOrder) {
+        ScoreType[] scoreReport = new ScoreType[4];
+        List<FruitType> requestedOrder = new List<FruitType>(order);
+        for(int i = 0; i < GameManager.orderSize; i++) {
+            if (requestedOrder[i] == preparedOrder[i]) {
+                scoreReport[i] = ScoreType.Correct;
+            }
+            else if (requestedOrder.IndexOf(preparedOrder[i]) > -1) {
+                scoreReport[i] = ScoreType.Misplaced;
+            }
+            else {
+                scoreReport[i] = ScoreType.Bad;
+            }
+        }
+        return scoreReport;
     }
 
 }

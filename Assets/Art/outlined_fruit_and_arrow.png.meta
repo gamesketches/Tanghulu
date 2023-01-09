@@ -1,28 +1,40 @@
 fileFormatVersion: 2
-guid: 699db280c2a634fbda2095327af43e3e
+guid: dfdb0f36c4bf246e0a2cbb29a07f7fdd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 37905666807263213
-    second: theme_assets_two_0
+      213: 3929251366544271934
+    second: outlined_fruit_and_arrow_0
   - first:
-      213: 3848500929716971504
-    second: theme_assets_two_1
+      213: 6395830362866728034
+    second: outlined_fruit_and_arrow_1
   - first:
-      213: 3411760199091362521
-    second: theme_assets_two_2
+      213: -615293369181371558
+    second: outlined_fruit_and_arrow_2
   - first:
-      213: -5535165009430471486
-    second: theme_assets_two_3
+      213: -7551996440668556972
+    second: outlined_fruit_and_arrow_3
   - first:
-      213: 6546160376368857781
-    second: theme_assets_two_4
+      213: 2665314746763322807
+    second: outlined_fruit_and_arrow_4
   - first:
-      213: 2907932097148162651
-    second: theme_assets_two_5
+      213: -6906328126488961047
+    second: outlined_fruit_and_arrow_8
   - first:
-      213: 6090637668711595663
-    second: theme_assets_two_6
+      213: -6407194403639130247
+    second: outlined_fruit_and_arrow_11
+  - first:
+      213: -8633004840328387593
+    second: outlined_fruit_and_arrow_12
+  - first:
+      213: -4599298753795034372
+    second: outlined_fruit_and_arrow_22
+  - first:
+      213: -7248037063041563632
+    second: outlined_fruit_and_arrow_23
+  - first:
+      213: 7400516831213905195
+    second: outlined_fruit_and_arrow_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -66,9 +78,9 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -82,7 +94,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -94,7 +106,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -106,7 +118,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -118,7 +130,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -132,13 +144,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: theme_assets_two_0
+      name: outlined_fruit_and_arrow_0
       rect:
         serializedVersion: 2
-        x: 45
-        y: 3849
-        width: 468
-        height: 202
+        x: 3
+        y: 185
+        width: 66
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: def650dc00ba68000800000000000000
-      internalID: 37905666807263213
+      spriteID: e3ae610cc41878630800000000000000
+      internalID: 3929251366544271934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: theme_assets_two_1
+      name: outlined_fruit_and_arrow_1
       rect:
         serializedVersion: 2
-        x: 785
-        y: 2771
-        width: 1340
-        height: 1302
+        x: 74
+        y: 186
+        width: 66
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f76a81943f986530800000000000000
-      internalID: 3848500929716971504
+      spriteID: 26c345614dd82c850800000000000000
+      internalID: 6395830362866728034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: theme_assets_two_2
+      name: outlined_fruit_and_arrow_2
       rect:
         serializedVersion: 2
-        x: 2175
-        y: 2781
-        width: 1338
-        height: 1304
+        x: 146
+        y: 187
+        width: 66
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9da18a523d1095f20800000000000000
-      internalID: 3411760199091362521
+      spriteID: a538a41d0f90677f0800000000000000
+      internalID: -615293369181371558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: theme_assets_two_3
+      name: outlined_fruit_and_arrow_3
       rect:
         serializedVersion: 2
-        x: 3553
-        y: 3585
-        width: 468
-        height: 468
+        x: 218
+        y: 186
+        width: 66
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cc99bf10c42f23b0800000000000000
-      internalID: -5535165009430471486
+      spriteID: 451bfe8df3be13790800000000000000
+      internalID: -7551996440668556972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: theme_assets_two_4
+      name: outlined_fruit_and_arrow_4
       rect:
         serializedVersion: 2
-        x: 45
-        y: 3471
-        width: 324
-        height: 324
+        x: 323
+        y: 53
+        width: 163
+        height: 163
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b20434ed22a8da50800000000000000
-      internalID: 6546160376368857781
+      spriteID: 7b5207704a91df420800000000000000
+      internalID: 2665314746763322807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: theme_assets_two_5
+      name: outlined_fruit_and_arrow_8
       rect:
         serializedVersion: 2
-        x: 3547
-        y: 3035
-        width: 484
-        height: 490
+        x: 77
+        y: 111
+        width: 66
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b521971e5dc0b5820800000000000000
-      internalID: 2907932097148162651
+      spriteID: 9ef1656092bc720a0800000000000000
+      internalID: -6906328126488961047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: theme_assets_two_6
+      name: outlined_fruit_and_arrow_11
       rect:
         serializedVersion: 2
-        x: 49
-        y: 3329
-        width: 100
-        height: 102
+        x: 150
+        y: 108
+        width: 66
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,8 +284,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8efa2ba0ba468450800000000000000
-      internalID: 6090637668711595663
+      spriteID: 977083cf2a21517a0800000000000000
+      internalID: -6407194403639130247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: outlined_fruit_and_arrow_12
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 108
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3affb56d7613880800000000000000
+      internalID: -8633004840328387593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: outlined_fruit_and_arrow_22
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 20
+        width: 115
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2762cc6220c20c0800000000000000
+      internalID: -4599298753795034372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: outlined_fruit_and_arrow_23
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 20
+        width: 115
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014ca8261bcc96b90800000000000000
+      internalID: -7248037063041563632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: outlined_fruit_and_arrow_5
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 116
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25edce29dae3b660800000000000000
+      internalID: 7400516831213905195
       vertices: []
       indices: 
       edges: []

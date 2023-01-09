@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class OrderBubble : MonoBehaviour
 {
-
     public SpriteRenderer[] fruitSprites;
+
+    public SpriteRenderer[] scoringSprites;
 
     public Sprite strawBerrySprite;
     public Sprite kiwiSprite;
@@ -15,14 +16,21 @@ public class OrderBubble : MonoBehaviour
     public Sprite appleSprite;
     public Sprite hawthornBerrySprite;
 
+    public Sprite correctSprite;
+    public Sprite misplacedSprite;
+    public Sprite wrongSprite;
+
     [Header("Pop in tuning")]
     public AnimationCurve popCurve;
     public float timeBetween;
+
+    public float scoringTimeBetween;
 
     public void SetFruits(FruitType[] fruitTypes) {
         for(int i = 0; i < fruitSprites.Length; i++) {
             fruitSprites[i].sprite = GetFruitSprite(fruitTypes[i]);
             fruitSprites[i].transform.localScale = Vector3.zero;
+            scoringSprites[i].color = Color.clear;
         }
     }
 
@@ -38,6 +46,28 @@ public class OrderBubble : MonoBehaviour
                 yield return null;
             }
             yield return new WaitForSeconds(timeBetween);
+        }
+    }
+
+    public void ShowServeAnimation(ScoreType[] scoreReport) {
+        StartCoroutine(ServeAnimation(scoreReport));
+    }
+
+    public IEnumerator ServeAnimation(ScoreType[] scoreReport) { 
+        for(int i = 0; i < scoringSprites.Length; i++) { 
+            switch(scoreReport[i]) {
+                case ScoreType.Correct:
+                    scoringSprites[i].sprite = correctSprite;
+                    break;
+                case ScoreType.Misplaced:
+                    scoringSprites[i].sprite = misplacedSprite;
+                    break;
+                case ScoreType.Bad:
+                    scoringSprites[i].sprite = wrongSprite;
+                    break;
+            }
+            scoringSprites[i].color = Color.white;
+            yield return new WaitForSeconds(scoringTimeBetween);
         }
     }
 
