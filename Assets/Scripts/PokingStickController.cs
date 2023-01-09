@@ -17,6 +17,7 @@ public class PokingStickController : MonoBehaviour
 
     public float rotationLimit;
     public float touchLimit;
+    public float touchDampValue;
 
     private float rotationProportion;
 
@@ -28,6 +29,8 @@ public class PokingStickController : MonoBehaviour
     public StickCounter stickCounter;
     private IEnumerator pokingCoroutine;
     bool fruitBehavior;
+
+    public TutorialArrow[] tutorialArrows;
 
     public delegate void StickPoked();
     public static event StickPoked StickFinishedPoking;
@@ -44,12 +47,6 @@ public class PokingStickController : MonoBehaviour
         stickCollider.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public bool CheckTouchPosition(Vector3 position)
     {
         return position.y < stickTouchHeight;
@@ -58,11 +55,12 @@ public class PokingStickController : MonoBehaviour
     public void BeginAiming(Vector3 fingerStartPosition) {
         aiming = true;
         lastFingerPosition = fingerStartPosition;
+        DisableTutorialArrows();
     }
 
     public void UpdateAim(Vector3 newFingerPosition) {
         if (poking) return;
-        float touchDistance = newFingerPosition.x - lastFingerPosition.x;
+        float touchDistance = (newFingerPosition.x - lastFingerPosition.x) * touchDampValue;
         lastFingerPosition = newFingerPosition;
         rotationProportion = Mathf.Clamp(rotationProportion + touchDistance, 0, 1);
         float rotationAmount = Mathf.Lerp(rotationLimit, -rotationLimit, rotationProportion);
@@ -205,6 +203,12 @@ public class PokingStickController : MonoBehaviour
         }
 
         return fruitTypes;
+    }
+
+    void DisableTutorialArrows() { 
+        foreach(TutorialArrow arrow in tutorialArrows) {
+            arrow.DeactivateArrow();
+        }
     }
 
     private void OnEnable()

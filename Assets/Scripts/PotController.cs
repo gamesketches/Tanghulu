@@ -13,6 +13,8 @@ public class PotController : MonoBehaviour
     public float distanceBetweenFruits;
     public int placementRetries;
 
+    public TutorialArrow[] tutorialArrows;
+
     Vector3 lastPosition;
     [HideInInspector]
     public bool dragging;
@@ -25,12 +27,6 @@ public class PotController : MonoBehaviour
         FillPot();
         lastPosition = Vector3.forward;
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 
     void FillPot()
@@ -128,6 +124,7 @@ public class PotController : MonoBehaviour
 
     public void UpdateDragging(bool newDragState) {
         dragging = newDragState;
+        DisableTutorialArrows();
         if (!dragging) lastPosition = Vector3.forward;
     }
 
@@ -147,6 +144,12 @@ public class PotController : MonoBehaviour
             PokeableFruit newFruit = Instantiate(obj).GetComponent<PokeableFruit>();
             fruitBag.Add(newFruit);
             newFruit.gameObject.SetActive(false);
+        }
+    }
+
+    void DisableTutorialArrows() { 
+        foreach(TutorialArrow arrow in tutorialArrows) {
+            arrow.DeactivateArrow();
         }
     }
 
