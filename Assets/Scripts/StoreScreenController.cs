@@ -98,6 +98,16 @@ public class StoreScreenController : MonoBehaviour
         }
     }
 
+    public void Purchase500Coins() { 
+        iapManager.BuyProductID(coinPurchaseLevels.fiveThousandCoins);
+        coinPurchaseMenu.gameObject.SetActive(false);
+    }
+
+    public void Purchase2500Coins() { 
+        iapManager.BuyProductID(coinPurchaseLevels.fiveThousandCoins);
+        coinPurchaseMenu.gameObject.SetActive(false);
+    }
+
     public void Purchase5kCoins() {
         iapManager.BuyProductID(coinPurchaseLevels.fiveThousandCoins);
         coinPurchaseMenu.gameObject.SetActive(false);

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
 
-public enum coinPurchaseLevels { fiveThousandCoins, fiftyThousandCoins, fiveHundredThousandCoins};
+public enum coinPurchaseLevels { fiveHundredCoins, twentyFiveHundredCoins, fiveThousandCoins, fiftyThousandCoins, fiveHundredThousandCoins};
 public class IAPManager : MonoBehaviour, IStoreListener
 {
 	public static IAPManager instance;
