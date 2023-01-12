@@ -21,6 +21,7 @@ public class CustomerManager : MonoBehaviour
     public CustomerSpritePack[] customerSprites;
 
     public static CustomerManager instance;
+
     public delegate void PointsScored(int points);
     public static event PointsScored ScorePoints;
 
@@ -40,7 +41,7 @@ public class CustomerManager : MonoBehaviour
     {
         int highestScore = -1;
         int highestScoringCustomer = -1;
-        for (int i = 0; i < activeCustomers.Count; i++)
+        for (int i = 0; i < Mathf.Min(activeCustomers.Count, 3); i++)
         {
             CustomerController customer = activeCustomers[i];
             if (!customer.gameObject.activeSelf) continue;

@@ -23,6 +23,27 @@ TextureImporter:
   - first:
       213: 6090637668711595663
     second: theme_assets_two_6
+  - first:
+      213: -2261879494141329466
+    second: theme_assets_two_7
+  - first:
+      213: 9205905047365518224
+    second: theme_assets_two_8
+  - first:
+      213: 2544800529411496865
+    second: theme_assets_two_9
+  - first:
+      213: -2544618270152582290
+    second: theme_assets_two_10
+  - first:
+      213: -951191636484252510
+    second: theme_assets_two_11
+  - first:
+      213: -3859968113670030795
+    second: theme_assets_two_12
+  - first:
+      213: -1765587731585981553
+    second: theme_assets_two_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -135,10 +156,10 @@ TextureImporter:
       name: theme_assets_two_0
       rect:
         serializedVersion: 2
-        x: 45
-        y: 3849
-        width: 468
-        height: 202
+        x: 47
+        y: 3851
+        width: 464
+        height: 198
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,9 +177,9 @@ TextureImporter:
       name: theme_assets_two_1
       rect:
         serializedVersion: 2
-        x: 785
-        y: 2771
-        width: 1340
+        x: 784
+        y: 2772
+        width: 1342
         height: 1302
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -177,10 +198,10 @@ TextureImporter:
       name: theme_assets_two_2
       rect:
         serializedVersion: 2
-        x: 2175
-        y: 2781
-        width: 1338
-        height: 1304
+        x: 2177
+        y: 2783
+        width: 1337
+        height: 1302
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,10 +219,10 @@ TextureImporter:
       name: theme_assets_two_3
       rect:
         serializedVersion: 2
-        x: 3553
-        y: 3585
-        width: 468
-        height: 468
+        x: 3555
+        y: 3587
+        width: 463
+        height: 463
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,10 +240,10 @@ TextureImporter:
       name: theme_assets_two_4
       rect:
         serializedVersion: 2
-        x: 45
-        y: 3471
-        width: 324
-        height: 324
+        x: 47
+        y: 3473
+        width: 320
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,10 +261,10 @@ TextureImporter:
       name: theme_assets_two_5
       rect:
         serializedVersion: 2
-        x: 3547
-        y: 3035
-        width: 484
-        height: 490
+        x: 3550
+        y: 3038
+        width: 479
+        height: 479
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,10 +282,10 @@ TextureImporter:
       name: theme_assets_two_6
       rect:
         serializedVersion: 2
-        x: 49
-        y: 3329
-        width: 100
-        height: 102
+        x: 51
+        y: 3332
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,6 +295,153 @@ TextureImporter:
       bones: []
       spriteID: f8efa2ba0ba468450800000000000000
       internalID: 6090637668711595663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theme_assets_two_7
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 2372
+        width: 463
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf37f285903c90e0800000000000000
+      internalID: -2261879494141329466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theme_assets_two_8
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1355
+        width: 1305
+        height: 1308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09382389dd1f1cf70800000000000000
+      internalID: 9205905047365518224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theme_assets_two_9
+      rect:
+        serializedVersion: 2
+        x: 2185
+        y: 1355
+        width: 1305
+        height: 1308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab5ccb3992f05320800000000000000
+      internalID: 2544800529411496865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theme_assets_two_10
+      rect:
+        serializedVersion: 2
+        x: 3549
+        y: 2108
+        width: 463
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b169e4a23bfacd0800000000000000
+      internalID: -2544618270152582290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theme_assets_two_11
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 2167
+        width: 120
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac980a0f30bcc2f0800000000000000
+      internalID: -951191636484252510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theme_assets_two_12
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1936
+        width: 164
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53afc5c9373ae6ac0800000000000000
+      internalID: -3859968113670030795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: theme_assets_two_13
+      rect:
+        serializedVersion: 2
+        x: 3550
+        y: 1523
+        width: 480
+        height: 479
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f83a707005f5f77e0800000000000000
+      internalID: -1765587731585981553
       vertices: []
       indices: 
       edges: []
