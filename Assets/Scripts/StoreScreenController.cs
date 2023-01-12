@@ -60,7 +60,9 @@ public class StoreScreenController : MonoBehaviour
 
     public void PurchaseScheme() {
         int numCoins = int.Parse(currentCoins.text);
-        int schemePrice = GetSchemePrice(currentInspectedScheme); 
+        int schemePrice = GetSchemePrice(currentInspectedScheme);
+        //TODO: Remove before release!!
+        schemePrice = 1;
         if (numCoins > schemePrice) {
             SaveDataManager.instance.UpdateOwnedColorSchemes(currentInspectedScheme);
             SaveDataManager.instance.UpdatePlayerCoins(schemePrice);

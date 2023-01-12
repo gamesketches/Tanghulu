@@ -30,6 +30,8 @@ public class PokingStickController : MonoBehaviour
     private IEnumerator pokingCoroutine;
     bool fruitBehavior;
 
+    public static int fruitsPoked;
+
     public TutorialArrow[] tutorialArrows;
 
     public delegate void StickPoked();
@@ -42,6 +44,7 @@ public class PokingStickController : MonoBehaviour
         poking = false;
         pokeMultiplier = 1;
         rotationProportion = 0.5f;
+        fruitsPoked = 0;
         pokingCurve.postWrapMode = WrapMode.PingPong;
         stickCollider = GetComponent<BoxCollider2D>();
         stickCollider.enabled = false;
@@ -173,12 +176,14 @@ public class PokingStickController : MonoBehaviour
         {
             transform.position = new Vector3(1000, 0);
         }
+        fruitsPoked = 0;
     }
 
     public bool AttachFruit(Transform newFruit) {
         if (transform.childCount == maxFruits + 1) return false;
         //newFruit.parent = transform;
         StartCoroutine(PierceFruit(0.15f, newFruit));
+        fruitsPoked++;
         return true;
     }
 

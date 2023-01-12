@@ -53,7 +53,7 @@ public class PotController : MonoBehaviour
     }
 
     private void AddNeededFruit(FruitType[] neededFruits, int delayMultiplier = 0) { 
-        for(int i = Random.Range(0, GameManager.orderSize); i < neededFruits.Length; i += GameManager.orderSize) { 
+        for(int i = PokingStickController.fruitsPoked; i < neededFruits.Length; i += GameManager.orderSize) { 
             for(int j = 0; j < fruitBag.Count; j++) {
                 if (fruitBag[j].fruitType == neededFruits[i]) {
                     AddFruit(j, delayMultiplier);
