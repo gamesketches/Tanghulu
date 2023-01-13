@@ -17,6 +17,12 @@ public class CustomerManager : MonoBehaviour
     public GameObject customerPrefab;
     public Vector3 firstCustomerPosition;
     public float customerOffset;
+
+    public int activeCustomerCount { 
+        get {
+            return activeCustomers.Count;
+        }
+    }
     
     public CustomerSpritePack[] customerSprites;
 

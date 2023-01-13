@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour
 
     // Game tuning stuff
     public float gameTime;
-    private float gameTimer;
     public int sticksPerGame;
     public static int sticksRemaining;
 
@@ -58,9 +57,12 @@ public class GameManager : MonoBehaviour
     {
         if(gamePlaying) {
             customerTimer -= Time.deltaTime;
-            if (customerTimer <= 0 && customersGenerated < sticksPerGame)
+            if (customerTimer <= 0)
             {
-                GenerateOrder();
+                if(CustomerManager.instance.activeCustomerCount < 3 && customersGenerated < sticksPerGame)
+                {
+                    GenerateOrder();
+                }
             }
         }
     }
@@ -137,5 +139,9 @@ public class GameManager : MonoBehaviour
 
     public void BackToHome() {
         LoadingScreenManager.instance.LoadScene(SceneType.TitleScreen, false, true);
+    }
+
+    public void BackToHomeCurtain() { 
+        LoadingScreenManager.instance.LoadScene(SceneType.TitleScreen, true, true);
     }
 }
