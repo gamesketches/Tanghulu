@@ -675,10 +675,10 @@ TextureImporter:
       name: theme_assets_two_14
       rect:
         serializedVersion: 2
-        x: 779
-        y: 34
-        width: 1293
-        height: 1255
+        x: 791
+        y: 12
+        width: 1307
+        height: 1277
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -719,8 +719,8 @@ TextureImporter:
         serializedVersion: 2
         x: 2174
         y: 12
-        width: 1208
-        height: 1252
+        width: 1223
+        height: 1282
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
