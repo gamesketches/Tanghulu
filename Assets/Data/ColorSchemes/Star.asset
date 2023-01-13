@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ab3273001d448b8a3a9cf179736995, type: 3}
+  m_Name: Star
+  m_EditorClassIdentifier: 
+  banner: {fileID: -3440350276726505141, guid: 699db280c2a634fbda2095327af43e3e, type: 3}
+  background: {fileID: 3089771162531772244, guid: 699db280c2a634fbda2095327af43e3e,
+    type: 3}
+  tableSprite: {fileID: 819885883095932884, guid: 699db280c2a634fbda2095327af43e3e,
+    type: 3}
+  potTop: {fileID: 4076024318693121915, guid: 699db280c2a634fbda2095327af43e3e, type: 3}
+  potBottom: {fileID: 6777338289341326025, guid: 699db280c2a634fbda2095327af43e3e,
+    type: 3}
+  mainColorSprite: {fileID: 819885883095932884, guid: 699db280c2a634fbda2095327af43e3e,
+    type: 3}
+  pricePoint: 1

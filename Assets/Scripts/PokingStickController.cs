@@ -27,8 +27,8 @@ public class PokingStickController : MonoBehaviour
     public float fruitSlidingTime;
 
     public StickCounter stickCounter;
-    private IEnumerator pokingCoroutine;
-    bool fruitBehavior;
+
+    public FruitHUD fruitHUD;
 
     public static int fruitsPoked;
 
@@ -138,6 +138,7 @@ public class PokingStickController : MonoBehaviour
             fruitTransform.localScale = Vector3.Lerp(squishVector, Vector3.one, t / duration);
             yield return null;
         }
+        fruitHUD.UpdateDisplay(GetFruits());
 
     }
 
@@ -172,6 +173,7 @@ public class PokingStickController : MonoBehaviour
             transform.localScale = Vector3.one;
             transform.GetChild(0).gameObject.SetActive(true);
             stickCollider.enabled = true;
+            fruitHUD.ClearDisplay();
         } else
         {
             transform.position = new Vector3(1000, 0);
