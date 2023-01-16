@@ -229,12 +229,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2048, y: 1536}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -362,15 +362,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1769591513}
   - {fileID: 1296457440}
+  - {fileID: 1769591513}
   m_Father: {fileID: 75118696}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1788}
-  m_SizeDelta: {x: 0, y: 1800}
+  m_AnchoredPosition: {x: 0, y: -1536}
+  m_SizeDelta: {x: 0, y: 1536}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &938709549
 GameObject:
@@ -552,11 +552,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 897086891}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: -23.92}
+  m_AnchorMin: {x: -0.05, y: 0}
+  m_AnchorMax: {x: 1.05, y: 0}
+  m_AnchoredPosition: {x: 0, y: -95.01}
   m_SizeDelta: {x: 0, y: 101.3}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1296457441
@@ -578,10 +578,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2837174921535753947, guid: 80bc5d391085848e78e84deb022b15c6,
+  m_Sprite: {fileID: -5925636670622259787, guid: a01bb956b745d425e95bfec6d54b74e0,
     type: 3}
   m_Type: 2
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -641,7 +641,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 897086891}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -667,7 +667,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 6032927595609670785, guid: a01bb956b745d425e95bfec6d54b74e0,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

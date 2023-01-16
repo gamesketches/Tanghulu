@@ -19,4 +19,6 @@ public class ColorScheme : ScriptableObject
     public Sprite mainColorSprite;
 
     public SchemePricePoint pricePoint;
+
+    public Color mainColor;
 }

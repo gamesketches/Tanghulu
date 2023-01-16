@@ -27,12 +27,6 @@ public class ResultScreenController : MonoBehaviour
         canvas.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OpenResultScreen() {
         canvas.enabled = true;
         curtainOnRoutine = MoveResultsScreenOn();
