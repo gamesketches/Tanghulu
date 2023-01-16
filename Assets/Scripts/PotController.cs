@@ -5,6 +5,7 @@ using UnityEngine;
 public class PotController : MonoBehaviour
 {
     public GameObject[] fruitPrefabs;
+    public Transform shadowTransform;
     public int numFruits;
     public float potRadius;
     private List<PokeableFruit> fruitBag;
@@ -113,6 +114,7 @@ public class PotController : MonoBehaviour
             float newPositionAngle = GetTheta(newPosition);
             float difference = newPositionAngle - oldPositionAngle;
             transform.Rotate(Vector3.forward, difference);
+            shadowTransform.Rotate(Vector3.forward, difference);
         }
         lastPosition = newPosition;
     }

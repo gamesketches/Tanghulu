@@ -6,15 +6,23 @@ public class PokingStickController : MonoBehaviour
 {
     public float stickLength;
     public float pokeDistance;
+
+    [Header("Serving variables")]
     public float serveTime;
     public float serveEndingScale;
     public float stickTouchHeight;
+    public float servingOffset;
+
+
+    [HideInInspector]
     public bool aiming;
+    [HideInInspector]
     public bool poking;
     BoxCollider2D stickCollider;
     private Vector3 lastFingerPosition;
     public int maxFruits;
 
+    [Header("Feel variables")]
     public float rotationLimit;
     public float touchLimit;
     public float touchDampValue;
@@ -26,6 +34,7 @@ public class PokingStickController : MonoBehaviour
     public AnimationCurve pokingCurve;
     public float fruitSlidingTime;
 
+    [Header("Hud stuff")]
     public StickCounter stickCounter;
 
     public FruitHUD fruitHUD;
@@ -152,14 +161,17 @@ public class PokingStickController : MonoBehaviour
     }
 
     private IEnumerator ServeCustomer(CustomerController customer) {
-        Vector3 targetPosition = customer.transform.position;
+        Vector3 targetPosition = customer.transform.position - new Vector3(0, servingOffset, 0);
         Vector3 startPosition = transform.position;
         Vector3 targetScale = new Vector3(serveEndingScale, serveEndingScale, serveEndingScale);
+        Quaternion startRotation = transform.rotation;
+        Quaternion targetRotation = Quaternion.Euler(0, 0, -90f);
 
         for(float t = 0; t < serveTime; t += Time.deltaTime) {
             float proportion = Mathf.SmoothStep(0, 1, t / serveTime);
             transform.position = Vector3.Lerp(startPosition, targetPosition, proportion);
             transform.localScale = Vector3.Lerp(Vector3.one, targetScale, proportion);
+            transform.rotation = Quaternion.Lerp(startRotation, targetRotation, proportion);
             yield return null;
         }
 
