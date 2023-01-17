@@ -132,10 +132,14 @@ public class PotController : MonoBehaviour
 
     public FruitType[] GetOrder() { 
         FruitType[] newOrder = new FruitType[GameManager.orderSize];
+        List<int> numbersPicked = new List<int>();
         for (int i = 0; i < GameManager.orderSize; i++) {
             // Picking from fruits in the pot so there will alwas be some fruits in the order, but not always all fruits
-            Transform randomChild = transform.GetChild(Random.Range(0, transform.childCount));
+            int diceRoll = Random.Range(0, transform.childCount);
+            while (numbersPicked.IndexOf(diceRoll) > -1) diceRoll = Random.Range(0, transform.childCount);
+            Transform randomChild = transform.GetChild(diceRoll);
             newOrder[i] = randomChild.GetComponent<PokeableFruit>().fruitType;
+            numbersPicked.Add(diceRoll);
         }
         return newOrder;
     }

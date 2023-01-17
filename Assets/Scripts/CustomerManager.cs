@@ -25,6 +25,7 @@ public class CustomerManager : MonoBehaviour
     }
     
     public CustomerSpritePack[] customerSprites;
+    List<CustomerSpritePack> customersPicked;
 
     public static CustomerManager instance;
 
@@ -39,6 +40,7 @@ public class CustomerManager : MonoBehaviour
         instance = this;
         customerPool = new List<CustomerController>();
         activeCustomers = new List<CustomerController>();
+        customersPicked = new List<CustomerSpritePack>();
         numCustomers = 0;
         pointText.enabled = false;
     }
@@ -66,7 +68,6 @@ public class CustomerManager : MonoBehaviour
     public void ServeCustomer(CustomerController customer, FruitType[] curOrder) {
         int customerIndex = activeCustomers.IndexOf(customer);
         int score = customer.CalculateSatisfaction(curOrder);
-        customer.UpdateSprite(score);
         StartCoroutine(ShowPointsScored(customer.transform.position, score));
         SFXManager.instance.PlaySoundEffect(SoundEffectType.Success);
         customer.Leave();
@@ -117,7 +118,9 @@ public class CustomerManager : MonoBehaviour
     }
 
     CustomerSpritePack GetCustomerSprite() {
-        return customerSprites[Random.Range(0, customerSprites.Length)];
+        int diceRoll = Random.Range(0, customerSprites.Length);
+        while (customersPicked.IndexOf(customerSprites[diceRoll]) > -1) diceRoll = Random.Range(0, customerSprites.Length);
+        return customerSprites[diceRoll];
     }
 
     Vector3 GetCustomerPhysicalPosition(int spotInLine) {

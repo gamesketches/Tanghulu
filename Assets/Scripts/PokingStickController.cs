@@ -12,6 +12,7 @@ public class PokingStickController : MonoBehaviour
     public float serveEndingScale;
     public float stickTouchHeight;
     public float servingOffset;
+    public float servingHoldTime;
 
 
     [HideInInspector]
@@ -165,7 +166,7 @@ public class PokingStickController : MonoBehaviour
         Vector3 startPosition = transform.position;
         Vector3 targetScale = new Vector3(serveEndingScale, serveEndingScale, serveEndingScale);
         Quaternion startRotation = transform.rotation;
-        Quaternion targetRotation = Quaternion.Euler(0, 0, -90f);
+        Quaternion targetRotation = Quaternion.Euler(0, 0, -87f);
 
         for(float t = 0; t < serveTime; t += Time.deltaTime) {
             float proportion = Mathf.SmoothStep(0, 1, t / serveTime);
@@ -178,11 +179,13 @@ public class PokingStickController : MonoBehaviour
         
         stickCounter.RemoveStick();
         yield return customer.ShowSatisfaction(GetFruits());
+        yield return new WaitForSeconds(servingHoldTime);
         CustomerManager.instance.ServeCustomer(customer, GetFruits());
         if (GameManager.sticksRemaining > 0)
         {
             transform.position = startPosition;
             transform.localScale = Vector3.one;
+            transform.rotation = Quaternion.identity;
             transform.GetChild(0).gameObject.SetActive(true);
             stickCollider.enabled = true;
             fruitHUD.ClearDisplay();

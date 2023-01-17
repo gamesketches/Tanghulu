@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Default
   m_EditorClassIdentifier: 
   banner: {fileID: -5925636670622259787, guid: a01bb956b745d425e95bfec6d54b74e0, type: 3}
-  background: {fileID: 6348842829084591218, guid: a01bb956b745d425e95bfec6d54b74e0,
+  background: {fileID: 6888630932344881776, guid: a01bb956b745d425e95bfec6d54b74e0,
     type: 3}
-  tableSprite: {fileID: 6032927595609670785, guid: a01bb956b745d425e95bfec6d54b74e0,
+  tableSprite: {fileID: 2579800128825338241, guid: a01bb956b745d425e95bfec6d54b74e0,
     type: 3}
-  potTop: {fileID: 3598769467827381985, guid: a01bb956b745d425e95bfec6d54b74e0, type: 3}
-  potBottom: {fileID: -6249295469806484922, guid: a01bb956b745d425e95bfec6d54b74e0,
+  potTop: {fileID: 6348842829084591218, guid: a01bb956b745d425e95bfec6d54b74e0, type: 3}
+  potBottom: {fileID: 3598769467827381985, guid: a01bb956b745d425e95bfec6d54b74e0,
     type: 3}
-  mainColorSprite: {fileID: 6032927595609670785, guid: a01bb956b745d425e95bfec6d54b74e0,
+  mainColorSprite: {fileID: 2579800128825338241, guid: a01bb956b745d425e95bfec6d54b74e0,
     type: 3}
+  pricePoint: 0
+  mainColor: {r: 0.77647066, g: 0.23529413, b: 0, a: 1}

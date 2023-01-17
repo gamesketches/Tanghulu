@@ -15,11 +15,12 @@ MonoBehaviour:
   banner: {fileID: -3440350276726505141, guid: 699db280c2a634fbda2095327af43e3e, type: 3}
   background: {fileID: 3089771162531772244, guid: 699db280c2a634fbda2095327af43e3e,
     type: 3}
-  tableSprite: {fileID: 819885883095932884, guid: 699db280c2a634fbda2095327af43e3e,
+  tableSprite: {fileID: -1803295085279033223, guid: 699db280c2a634fbda2095327af43e3e,
     type: 3}
   potTop: {fileID: 4076024318693121915, guid: 699db280c2a634fbda2095327af43e3e, type: 3}
   potBottom: {fileID: 6777338289341326025, guid: 699db280c2a634fbda2095327af43e3e,
     type: 3}
-  mainColorSprite: {fileID: 819885883095932884, guid: 699db280c2a634fbda2095327af43e3e,
+  mainColorSprite: {fileID: -1803295085279033223, guid: 699db280c2a634fbda2095327af43e3e,
     type: 3}
   pricePoint: 1
+  mainColor: {r: 0.1254902, g: 0.32941177, b: 0.53333336, a: 1}

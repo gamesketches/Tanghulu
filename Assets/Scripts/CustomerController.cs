@@ -72,6 +72,8 @@ public class CustomerController : MonoBehaviour
 
     public IEnumerator ShowSatisfaction(FruitType[] preparedOrder) {
         yield return customerBubble.ServeAnimation(CalculateSatisfactionReport(preparedOrder));
+        int score = CalculateSatisfaction(preparedOrder);
+        UpdateSprite(score);
     }
 
     public void GetDismissed() {

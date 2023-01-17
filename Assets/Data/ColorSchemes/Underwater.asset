@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Underwater
   m_EditorClassIdentifier: 
   banner: {fileID: 4822891940688988449, guid: a01bb956b745d425e95bfec6d54b74e0, type: 3}
-  background: {fileID: 9037201249589100101, guid: a01bb956b745d425e95bfec6d54b74e0,
+  background: {fileID: -2489834569576086134, guid: a01bb956b745d425e95bfec6d54b74e0,
     type: 3}
   tableSprite: {fileID: -8235154665577526792, guid: a01bb956b745d425e95bfec6d54b74e0,
     type: 3}
-  potTop: {fileID: -1523056884686397683, guid: a01bb956b745d425e95bfec6d54b74e0, type: 3}
-  potBottom: {fileID: 8621030546158270299, guid: a01bb956b745d425e95bfec6d54b74e0,
+  potTop: {fileID: 9037201249589100101, guid: a01bb956b745d425e95bfec6d54b74e0, type: 3}
+  potBottom: {fileID: -1523056884686397683, guid: a01bb956b745d425e95bfec6d54b74e0,
     type: 3}
   mainColorSprite: {fileID: -1071777963536759667, guid: a01bb956b745d425e95bfec6d54b74e0,
     type: 3}
+  pricePoint: 0
+  mainColor: {r: 0, g: 0.5176471, b: 0.5647059, a: 1}

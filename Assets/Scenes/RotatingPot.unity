@@ -3314,6 +3314,7 @@ MonoBehaviour:
   serveEndingScale: 0.4
   stickTouchHeight: -3.7
   servingOffset: 0.569545
+  servingHoldTime: 0.5
   aiming: 0
   poking: 0
   maxFruits: 4

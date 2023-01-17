@@ -23,3 +23,4 @@ MonoBehaviour:
   mainColorSprite: {fileID: 6090637668711595663, guid: 699db280c2a634fbda2095327af43e3e,
     type: 3}
   pricePoint: 5
+  mainColor: {r: 0.93725497, g: 0.6745098, b: 0.5803922, a: 1}

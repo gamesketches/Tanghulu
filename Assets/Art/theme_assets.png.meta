@@ -113,7 +113,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -201,10 +201,10 @@ TextureImporter:
       name: theme_assets_1
       rect:
         serializedVersion: 2
-        x: 561
-        y: 3969
-        width: 90
-        height: 77
+        x: 949
+        y: 3023
+        width: 1057
+        height: 1057
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,9 +222,9 @@ TextureImporter:
       name: theme_assets_2
       rect:
         serializedVersion: 2
-        x: 949
-        y: 3019
-        width: 1057
+        x: 2252
+        y: 3005
+        width: 1058
         height: 1061
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -243,10 +243,10 @@ TextureImporter:
       name: theme_assets_3
       rect:
         serializedVersion: 2
-        x: 2253
-        y: 3005
-        width: 1057
-        height: 1061
+        x: 3555
+        y: 3586
+        width: 463
+        height: 463
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,10 +264,10 @@ TextureImporter:
       name: theme_assets_4
       rect:
         serializedVersion: 2
-        x: 3555
-        y: 3586
-        width: 463
-        height: 463
+        x: 55
+        y: 3432
+        width: 341
+        height: 341
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -285,10 +285,10 @@ TextureImporter:
       name: theme_assets_5
       rect:
         serializedVersion: 2
-        x: 46
-        y: 3697
-        width: 84
-        height: 84
+        x: 3555
+        y: 3035
+        width: 479
+        height: 481
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,10 +306,10 @@ TextureImporter:
       name: theme_assets_6
       rect:
         serializedVersion: 2
-        x: 3555
-        y: 3035
-        width: 479
-        height: 481
+        x: 67
+        y: 3021
+        width: 333
+        height: 333
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,7 +328,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 45
-        y: 2668
+        y: 2753
         width: 466
         height: 198
       alignment: 0
@@ -348,10 +348,10 @@ TextureImporter:
       name: theme_assets_8
       rect:
         serializedVersion: 2
-        x: 596
-        y: 2812
-        width: 26
-        height: 47
+        x: 854
+        y: 1671
+        width: 1210
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -369,10 +369,10 @@ TextureImporter:
       name: theme_assets_9
       rect:
         serializedVersion: 2
-        x: 854
-        y: 1667
-        width: 1210
-        height: 1204
+        x: 2135
+        y: 1671
+        width: 1209
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -390,10 +390,10 @@ TextureImporter:
       name: theme_assets_10
       rect:
         serializedVersion: 2
-        x: 2135
-        y: 1671
-        width: 1209
-        height: 1200
+        x: 3554
+        y: 2344
+        width: 464
+        height: 463
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,7 +412,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 46
-        y: 1926
+        y: 2011
         width: 679
         height: 681
       alignment: 0
@@ -432,10 +432,10 @@ TextureImporter:
       name: theme_assets_12
       rect:
         serializedVersion: 2
-        x: 3554
-        y: 2339
-        width: 464
-        height: 468
+        x: 3555
+        y: 1799
+        width: 479
+        height: 479
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -453,10 +453,10 @@ TextureImporter:
       name: theme_assets_13
       rect:
         serializedVersion: 2
-        x: 45
-        y: 1776
-        width: 91
-        height: 81
+        x: 48
+        y: 1587
+        width: 402
+        height: 402
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -474,10 +474,10 @@ TextureImporter:
       name: theme_assets_14
       rect:
         serializedVersion: 2
-        x: 3555
-        y: 1799
-        width: 479
-        height: 479
+        x: 48
+        y: 1259
+        width: 416
+        height: 310
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -495,10 +495,10 @@ TextureImporter:
       name: theme_assets_15
       rect:
         serializedVersion: 2
-        x: 55
-        y: 1315
-        width: 465
-        height: 211
+        x: 844
+        y: 211
+        width: 1235
+        height: 1238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -516,10 +516,10 @@ TextureImporter:
       name: theme_assets_16
       rect:
         serializedVersion: 2
-        x: 625
-        y: 1427
-        width: 89
-        height: 89
+        x: 2156
+        y: 222
+        width: 1235
+        height: 1238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -537,10 +537,10 @@ TextureImporter:
       name: theme_assets_17
       rect:
         serializedVersion: 2
-        x: 843
-        y: 211
-        width: 1239
-        height: 1239
+        x: 3538
+        y: 970
+        width: 464
+        height: 463
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -558,10 +558,10 @@ TextureImporter:
       name: theme_assets_18
       rect:
         serializedVersion: 2
-        x: 2156
-        y: 222
-        width: 1235
-        height: 1238
+        x: 43
+        y: 1018
+        width: 465
+        height: 210
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -579,10 +579,10 @@ TextureImporter:
       name: theme_assets_19
       rect:
         serializedVersion: 2
-        x: 3538
-        y: 970
-        width: 464
-        height: 463
+        x: 43
+        y: 492
+        width: 460
+        height: 460
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -600,10 +600,10 @@ TextureImporter:
       name: theme_assets_20
       rect:
         serializedVersion: 2
-        x: 45
-        y: 1101
-        width: 115
-        height: 115
+        x: 3530
+        y: 428
+        width: 479
+        height: 479
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -621,10 +621,10 @@ TextureImporter:
       name: theme_assets_21
       rect:
         serializedVersion: 2
-        x: 3530
-        y: 428
-        width: 479
-        height: 479
+        x: 63
+        y: 7
+        width: 414
+        height: 414
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
