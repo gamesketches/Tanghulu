@@ -24,7 +24,7 @@ public class CustomerManager : MonoBehaviour
         }
     }
     
-    public CustomerSpritePack[] customerSprites;
+    public List<CustomerSpritePack> customerSprites;
     List<CustomerSpritePack> customersPicked;
 
     public static CustomerManager instance;
@@ -118,9 +118,10 @@ public class CustomerManager : MonoBehaviour
     }
 
     CustomerSpritePack GetCustomerSprite() {
-        int diceRoll = Random.Range(0, customerSprites.Length);
-        while (customersPicked.IndexOf(customerSprites[diceRoll]) > -1) diceRoll = Random.Range(0, customerSprites.Length);
-        return customerSprites[diceRoll];
+        int diceRoll = Random.Range(0, customerSprites.Count);
+        CustomerSpritePack returnVal = customerSprites[diceRoll];
+        customerSprites.RemoveAt(diceRoll);
+        return returnVal;
     }
 
     Vector3 GetCustomerPhysicalPosition(int spotInLine) {

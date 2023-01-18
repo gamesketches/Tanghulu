@@ -74,13 +74,9 @@ public class GameManager : MonoBehaviour
         GenerateOrder();
     }
 
-    public CustomerController VerifyFruit(PokeableFruit[] pokedFruits) {
+    public CustomerController VerifyFruit(FruitType[] pokedFruits) {
         sticksRemaining--;
-        FruitType[] fruitOnStick = new FruitType[orderSize];
-        for(int i = 0; i < orderSize; i++) {
-            fruitOnStick[i] = pokedFruits[i].fruitType;
-        }
-        return CustomerManager.instance.SatisfiesCustomer(fruitOnStick);
+        return CustomerManager.instance.SatisfiesCustomer(pokedFruits);
     }
     
     void GenerateOrder() {
@@ -143,5 +139,9 @@ public class GameManager : MonoBehaviour
 
     public void BackToHomeCurtain() { 
         LoadingScreenManager.instance.LoadScene(SceneType.TitleScreen, true, true);
+    }
+
+    public void GoToShop() {
+        LoadingScreenManager.instance.LoadScene(SceneType.StoreScreen, false, true);
     }
 }

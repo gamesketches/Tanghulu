@@ -12,7 +12,6 @@ public class StickCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(GameManager.sticksRemaining);
         for (int i = 0; i < GameManager.sticksRemaining; i++) {
             GameObject newStick = GameObject.Instantiate(stickCounter, transform);
             newStick.GetComponent<RectTransform>().anchoredPosition = firstStickPos + new Vector2(stickOffset * i, 0);

@@ -15,6 +15,8 @@ public class LoadingScreenManager : MonoBehaviour
     public float curtainMoveTime;
     public float curtainHoldTime;
 
+    public int activeSortOrder;
+
     bool loading;
 
     // Start is called before the first frame update
@@ -41,7 +43,8 @@ public class LoadingScreenManager : MonoBehaviour
 
     private IEnumerator LoadScreenWithCurtain(SceneType screenType, bool curtainDown = true, bool curtainUp = true) {
 
-        canvas.enabled = true;
+        //canvas.enabled = true;
+        canvas.sortingOrder = activeSortOrder;
         AsyncOperation sceneLoadHandle = SceneManager.LoadSceneAsync(screenType.ToString());
 
         sceneLoadHandle.allowSceneActivation = false;
@@ -58,7 +61,8 @@ public class LoadingScreenManager : MonoBehaviour
 
         if (curtainUp) yield return MoveCurtain(false);
         
-        canvas.enabled = false;
+        //canvas.enabled = false;
+        canvas.sortingOrder = 0;
         loading = false;
     }
 

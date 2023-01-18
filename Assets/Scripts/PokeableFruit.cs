@@ -64,7 +64,8 @@ public class PokeableFruit : MonoBehaviour
         floating = true;
     }
 
-    IEnumerator KnockFruitOff() { 
+    IEnumerator KnockFruitOff() {
+        GetComponent<Collider2D>().enabled = false;
         for(float t = 0; t < appearTime; t += Time.deltaTime) {
             transform.Translate(10 * Time.deltaTime, 10 * Time.deltaTime, 0, Space.World);
             yield return null;

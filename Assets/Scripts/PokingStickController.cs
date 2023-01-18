@@ -14,7 +14,6 @@ public class PokingStickController : MonoBehaviour
     public float servingOffset;
     public float servingHoldTime;
 
-
     [HideInInspector]
     public bool aiming;
     [HideInInspector]
@@ -27,13 +26,14 @@ public class PokingStickController : MonoBehaviour
     public float rotationLimit;
     public float touchLimit;
     public float touchDampValue;
+    public AnimationCurve pokingCurve;
+    public float fruitSlidingTime;
 
+    List<PokeableFruit> pokedFruits;
     private float rotationProportion;
 
     float pokeMultiplier;
 
-    public AnimationCurve pokingCurve;
-    public float fruitSlidingTime;
 
     [Header("Hud stuff")]
     public StickCounter stickCounter;
@@ -58,6 +58,7 @@ public class PokingStickController : MonoBehaviour
         pokingCurve.postWrapMode = WrapMode.PingPong;
         stickCollider = GetComponent<BoxCollider2D>();
         stickCollider.enabled = false;
+        pokedFruits = new List<PokeableFruit>();
     }
 
     public bool CheckTouchPosition(Vector3 position)
@@ -103,9 +104,9 @@ public class PokingStickController : MonoBehaviour
         }
         transform.position = startPosition;
         poking = false;
-        if (transform.childCount == maxFruits + 1)
+        if (pokedFruits.Count == maxFruits)
         {
-            CustomerController customer = GameManager.instance.VerifyFruit(gameObject.GetComponentsInChildren<PokeableFruit>());
+            CustomerController customer = GameManager.instance.VerifyFruit(GetFruits());
             if (customer != null)
             {
                 StartCoroutine(ServeCustomer(customer));
@@ -117,6 +118,15 @@ public class PokingStickController : MonoBehaviour
         }
         stickCollider.enabled = false;
         StickFinishedPoking();
+    }
+
+    public bool AttachFruit(Transform newFruit) {
+        PokeableFruit fruitObject = newFruit.GetComponent<PokeableFruit>();
+        if (pokedFruits.Count >= maxFruits || pokedFruits.IndexOf(fruitObject) > -1) return false;
+        StartCoroutine(PierceFruit(0.15f, newFruit));
+        pokedFruits.Add(fruitObject);
+        fruitsPoked++;
+        return true;
     }
 
     private IEnumerator PierceFruit(float duration, Transform fruitTransform)
@@ -189,19 +199,12 @@ public class PokingStickController : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(true);
             stickCollider.enabled = true;
             fruitHUD.ClearDisplay();
+            pokedFruits.Clear();
+            fruitsPoked = 0;
         } else
         {
             transform.position = new Vector3(1000, 0);
         }
-        fruitsPoked = 0;
-    }
-
-    public bool AttachFruit(Transform newFruit) {
-        if (transform.childCount == maxFruits + 1) return false;
-        //newFruit.parent = transform;
-        StartCoroutine(PierceFruit(0.15f, newFruit));
-        fruitsPoked++;
-        return true;
     }
 
     private float StickEnd(bool local = false) {
@@ -219,11 +222,11 @@ public class PokingStickController : MonoBehaviour
     }
 
     public FruitType[] GetFruits() {
-        PokeableFruit[] fruits = gameObject.GetComponentsInChildren<PokeableFruit>();
-        FruitType[] fruitTypes = new FruitType[fruits.Length];
+        FruitType[] fruitTypes = new FruitType[pokedFruits.Count];
 
-        for(int i = 0; i < fruits.Length; i++) {
-            fruitTypes[i] = fruits[i].fruitType;
+        for(int i = 0; i < pokedFruits.Count; i++) { 
+        //for(int i = 0; i < fruits.Length; i++) {
+            fruitTypes[i] = pokedFruits[i].fruitType;
         }
 
         return fruitTypes;
