@@ -15,6 +15,8 @@ public class LoadingScreenManager : MonoBehaviour
     public float curtainMoveTime;
     public float curtainHoldTime;
 
+    float bottomOfScreen;
+
     public int activeSortOrder;
 
     bool loading;
@@ -24,7 +26,8 @@ public class LoadingScreenManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         instance = this;
-        curtainRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 0, Screen.height);
+        bottomOfScreen = 0;
+        curtainRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, bottomOfScreen, Screen.height);
         loading = false;
     }
 
@@ -43,13 +46,13 @@ public class LoadingScreenManager : MonoBehaviour
 
     private IEnumerator LoadScreenWithCurtain(SceneType screenType, bool curtainDown = true, bool curtainUp = true) {
 
-        //canvas.enabled = true;
         canvas.sortingOrder = activeSortOrder;
         AsyncOperation sceneLoadHandle = SceneManager.LoadSceneAsync(screenType.ToString());
 
         sceneLoadHandle.allowSceneActivation = false;
 
         if (curtainDown) yield return MoveCurtain(true);
+        else curtainRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, bottomOfScreen, curtainRect.rect.size.y);
 
         while (sceneLoadHandle.progress < 0.9f)
         {
@@ -60,20 +63,24 @@ public class LoadingScreenManager : MonoBehaviour
         sceneLoadHandle.allowSceneActivation = true;
 
         if (curtainUp) yield return MoveCurtain(false);
+        else curtainRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, -Screen.height, curtainRect.rect.size.y);
         
-        //canvas.enabled = false;
-        canvas.sortingOrder = 0;
+        if(screenType != SceneType.TitleScreen)
+            canvas.sortingOrder = 0;
         loading = false;
     }
 
     private IEnumerator MoveCurtain(bool curtainDown) {
         float proportion;
         for(float t = 0; t < curtainMoveTime; t += Time.deltaTime) {
-            if (curtainDown) proportion = Mathf.SmoothStep(-Screen.height, 0, t / curtainMoveTime);
-            else proportion = Mathf.SmoothStep(0, -Screen.height, t / curtainMoveTime);
+            if (curtainDown) proportion = Mathf.SmoothStep(-Screen.height, bottomOfScreen, t / curtainMoveTime);
+            else proportion = Mathf.SmoothStep(bottomOfScreen, -Screen.height, t / curtainMoveTime);
 
             curtainRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, proportion, curtainRect.rect.size.y);
             yield return null;
         }
+
+        float endPoint = curtainDown ? bottomOfScreen : -Screen.height;
+        curtainRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, endPoint, curtainRect.rect.size.y);
     }
 }

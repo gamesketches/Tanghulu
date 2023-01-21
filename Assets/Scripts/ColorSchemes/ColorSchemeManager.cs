@@ -11,10 +11,16 @@ public class ColorSchemeManager : MonoBehaviour
 
     public delegate void ColorSchemeChangeEvent();
     public static event ColorSchemeChangeEvent ColorSchemeChanged;
+
     // Start is called before the first frame update
     void Awake()
     {
         int targetColorScheme = SaveDataManager.instance.GetPlayerPreferredColorScheme();
+        if (currentColorScheme != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
         currentColorScheme = colorSchemes[targetColorScheme];
         DontDestroyOnLoad(gameObject);
     }
