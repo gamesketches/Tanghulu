@@ -31,7 +31,7 @@ public class PokeableFruit : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("Stick")) {
+        if(other.CompareTag("Stick") && floating) {
             if (other.GetComponent<PokingStickController>().AttachFruit(transform))
             {
                 transform.localScale = Vector3.one;
@@ -65,6 +65,7 @@ public class PokeableFruit : MonoBehaviour
     }
 
     IEnumerator KnockFruitOff() {
+        floating = false;
         GetComponent<Collider2D>().enabled = false;
         for(float t = 0; t < appearTime; t += Time.deltaTime) {
             transform.Translate(10 * Time.deltaTime, 10 * Time.deltaTime, 0, Space.World);

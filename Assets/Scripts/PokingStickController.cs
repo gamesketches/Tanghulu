@@ -34,11 +34,14 @@ public class PokingStickController : MonoBehaviour
 
     float pokeMultiplier;
 
+    int pokeCombo;
 
     [Header("Hud stuff")]
     public StickCounter stickCounter;
 
     public FruitHUD fruitHUD;
+
+    public MultiplierDisplay multiplierDisplay;
 
     public static int fruitsPoked;
 
@@ -93,6 +96,7 @@ public class PokingStickController : MonoBehaviour
         stickCollider.enabled = true;
         transform.GetChild(0).gameObject.SetActive(false);
         poking = true;
+        pokeCombo = 0;
         Vector3 startPosition = transform.position;
         Vector3 endPosition = startPosition + new Vector3(transform.up.x * pokeDistance, transform.up.y * pokeDistance,
                                                 transform.position.z);
@@ -159,7 +163,7 @@ public class PokingStickController : MonoBehaviour
             yield return null;
         }
         fruitHUD.UpdateDisplay(GetFruits());
-
+        multiplierDisplay.UpdateScoreMultiplier(++pokeCombo);
     }
 
     private IEnumerator SlideFruitOnStick(Transform fruitTransform, Vector3 startPosition, Vector3 endPosition)
