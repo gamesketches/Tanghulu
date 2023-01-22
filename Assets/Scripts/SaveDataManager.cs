@@ -53,6 +53,15 @@ public class SaveDataManager : MonoBehaviour
         SavePlayerData();
     }
 
+    public bool PlayerPrefersMute() {
+        return playerData.muteVolume;
+    }
+
+    public void SetPlayerPrefersMute(bool mute) {
+        playerData.muteVolume = mute;
+        SavePlayerData();
+    }
+
     void SavePlayerData() {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/playerData.gd");
@@ -90,14 +99,28 @@ public class SaveDataManager : MonoBehaviour
         SavePlayerData();
     }
 }
-
 [System.Serializable]
 public class PlayerData {
     public int numCoins;
     public int preferredColorScheme;
     public int[] unlockedPalettes;
+    public bool muteVolume;
 
     public PlayerData() {
+        numCoins = 0;
+        preferredColorScheme = 0;
+        unlockedPalettes = new int[] { 0 };
+        muteVolume = false;
+    }
+}
+
+[System.Serializable]
+public class PlayerDataOld {
+    public int numCoins;
+    public int preferredColorScheme;
+    public int[] unlockedPalettes;
+
+    public PlayerDataOld() {
         numCoins = 0;
         preferredColorScheme = 0;
         unlockedPalettes = new int[] { 0 };

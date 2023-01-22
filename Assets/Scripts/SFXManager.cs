@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public enum SoundEffectType { PokeFruit, Success, Footstep};
 public class SFXManager : MonoBehaviour
@@ -13,6 +14,7 @@ public class SFXManager : MonoBehaviour
 
     public AudioClip walkingClip;
 
+    public AudioMixerGroup audioMixer;
     private List<AudioSource> audioSourcePool;
 
     // Start is called before the first frame update
@@ -70,6 +72,7 @@ public class SFXManager : MonoBehaviour
             }
         }
         AudioSource newSource = gameObject.AddComponent<AudioSource>();
+        newSource.outputAudioMixerGroup = audioMixer;
         audioSourcePool.Add(newSource);
         return newSource;
         }
