@@ -1063,6 +1063,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee2ec8a352a94ebda3ddf2b107e6d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 24300002, guid: a696a12befe674a6c94ee701c58fbfd4, type: 2}
+  soundButton: {fileID: 1942586217}
+  mutedButton: {fileID: -7679921613392034420, guid: 61083b27f7ed1400697819cd8d699160,
+    type: 3}
+  soundOnButton: {fileID: 1686163178347269532, guid: 61083b27f7ed1400697819cd8d699160,
+    type: 3}
 --- !u!1 &1902275410
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,7 +1217,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1445385674}
-        m_MethodName: OpenShop
+        m_MethodName: SwapVolumeSetting
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1240,7 +1246,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3959856308398013223, guid: bc9094ff64360488799d1f8d50ac267d,
+  m_Sprite: {fileID: 1686163178347269532, guid: 61083b27f7ed1400697819cd8d699160,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 1

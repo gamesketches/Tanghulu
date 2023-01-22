@@ -322,6 +322,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8443edd73407b4bfb86cdf927f6cf165, type: 3}
   successClip: {fileID: 8300000, guid: e5f06aa2461774a74a26eee0be8907bc, type: 3}
   walkingClip: {fileID: 8300000, guid: 7744d692e3c1c472e84f42ae10560262, type: 3}
+  audioMixer: {fileID: 24300002, guid: a696a12befe674a6c94ee701c58fbfd4, type: 2}
 --- !u!4 &221377357
 Transform:
   m_ObjectHideFlags: 0

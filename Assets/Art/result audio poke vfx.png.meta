@@ -1,7 +1,112 @@
 fileFormatVersion: 2
 guid: 61083b27f7ed1400697819cd8d699160
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8463587337250468525
+    second: result audio poke vfx_0
+  - first:
+      213: 1105348446700710059
+    second: result audio poke vfx_1
+  - first:
+      213: 8966528331542487717
+    second: result audio poke vfx_2
+  - first:
+      213: 1686163178347269532
+    second: result audio poke vfx_3
+  - first:
+      213: -7086437555788215969
+    second: result audio poke vfx_4
+  - first:
+      213: 2239984228486719847
+    second: result audio poke vfx_5
+  - first:
+      213: 4563023500382841650
+    second: result audio poke vfx_6
+  - first:
+      213: -4658560294552806684
+    second: result audio poke vfx_7
+  - first:
+      213: -9211110603144880897
+    second: result audio poke vfx_8
+  - first:
+      213: 8554808386063832806
+    second: result audio poke vfx_9
+  - first:
+      213: 7507678387723527465
+    second: result audio poke vfx_10
+  - first:
+      213: -8351209511523764332
+    second: result audio poke vfx_11
+  - first:
+      213: -7679921613392034420
+    second: result audio poke vfx_12
+  - first:
+      213: -1434812126729405235
+    second: result audio poke vfx_13
+  - first:
+      213: 4913800438048792124
+    second: result audio poke vfx_14
+  - first:
+      213: 9129444114290518748
+    second: result audio poke vfx_15
+  - first:
+      213: -4132255018695439525
+    second: result audio poke vfx_16
+  - first:
+      213: 3154096583032669072
+    second: result audio poke vfx_17
+  - first:
+      213: -4084278954896526205
+    second: result audio poke vfx_18
+  - first:
+      213: -3011693056839785847
+    second: result audio poke vfx_19
+  - first:
+      213: -3302111563325710493
+    second: result audio poke vfx_20
+  - first:
+      213: 7663966755938358417
+    second: result audio poke vfx_21
+  - first:
+      213: 2268162807758231242
+    second: result audio poke vfx_22
+  - first:
+      213: 698935556680124661
+    second: result audio poke vfx_23
+  - first:
+      213: 4595365255231760647
+    second: result audio poke vfx_24
+  - first:
+      213: 2143763828442109051
+    second: result audio poke vfx_25
+  - first:
+      213: -3887624365126515293
+    second: result audio poke vfx_26
+  - first:
+      213: 1486761949739854875
+    second: result audio poke vfx_27
+  - first:
+      213: -3612115985293688831
+    second: result audio poke vfx_28
+  - first:
+      213: 2393431924552065420
+    second: result audio poke vfx_29
+  - first:
+      213: -7427231200341068260
+    second: result audio poke vfx_30
+  - first:
+      213: -400462719691941421
+    second: result audio poke vfx_31
+  - first:
+      213: -1773005308469244744
+    second: result audio poke vfx_32
+  - first:
+      213: -5587361109553380376
+    second: result audio poke vfx_33
+  - first:
+      213: -3795206011675434517
+    second: result audio poke vfx_34
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +145,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +176,780 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: result audio poke vfx_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 442
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da2fe4a57d3b47570800000000000000
+      internalID: 8463587337250468525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 442
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba820ae4e8cf65f00800000000000000
+      internalID: 1105348446700710059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_2
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 442
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a2e016c2028f6c70800000000000000
+      internalID: 8966528331542487717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_3
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 348
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d8bbe1a74766710800000000000000
+      internalID: 1686163178347269532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_4
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 442
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f59814ca69ae7ad90800000000000000
+      internalID: -7086437555788215969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_5
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 371
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 769ad61b9c5061f10800000000000000
+      internalID: 2239984228486719847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 371
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b241a92bd135f30800000000000000
+      internalID: 4563023500382841650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_7
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 371
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ead07e1818795fb0800000000000000
+      internalID: -4658560294552806684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_8
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 368
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc17b085bf8b2080800000000000000
+      internalID: -9211110603144880897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_9
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 298
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e61edcd6e8c8b670800000000000000
+      internalID: 8554808386063832806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_10
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 296
+        width: 66
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 925632c57b1a03860800000000000000
+      internalID: 7507678387723527465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_11
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 298
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49733c4223b8a1c80800000000000000
+      internalID: -8351209511523764332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_12
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 183
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c854cea8bff6b6590800000000000000
+      internalID: -7679921613392034420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_13
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 280
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dccfed209f5861ce0800000000000000
+      internalID: -1434812126729405235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_14
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 228
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e9e07c673513440800000000000000
+      internalID: 4913800438048792124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 228
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda21155d0d42be70800000000000000
+      internalID: 9129444114290518748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_16
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 228
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b455144f747a6c0800000000000000
+      internalID: -4132255018695439525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_17
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 193
+        width: 68
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0938fe2912a95cb20800000000000000
+      internalID: 3154096583032669072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_18
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 156
+        width: 68
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 384f9c11ee9b157c0800000000000000
+      internalID: -4084278954896526205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_19
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 156
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 982ed861f115436d0800000000000000
+      internalID: -3011693056839785847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_20
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 156
+        width: 69
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36fd24b470b8c22d0800000000000000
+      internalID: -3302111563325710493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_21
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 96
+        width: 60
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 194db1ab821eb5a60800000000000000
+      internalID: 7663966755938358417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_22
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 96
+        width: 60
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac69e217e022a7f10800000000000000
+      internalID: 2268162807758231242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_23
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 96
+        width: 60
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f80fc88f2e13b900800000000000000
+      internalID: 698935556680124661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_24
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 96
+        width: 60
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709e2433a5406cf30800000000000000
+      internalID: 4595365255231760647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_25
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 83
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b749f9408dd20cd10800000000000000
+      internalID: 2143763828442109051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_26
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 83
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a50b78cc326c0ac0800000000000000
+      internalID: -3887624365126515293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_27
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 83
+        width: 69
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1cafc7bd1a02a410800000000000000
+      internalID: 1486761949739854875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_28
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 3
+        width: 60
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1004f0136af2fddc0800000000000000
+      internalID: -3612115985293688831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_29
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 3
+        width: 60
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81610987ad273120800000000000000
+      internalID: 2393431924552065420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_30
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 3
+        width: 60
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16f8fe039c2de890800000000000000
+      internalID: -7427231200341068260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_31
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 3
+        width: 60
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d999f63745417af0800000000000000
+      internalID: -400462719691941421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_32
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 9
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc0fc3d0150567e0800000000000000
+      internalID: -1773005308469244744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_33
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 9
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e30d398ca4b572b0800000000000000
+      internalID: -5587361109553380376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: result audio poke vfx_34
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 9
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be1a8a08d38b45bc0800000000000000
+      internalID: -3795206011675434517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
