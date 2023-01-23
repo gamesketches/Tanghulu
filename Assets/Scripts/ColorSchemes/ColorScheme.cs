@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/ColorScheme", order = 1)]
 public class ColorScheme : ScriptableObject
@@ -21,4 +18,8 @@ public class ColorScheme : ScriptableObject
     public SchemePricePoint pricePoint;
 
     public Color mainColor;
+
+    public Sprite storeSprite;
+
+    public Sprite storeSpriteHighlighted;
 }

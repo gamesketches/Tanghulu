@@ -27,7 +27,7 @@ public class StoreScreenController : MonoBehaviour
 
         int preferredColorScheme = SaveDataManager.instance.GetPlayerPreferredColorScheme();
         Button preferredSchemeButton = schemeButtons.GetChild(preferredColorScheme).GetComponent<Button>();
-        preferredSchemeButton.Select();
+        preferredSchemeButton.GetComponent<Image>().sprite = colorSchemes[preferredColorScheme].storeSpriteHighlighted;
         coinPurchaseMenu.gameObject.SetActive(false);
         schemePurchaseMenu.gameObject.SetActive(false);
     }
@@ -73,6 +73,13 @@ public class StoreScreenController : MonoBehaviour
     }
 
     void UpdateSelectedScheme(int schemeId) { 
+        for(int i = 0; i < schemeButtons.childCount; i++) {
+            if(i == schemeId)
+                schemeButtons.GetChild(i).GetComponent<Image>().sprite = colorSchemes[i].storeSpriteHighlighted;
+            else
+                schemeButtons.GetChild(i).GetComponent<Image>().sprite = colorSchemes[i].storeSprite;
+        }
+        
         SaveDataManager.instance.SetPlayerPreferredColorScheme(schemeId);
         colorSchemeManager.UpdateColorScheme(schemeId);
     }
