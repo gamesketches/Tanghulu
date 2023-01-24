@@ -24,7 +24,7 @@ MonoBehaviour:
     type: 3}
   pricePoint: 0
   mainColor: {r: 0, g: 0.5176471, b: 0.5647059, a: 1}
-  storeSprite: {fileID: 8621030546158270299, guid: a01bb956b745d425e95bfec6d54b74e0,
+  storeSprite: {fileID: 7602428995674253794, guid: 39e9a602f0b0144fba545504c754e95b,
     type: 3}
-  storeSpriteHighlighted: {fileID: -4264198756625643880, guid: a01bb956b745d425e95bfec6d54b74e0,
+  storeSpriteHighlighted: {fileID: -3598020033752055308, guid: 39e9a602f0b0144fba545504c754e95b,
     type: 3}

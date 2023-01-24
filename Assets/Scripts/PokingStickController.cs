@@ -28,6 +28,7 @@ public class PokingStickController : MonoBehaviour
     public float touchDampValue;
     public AnimationCurve pokingCurve;
     public float fruitSlidingTime;
+    public float fruitHitStop;
 
     List<PokeableFruit> pokedFruits;
     private float rotationProportion;
@@ -140,8 +141,8 @@ public class PokingStickController : MonoBehaviour
             pokeMultiplier = Mathf.SmoothStep(1, 0, t / initialSlowDown);
             yield return null;
         }
-        // WHY does this break stuff
-        //yield return new WaitForSeconds(0.3f);
+        pokeMultiplier = 0;
+        yield return new WaitForSeconds(fruitHitStop);
         float pushDistance = 0.1f;
         fruitTransform.parent = transform;
         for (int i = transform.childCount - 1; i > 0; i--) {
@@ -151,7 +152,6 @@ public class PokingStickController : MonoBehaviour
             pushDistance += childFruit.lossyScale.y;
             StartCoroutine(SlideFruitOnStick(childFruit, childFruit.localPosition, newFruitPosition));
         }
-        //yield return new WaitForSeconds(fruitSlidingTime);
         Vector3 squishVector = new Vector3(0.8f, 0.8f, 0.8f);
         for(float t = 0; t < fruitSlidingTime; t += Time.deltaTime) { 
             fruitTransform.localScale = Vector3.Lerp(Vector3.one, squishVector, t / fruitSlidingTime);
@@ -168,7 +168,7 @@ public class PokingStickController : MonoBehaviour
 
     private IEnumerator SlideFruitOnStick(Transform fruitTransform, Vector3 startPosition, Vector3 endPosition)
     {
-        for(float t = 0; t < fruitSlidingTime; t += Time.deltaTime) {
+        for(float t = 0; t < fruitSlidingTime; t += Time.deltaTime * pokeMultiplier) {
             fruitTransform.localPosition = Vector3.Lerp(startPosition, endPosition, t / fruitSlidingTime);
             yield return null;
         }
@@ -180,7 +180,7 @@ public class PokingStickController : MonoBehaviour
         Vector3 startPosition = transform.position;
         Vector3 targetScale = new Vector3(serveEndingScale, serveEndingScale, serveEndingScale);
         Quaternion startRotation = transform.rotation;
-        Quaternion targetRotation = Quaternion.Euler(0, 0, -87f);
+        Quaternion targetRotation = Quaternion.Euler(0, 0, -90f);
 
         for(float t = 0; t < serveTime; t += Time.deltaTime) {
             float proportion = Mathf.SmoothStep(0, 1, t / serveTime);
