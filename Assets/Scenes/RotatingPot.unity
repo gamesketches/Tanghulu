@@ -1529,7 +1529,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 000
+  m_text: 888
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cf2c9dcc3b5394c178be907a8f733cec, type: 2}
   m_sharedMaterial: {fileID: -3576159637672465470, guid: cf2c9dcc3b5394c178be907a8f733cec,
@@ -1557,7 +1557,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 76.5
+  m_fontSize: 72.65
   m_fontSizeBase: 96
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1697,7 +1697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goSprite: {fileID: -9015678204852350527, guid: 604a8923fa00f4a508131220584973c3,
     type: 3}
-  readyTime: 1
+  readyTime: 1.5
   goTime: 0.4
 --- !u!1 &1027676426
 GameObject:
@@ -3515,6 +3515,7 @@ MonoBehaviour:
   tutorialArrows:
   - {fileID: 43400315}
   - {fileID: 1084709335}
+  arrowDisableTreshold: 0.05
 --- !u!61 &2047685948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3833,7 +3834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.76481944, y: 0.94}
   m_AnchorMax: {x: 0.8462292, y: 0.99334896}
-  m_AnchoredPosition: {x: -0.050048828, y: 0}
+  m_AnchoredPosition: {x: -5.9000244, y: 0}
   m_SizeDelta: {x: 0.100097656, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2123595017

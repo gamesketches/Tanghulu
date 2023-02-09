@@ -47,6 +47,7 @@ public class PokingStickController : MonoBehaviour
     public static int fruitsPoked;
 
     public TutorialArrow[] tutorialArrows;
+    public float arrowDisableTreshold;
 
     public delegate void StickPoked();
     public static event StickPoked StickFinishedPoking;
@@ -73,7 +74,6 @@ public class PokingStickController : MonoBehaviour
     public void BeginAiming(Vector3 fingerStartPosition) {
         aiming = true;
         lastFingerPosition = fingerStartPosition;
-        DisableTutorialArrows();
     }
 
     public void UpdateAim(Vector3 newFingerPosition) {
@@ -81,6 +81,11 @@ public class PokingStickController : MonoBehaviour
         float touchDistance = (newFingerPosition.x - lastFingerPosition.x) * touchDampValue;
         lastFingerPosition = newFingerPosition;
         rotationProportion = Mathf.Clamp(rotationProportion + touchDistance, 0, 1);
+        if (Mathf.Abs(rotationProportion - 0.5f) > arrowDisableTreshold)
+        {
+            DisableTutorialArrows();
+        }
+        Debug.Log(rotationProportion);
         float rotationAmount = Mathf.Lerp(rotationLimit, -rotationLimit, rotationProportion);
         transform.rotation = Quaternion.Euler(0, 0, rotationAmount);
     }
