@@ -38,6 +38,30 @@ TextureImporter:
   - first:
       213: -5514055987896242936
     second: new_store_thumbnails_11
+  - first:
+      213: -4213349167999539
+    second: new_store_thumbnails_12
+  - first:
+      213: -755670799946882924
+    second: new_store_thumbnails_13
+  - first:
+      213: -8121810707838210803
+    second: new_store_thumbnails_14
+  - first:
+      213: -777896286695062991
+    second: new_store_thumbnails_15
+  - first:
+      213: 1491335774798777457
+    second: new_store_thumbnails_16
+  - first:
+      213: -3026166699778415227
+    second: new_store_thumbnails_17
+  - first:
+      213: 1283524113367992223
+    second: new_store_thumbnails_18
+  - first:
+      213: 8609148925458831443
+    second: new_store_thumbnails_19
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -97,7 +121,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -109,7 +133,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -121,7 +145,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -174,7 +198,7 @@ TextureImporter:
         x: 645
         y: 3489
         width: 540
-        height: 542
+        height: 540
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,9 +238,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 37
-        y: 2905
+        y: 2907
         width: 556
-        height: 540
+        height: 538
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,9 +280,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1285
-        y: 2953
+        y: 2955
         width: 444
-        height: 444
+        height: 442
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,9 +321,9 @@ TextureImporter:
       name: new_store_thumbnails_7
       rect:
         serializedVersion: 2
-        x: 673
+        x: 675
         y: 2259
-        width: 562
+        width: 560
         height: 562
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -340,9 +364,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 41
-        y: 1647
+        y: 1649
         width: 574
-        height: 560
+        height: 558
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,6 +418,174 @@ TextureImporter:
       bones: []
       spriteID: 80d24d13b432a73b0800000000000000
       internalID: -5514055987896242936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_store_thumbnails_12
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 1167
+        width: 1108
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5d6833bf701fff0800000000000000
+      internalID: -4213349167999539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_store_thumbnails_13
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 1375
+        width: 456
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 490e70249615385f0800000000000000
+      internalID: -755670799946882924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_store_thumbnails_14
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 1229
+        width: 456
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0de6524138894f80800000000000000
+      internalID: -8121810707838210803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_store_thumbnails_15
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 843
+        width: 550
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132027fd27b5435f0800000000000000
+      internalID: -777896286695062991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_store_thumbnails_16
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 1085
+        width: 456
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c86b95cf942b410800000000000000
+      internalID: 1491335774798777457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_store_thumbnails_17
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 941
+        width: 456
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585679c7b65e006d0800000000000000
+      internalID: -3026166699778415227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_store_thumbnails_18
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 797
+        width: 456
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9782f5716effc110800000000000000
+      internalID: 1283524113367992223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_store_thumbnails_19
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 653
+        width: 456
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358d860a557d97770800000000000000
+      internalID: 8609148925458831443
       vertices: []
       indices: 
       edges: []
