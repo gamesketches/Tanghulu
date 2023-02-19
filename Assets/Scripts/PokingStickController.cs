@@ -85,7 +85,6 @@ public class PokingStickController : MonoBehaviour
         {
             DisableTutorialArrows();
         }
-        Debug.Log(rotationProportion);
         float rotationAmount = Mathf.Lerp(rotationLimit, -rotationLimit, rotationProportion);
         transform.rotation = Quaternion.Euler(0, 0, rotationAmount);
     }
@@ -108,6 +107,7 @@ public class PokingStickController : MonoBehaviour
                                                 transform.position.z);
         float pokingTime = pokingCurve.keys[pokingCurve.length - 1].time;
         for(float t = 0; t < pokingTime * 2; t += Time.deltaTime * pokeMultiplier) {
+            if (t > pokingTime) stickCollider.enabled = false;
             float proportion = pokingCurve.Evaluate(t);
             transform.position = Vector3.Lerp(startPosition, endPosition, proportion);
             yield return null;
@@ -126,7 +126,6 @@ public class PokingStickController : MonoBehaviour
         {
             transform.GetChild(0).gameObject.SetActive(true);
         }
-        stickCollider.enabled = false;
         StickFinishedPoking();
     }
 

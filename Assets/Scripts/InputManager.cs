@@ -15,8 +15,12 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+#if UNITY_EDITOR
         //if (Input.touchCount > 0) ProcessTouches();
         ProcessClicks();
+#else
+        ProcessTouches();
+#endif
     }
 
     void ProcessClicks() {
@@ -53,23 +57,41 @@ public class InputManager : MonoBehaviour
     }
 
     void ProcessTouches() {
-        Touch mainTouch = Input.touches[0];
+        //Touch mainTouch = Input.touches[0];
 
-        Vector3 worldPosition = GetWorldPosition(mainTouch.position);
-        switch(mainTouch.phase) {
-            case TouchPhase.Began:
-                if(potController.CheckTouchPosition(worldPosition)) {
-                    potController.UpdateDragging(true);
-                }
-                break;
-            case TouchPhase.Moved:
-                if(potController.CheckTouchPosition(worldPosition)) {
-                    potController.NewDragPosition(worldPosition);
-                }
-                break;
-            case TouchPhase.Ended:
-                potController.UpdateDragging(false);
-                break;
+        for (int i = 0; i < Input.touchCount; i++)
+        {
+            Touch theTouch = Input.touches[i];
+            Vector3 worldPosition = GetWorldPosition(theTouch.position);
+            switch (theTouch.phase)
+            {
+                case TouchPhase.Began:
+                    if(pokingStick.CheckTouchPosition(worldPosition)) {
+                        pokingStick.BeginAiming(worldPosition);
+                    }
+                    else if (potController.CheckTouchPosition(worldPosition))
+                    {
+                        potController.UpdateDragging(true);
+                    }
+                    break;
+                case TouchPhase.Moved:
+                    if(pokingStick.CheckTouchPosition(worldPosition)) {
+                        pokingStick.UpdateAim(worldPosition);
+                    }
+                    else if (potController.CheckTouchPosition(worldPosition))
+                    {
+                        potController.NewDragPosition(worldPosition);
+                    }
+                    break;
+                case TouchPhase.Ended:
+                    if (pokingStick.CheckTouchPosition(worldPosition) && pokingStick.aiming)
+                    {
+                        pokingStick.PokeStick(worldPosition);
+                    }
+                    else if (potController.CheckTouchPosition(worldPosition))
+                        potController.UpdateDragging(false);
+                    break;
+            }
         }
     }
 
