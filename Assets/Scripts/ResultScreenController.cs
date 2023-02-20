@@ -21,7 +21,7 @@ public class ResultScreenController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        curtainRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, -Screen.height, Screen.height);
+        curtainRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, -Screen.height, canvas.GetComponent<RectTransform>().rect.height);
         curtainRect.GetComponent<Image>().sprite = ColorSchemeManager.currentColorScheme.mainColorSprite;
         curtainFringe.sprite = ColorSchemeManager.currentColorScheme.banner;
         canvas.enabled = false;
