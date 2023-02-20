@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
     }
          
     private void ScaleCamera() {
-        float inGameSize = 5.5f;
+        float inGameSize = SystemInfo.deviceModel.StartsWith("iPad") ? 6.3f : 5.5f;
         float unitsPerPixel = inGameSize / Screen.width;
 
         float desiredHalfHeight = 0.5f * unitsPerPixel * Screen.height;

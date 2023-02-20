@@ -18,7 +18,8 @@ public class TitleScreenController : MonoBehaviour
     }
 
     public void StartGame() {
-        LoadingScreenManager.instance.LoadScene(SceneType.RotatingPot);
+        if (SystemInfo.deviceModel.StartsWith("iPad")) LoadingScreenManager.instance.LoadScene(SceneType.RotatingPotiPad);
+        else LoadingScreenManager.instance.LoadScene(SceneType.RotatingPot);
     }
 
     public void OpenShop() {

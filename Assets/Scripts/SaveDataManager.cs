@@ -62,6 +62,15 @@ public class SaveDataManager : MonoBehaviour
         SavePlayerData();
     }
 
+    public void SetPlayerHighScore(int newHighScore) {
+        if(newHighScore > playerData.highScore)
+            playerData.highScore = newHighScore;
+    }
+
+    public int GetHighScore() {
+        return playerData.highScore;
+    }
+
     void SavePlayerData() {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/playerData.gd");
@@ -105,8 +114,33 @@ public class PlayerData {
     public int preferredColorScheme;
     public int[] unlockedPalettes;
     public bool muteVolume;
+    public int highScore;
 
     public PlayerData() {
+        numCoins = 0;
+        preferredColorScheme = 0;
+        unlockedPalettes = new int[] { 0 };
+        muteVolume = false;
+        highScore = 0;
+    }
+
+    public PlayerData(PlayerDataV2 oldData) {
+        numCoins = oldData.numCoins;
+        preferredColorScheme = oldData.preferredColorScheme;
+        unlockedPalettes = oldData.unlockedPalettes;
+        muteVolume = oldData.muteVolume;
+        highScore = 0;
+    }
+}
+
+[System.Serializable]
+public class PlayerDataV2 {
+    public int numCoins;
+    public int preferredColorScheme;
+    public int[] unlockedPalettes;
+    public bool muteVolume;
+
+    public PlayerDataV2() {
         numCoins = 0;
         preferredColorScheme = 0;
         unlockedPalettes = new int[] { 0 };
@@ -115,12 +149,12 @@ public class PlayerData {
 }
 
 [System.Serializable]
-public class PlayerDataOld {
+public class PlayerDataV1 {
     public int numCoins;
     public int preferredColorScheme;
     public int[] unlockedPalettes;
 
-    public PlayerDataOld() {
+    public PlayerDataV1() {
         numCoins = 0;
         preferredColorScheme = 0;
         unlockedPalettes = new int[] { 0 };

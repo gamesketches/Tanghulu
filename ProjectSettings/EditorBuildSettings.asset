@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/RotatingPot.unity
     guid: 59ebd9df60e664d0a82d9c51c341f6c0
   - enabled: 1
+    path: Assets/Scenes/RotatingPotIPad.unity
+    guid: 69003363ed4d946b1a88a79ebc6a1517
+  - enabled: 1
     path: Assets/Scenes/StoreScreen.unity
     guid: da424b7f7a29d4d958adfb2b887aac78
   m_configObjects: {}

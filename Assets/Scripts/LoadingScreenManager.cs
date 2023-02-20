@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public enum SceneType { Preload, TitleScreen, ComicScene, RotatingPot, StoreScreen};
+public enum SceneType { Preload, TitleScreen, ComicScene, RotatingPot, RotatingPotiPad, StoreScreen};
 public class LoadingScreenManager : MonoBehaviour
 {
     public static LoadingScreenManager instance;
