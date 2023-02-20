@@ -14,6 +14,63 @@ TextureImporter:
   - first:
       213: 3486174128500939471
     second: hand written stuffs_3
+  - first:
+      213: 22889095353661684
+    second: hand written stuffs_4
+  - first:
+      213: -2290016741103776122
+    second: hand written stuffs_5
+  - first:
+      213: 2089469125954837621
+    second: hand written stuffs_6
+  - first:
+      213: 2341274246184346858
+    second: hand written stuffs_7
+  - first:
+      213: 4004398342156624100
+    second: hand written stuffs_8
+  - first:
+      213: -5373965753141243881
+    second: hand written stuffs_9
+  - first:
+      213: -6283822662682060278
+    second: hand written stuffs_10
+  - first:
+      213: 1577130231021157274
+    second: hand written stuffs_11
+  - first:
+      213: 105871485390596282
+    second: hand written stuffs_12
+  - first:
+      213: 6159608650158715983
+    second: hand written stuffs_13
+  - first:
+      213: -7799267830444376980
+    second: hand written stuffs_14
+  - first:
+      213: 459747506051563353
+    second: hand written stuffs_15
+  - first:
+      213: -3161767335434127444
+    second: hand written stuffs_16
+  - first:
+      213: 5207267624372845821
+    second: hand written stuffs_17
+  - first:
+      213: -8162954372360016705
+    second: hand written stuffs_18
+  - first:
+      213: 7223505093462199099
+    second: hand written stuffs_19
+  - first:
+      213: -3258503912818351044
+    second: hand written stuffs_20
+  - first:
+      213: -8889749253018716800
+    second: hand written stuffs_21
+  - first:
+      213: 8645299619027515849
+    second: hand written stuffs_22
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -178,6 +235,405 @@ TextureImporter:
       bones: []
       spriteID: fca947a36e0616030800000000000000
       internalID: 3486174128500939471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_4
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 913
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8f8cdc281515000800000000000000
+      internalID: 22889095353661684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_5
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 912
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ecfc038e93830e0800000000000000
+      internalID: -2290016741103776122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_6
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 914
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c1fad79194ffc10800000000000000
+      internalID: 2089469125954837621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_7
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 911
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4a695b580ed7020800000000000000
+      internalID: 2341274246184346858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_8
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 910
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0a863731b729730800000000000000
+      internalID: 4004398342156624100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_9
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 911
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 710d6e8be96db65b0800000000000000
+      internalID: -5373965753141243881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_10
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 913
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a5947d4906bc8a0800000000000000
+      internalID: -6283822662682060278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_11
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 787
+        width: 77
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bbb80d69713e510800000000000000
+      internalID: 1577130231021157274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_12
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 786
+        width: 77
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8ac861e81287100800000000000000
+      internalID: 105871485390596282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_13
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 788
+        width: 77
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44322cae635b7550800000000000000
+      internalID: 6159608650158715983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_14
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 785
+        width: 77
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c3b320b3f63c390800000000000000
+      internalID: -7799267830444376980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_15
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 784
+        width: 77
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95f3390cbe9516600800000000000000
+      internalID: 459747506051563353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_16
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 785
+        width: 77
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7f3053c552f14d0800000000000000
+      internalID: -3161767335434127444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_17
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 787
+        width: 77
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfcb229a05ee34840800000000000000
+      internalID: 5207267624372845821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_18
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 644
+        width: 241
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc62cd5f3c57be80800000000000000
+      internalID: -8162954372360016705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_19
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 596
+        width: 293
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b0a095c9b0f3460800000000000000
+      internalID: 7223505093462199099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_20
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 544
+        width: 241
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34ed31a4f777c2d0800000000000000
+      internalID: -3258503912818351044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_21
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 430
+        width: 301
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 085768f772441a480800000000000000
+      internalID: -8889749253018716800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand written stuffs_22
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 436
+        width: 241
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c974f0e2364af770800000000000000
+      internalID: 8645299619027515849
       vertices: []
       indices: 
       edges: []

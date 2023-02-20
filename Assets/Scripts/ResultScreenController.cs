@@ -16,6 +16,9 @@ public class ResultScreenController : MonoBehaviour
     public RectTransform curtainRect;
     public Image curtainFringe;
 
+    public float highScoreDelay;
+    public Image highScoreLabel;
+
     IEnumerator curtainOnRoutine;
 
     // Start is called before the first frame update
@@ -25,6 +28,7 @@ public class ResultScreenController : MonoBehaviour
         curtainRect.GetComponent<Image>().sprite = ColorSchemeManager.currentColorScheme.mainColorSprite;
         curtainFringe.sprite = ColorSchemeManager.currentColorScheme.banner;
         canvas.enabled = false;
+        highScoreLabel.enabled = false;
     }
 
     private void OpenResultScreen() {
@@ -43,11 +47,11 @@ public class ResultScreenController : MonoBehaviour
         }
     }
 
-    public void CountUpScore(int playerScore) {
-        StartCoroutine(CountUpPoints(playerScore));
+    public void CountUpScore(int playerScore, bool isHighScore = false) {
+        StartCoroutine(CountUpPoints(playerScore, isHighScore));
     }
     
-    IEnumerator CountUpPoints(int totalScore) {
+    IEnumerator CountUpPoints(int totalScore, bool isHighScore = false) {
         int pointCount = 0;
         yield return curtainOnRoutine;
         yield return countUpTime;
@@ -57,6 +61,11 @@ public class ResultScreenController : MonoBehaviour
             yield return countUpTime;
         }
         scoreText.text = totalScore.ToString();
+        if(isHighScore)
+        {
+            yield return new WaitForSeconds(highScoreDelay);
+            highScoreLabel.enabled = true;
+        }
     }
 
     private void OnEnable() {

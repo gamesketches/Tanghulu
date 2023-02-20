@@ -108,8 +108,10 @@ public class GameManager : MonoBehaviour
     private void GameOver() {
         EndGame();
         gamePlaying = false;
-        resultScreen.CountUpScore(score);
+        bool isHighScore = SaveDataManager.instance.GetHighScore() < score;
+        resultScreen.CountUpScore(score, isHighScore);
         SaveDataManager.instance.UpdatePlayerCoins(score);
+        if (isHighScore) SaveDataManager.instance.SetPlayerHighScore(score);
     }
          
     private void ScaleCamera() {
