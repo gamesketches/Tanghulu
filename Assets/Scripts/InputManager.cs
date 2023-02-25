@@ -7,6 +7,8 @@ public class InputManager : MonoBehaviour
     public PotController potController;
     public PokingStickController pokingStick;
 
+    int potControllingId = -1;
+
     void Start()
     {
         
@@ -72,24 +74,27 @@ public class InputManager : MonoBehaviour
                     else if (potController.CheckTouchPosition(worldPosition))
                     {
                         potController.UpdateDragging(true);
+                        potControllingId = theTouch.fingerId;
                     }
                     break;
                 case TouchPhase.Moved:
-                    if(pokingStick.CheckTouchPosition(worldPosition)) {
+                    if(theTouch.fingerId != potControllingId && pokingStick.CheckTouchPosition(worldPosition)) {
                         pokingStick.UpdateAim(worldPosition);
                     }
-                    else if (potController.CheckTouchPosition(worldPosition))
+                    else if (theTouch.fingerId == potControllingId && potController.CheckTouchPosition(worldPosition))
                     {
                         potController.NewDragPosition(worldPosition);
                     }
                     break;
                 case TouchPhase.Ended:
-                    if (pokingStick.CheckTouchPosition(worldPosition) && pokingStick.aiming)
+                    if (theTouch.fingerId != potControllingId && pokingStick.CheckTouchPosition(worldPosition) && pokingStick.aiming)
                     {
                         pokingStick.PokeStick(worldPosition);
                     }
-                    else if (potController.CheckTouchPosition(worldPosition))
+                    else if (theTouch.fingerId == potControllingId || potController.CheckTouchPosition(worldPosition)) {
                         potController.UpdateDragging(false);
+                        potControllingId = -1;
+                    }
                     break;
             }
         }
