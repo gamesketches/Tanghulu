@@ -67,8 +67,11 @@ public class CustomerManager : MonoBehaviour
 
     public void ServeCustomer(CustomerController customer, FruitType[] curOrder) {
         int customerIndex = activeCustomers.IndexOf(customer);
-        int score = customer.CalculateSatisfaction(curOrder) * MultiplierDisplay.scoreMultiplier;
-        StartCoroutine(ShowPointsScored(customer.transform.position, score));
+        int customerSatisfaction = customer.CalculateSatisfaction(curOrder);
+        string scoreString = customerSatisfaction.ToString();
+        //if(MultiplierDisplay.scoreMultiplier > 1) scoreString += " × " + MultiplierDisplay.scoreMultiplier.ToString(); 
+        int score = customerSatisfaction * MultiplierDisplay.scoreMultiplier;
+        StartCoroutine(ShowPointsScored(customer.transform.position, score.ToString()));
         SFXManager.instance.PlaySoundEffect(SoundEffectType.Success);
         customer.Leave();
         activeCustomers.RemoveAt(customerIndex);
@@ -79,7 +82,8 @@ public class CustomerManager : MonoBehaviour
         numCustomers--;
     }
 
-    IEnumerator ShowPointsScored(Vector3 startPoint, int pointsScored) {
+    IEnumerator ShowPointsScored(Vector3 startPoint, string pointsScored) {
+        startPoint.y += 1.5f;
         pointText.transform.position = startPoint;
         pointText.text = pointsScored.ToString();
         pointText.enabled = true;

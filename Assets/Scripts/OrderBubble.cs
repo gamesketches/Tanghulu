@@ -26,6 +26,13 @@ public class OrderBubble : MonoBehaviour
 
     public float scoringTimeBetween;
 
+    private static OrderScoreController orderScoreController;
+
+    void Start() {
+        if (orderScoreController == null)
+            orderScoreController = GameObject.Find("OrderScoreController").GetComponent<OrderScoreController>();
+    }
+
     public void SetFruits(FruitType[] fruitTypes) {
         for(int i = 0; i < fruitSprites.Length; i++) {
             fruitSprites[i].sprite = GetFruitSprite(fruitTypes[i]);
@@ -53,7 +60,8 @@ public class OrderBubble : MonoBehaviour
         StartCoroutine(ServeAnimation(scoreReport));
     }
 
-    public IEnumerator ServeAnimation(ScoreType[] scoreReport) { 
+    public IEnumerator ServeAnimation(ScoreType[] scoreReport) {
+        orderScoreController.ResetTotalScore(transform.position);
         for(int i = 0; i < scoringSprites.Length; i++) { 
             switch(scoreReport[i]) {
                 case ScoreType.Correct:
@@ -67,7 +75,9 @@ public class OrderBubble : MonoBehaviour
                     break;
             }
             scoringSprites[i].color = Color.white;
+            orderScoreController.ShowFruitPoints(scoringSprites[i].transform.position, scoreReport[i]);
             yield return new WaitForSeconds(scoringTimeBetween);
+            orderScoreController.ShowUpdatedTotal(scoreReport[i]);
         }
     }
 

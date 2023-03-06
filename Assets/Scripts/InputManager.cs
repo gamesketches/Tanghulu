@@ -6,6 +6,7 @@ public class InputManager : MonoBehaviour
 {
     public PotController potController;
     public PokingStickController pokingStick;
+    public ShootButton shootButton;
 
     int potControllingId = -1;
 
@@ -30,8 +31,13 @@ public class InputManager : MonoBehaviour
         Ray touchRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Input.GetMouseButtonDown(0))
         {
-            if(pokingStick.CheckTouchPosition(worldPosition)) {
+            if (pokingStick.CheckTouchPosition(worldPosition))
+            {
                 pokingStick.BeginAiming(worldPosition);
+            }
+            else if (shootButton.CheckTouchPosition(worldPosition))
+            {
+                pokingStick.PokeStick(worldPosition);
             }
             else if (potController.CheckTouchPosition(worldPosition))
             {
@@ -51,7 +57,7 @@ public class InputManager : MonoBehaviour
         else if (Input.GetMouseButtonUp(0))
         {
             if(pokingStick.aiming) {
-                pokingStick.PokeStick(worldPosition);
+               // pokingStick.PokeStick(worldPosition);
             }
             else 
                 potController.UpdateDragging(false);
@@ -71,6 +77,9 @@ public class InputManager : MonoBehaviour
                     if(pokingStick.CheckTouchPosition(worldPosition)) {
                         pokingStick.BeginAiming(worldPosition);
                     }
+                    else if(shootButton.CheckTouchPosition(worldPosition)) {
+                        pokingStick.PokeStick(worldPosition);
+                    }
                     else if (potController.CheckTouchPosition(worldPosition))
                     {
                         potController.UpdateDragging(true);
@@ -89,7 +98,7 @@ public class InputManager : MonoBehaviour
                 case TouchPhase.Ended:
                     if (theTouch.fingerId != potControllingId && pokingStick.CheckTouchPosition(worldPosition) && pokingStick.aiming)
                     {
-                        pokingStick.PokeStick(worldPosition);
+                        //pokingStick.PokeStick(worldPosition);
                     }
                     else if (theTouch.fingerId == potControllingId || potController.CheckTouchPosition(worldPosition)) {
                         potController.UpdateDragging(false);

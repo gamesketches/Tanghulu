@@ -37,6 +37,10 @@ public class GameManager : MonoBehaviour
     int score;
     int customersGenerated;
 
+    public static int CorrectFruitValue = 2;
+    public static int MisplacedFruitValue = 1;
+    public static int IncorrectFruitValue = 0;
+
     void Awake() { 
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 60;

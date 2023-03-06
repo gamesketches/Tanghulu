@@ -68,7 +68,7 @@ public class PokingStickController : MonoBehaviour
 
     public bool CheckTouchPosition(Vector3 position)
     {
-        return position.y < stickTouchHeight;
+        return position.y < stickTouchHeight && Mathf.Abs(position.x) < 2;
     }
 
     public void BeginAiming(Vector3 fingerStartPosition) {
@@ -91,7 +91,7 @@ public class PokingStickController : MonoBehaviour
 
     public void PokeStick(Vector3 newFingerPosition) {
         aiming = false;
-        if (Mathf.Abs(newFingerPosition.x - transform.position.x) > touchLimit) return;
+        //if (Mathf.Abs(newFingerPosition.x - transform.position.x) > touchLimit) return;
         if (!poking && GameManager.gamePlaying) {
             StartCoroutine(StickPokingAnimation());
         }
@@ -141,13 +141,16 @@ public class PokingStickController : MonoBehaviour
     private IEnumerator PierceFruit(float duration, Transform fruitTransform)
     {
         float initialSlowDown = duration * 0.1f;
+        float pushDistance = 0.1f;
+        Vector3 startingFruitPos = fruitTransform.position;
+        Vector3 offsetPosition = fruitTransform.position + (transform.up * pushDistance);
         for(float t = 0; t < initialSlowDown; t += Time.deltaTime) {
             pokeMultiplier = Mathf.SmoothStep(1, 0, t / initialSlowDown);
+            fruitTransform.position = Vector3.Lerp(offsetPosition, startingFruitPos, pokeMultiplier);
             yield return null;
         }
         pokeMultiplier = 0;
         yield return new WaitForSeconds(fruitHitStop);
-        float pushDistance = 0.1f;
         fruitTransform.parent = transform;
         for (int i = transform.childCount - 1; i > 0; i--) {
             Transform childFruit = transform.GetChild(i);
@@ -162,10 +165,17 @@ public class PokingStickController : MonoBehaviour
         }
 
         for(float t = 0; t < duration; t += Time.deltaTime) {
-            pokeMultiplier = Mathf.SmoothStep(0, 1, t / duration);
+            pokeMultiplier = Mathf.SmoothStep(0, 1, Mathf.PingPong(t, duration / 2) / (duration / 2)); //t / duration);
             fruitTransform.localScale = Vector3.Lerp(squishVector, Vector3.one, t / duration);
             yield return null;
         }
+        pokeMultiplier = 0;
+        yield return new WaitForSeconds(0.05f);
+        for(float t = 0; t < initialSlowDown; t += Time.deltaTime) {
+            pokeMultiplier = Mathf.SmoothStep(0, 1, t / initialSlowDown);
+            yield return null;
+        }
+        pokeMultiplier = 1;
         fruitHUD.UpdateDisplay(GetFruits());
         multiplierDisplay.UpdateScoreMultiplier(++pokeCombo);
     }
@@ -193,7 +203,6 @@ public class PokingStickController : MonoBehaviour
             transform.rotation = Quaternion.Lerp(startRotation, targetRotation, proportion);
             yield return null;
         }
-
         
         stickCounter.RemoveStick();
         yield return customer.ShowSatisfaction(GetFruits());

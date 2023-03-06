@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointText: {fileID: 0}
-  pointFloatTime: 1.5
-  pointFloatDistance: 1
+  pointFloatTime: 1
+  pointFloatDistance: 0.8
   customerPrefab: {fileID: 7437237936247001040, guid: 3a8e264d2fd2244448fd194cb7197fde,
     type: 3}
   firstCustomerPosition: {x: -1.7, y: 1.7, z: 0}

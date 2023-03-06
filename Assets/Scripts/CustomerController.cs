@@ -114,13 +114,13 @@ public class CustomerController : MonoBehaviour
         foreach(ScoreType fruitScore in scoreReport) { 
             switch(fruitScore) {
                 case ScoreType.Correct:
-                    score += 2;
+                    score += GameManager.CorrectFruitValue;
                     break;
                 case ScoreType.Misplaced:
-                    score += 1;
+                    score += GameManager.MisplacedFruitValue;
                     break;
                 case ScoreType.Bad:
-                    score += 0;
+                    score += GameManager.IncorrectFruitValue;
                     break;
             }
         }
