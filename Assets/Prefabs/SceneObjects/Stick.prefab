@@ -219,6 +219,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   fruitSlidingTime: 0.2
   fruitHitStop: 0.04
+  fruitSquishSize: 0.9
+  pokeAnimationLength: 0.23
   stickCounter: {fileID: 0}
   fruitHUD: {fileID: 0}
   multiplierDisplay: {fileID: 0}

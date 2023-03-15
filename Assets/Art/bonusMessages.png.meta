@@ -186,10 +186,10 @@ TextureImporter:
       name: bonusMessages_2
       rect:
         serializedVersion: 2
-        x: 7
-        y: 1637
-        width: 442
-        height: 310
+        x: 45
+        y: 1663
+        width: 371
+        height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,10 +207,10 @@ TextureImporter:
       name: bonusMessages_3
       rect:
         serializedVersion: 2
-        x: 478
-        y: 1660
-        width: 432
-        height: 282
+        x: 449
+        y: 1663
+        width: 391
+        height: 263
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,10 +228,10 @@ TextureImporter:
       name: bonusMessages_4
       rect:
         serializedVersion: 2
-        x: 44
-        y: 1333
-        width: 355
-        height: 288
+        x: 64
+        y: 1335
+        width: 346
+        height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,10 +249,10 @@ TextureImporter:
       name: bonusMessages_5
       rect:
         serializedVersion: 2
-        x: 447
-        y: 1374
-        width: 408
-        height: 243
+        x: 445
+        y: 1335
+        width: 373
+        height: 263
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
