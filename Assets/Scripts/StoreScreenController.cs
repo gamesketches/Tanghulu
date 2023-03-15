@@ -8,6 +8,7 @@ public enum SchemePricePoint { FiveHundred, OneThousand, TwoThousand, ThreeThous
 public class StoreScreenController : MonoBehaviour
 {
     public Transform schemeButtons;
+    public Sprite useSprite;
     public TextMeshProUGUI currentCoins;
     public IAPManager iapManager;
 
@@ -31,6 +32,8 @@ public class StoreScreenController : MonoBehaviour
         for(int i = 0; i < schemeButtons.childCount; i++) {
             if(i == preferredColorScheme)
                 schemeButtons.GetChild(i).GetComponent<Image>().sprite = colorSchemes[i].storeSpriteHighlighted;
+            else if(SaveDataManager.instance.PlayerOwnsScheme(i)) 
+                schemeButtons.GetChild(i).GetChild(0).GetComponent<Image>().sprite = useSprite;
             else
                 schemeButtons.GetChild(i).GetComponent<Image>().sprite = colorSchemes[i].storeSprite;
         }
@@ -68,7 +71,7 @@ public class StoreScreenController : MonoBehaviour
         int numCoins = int.Parse(currentCoins.text);
         int schemePrice = GetSchemePrice(currentInspectedScheme);
         //TODO: Remove before release!!
-        schemePrice = 1;
+        //schemePrice = 1;
         if (numCoins > schemePrice) {
             SaveDataManager.instance.UpdateOwnedColorSchemes(currentInspectedScheme);
             SaveDataManager.instance.UpdatePlayerCoins(schemePrice);

@@ -3574,7 +3574,7 @@ MonoBehaviour:
     m_Left: 20
     m_Right: 20
     m_Top: 86
-    m_Bottom: 0
+    m_Bottom: 100
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
@@ -4456,6 +4456,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   schemeButtons: {fileID: 1720821713}
+  useSprite: {fileID: -3026166699778415227, guid: 39e9a602f0b0144fba545504c754e95b,
+    type: 3}
   currentCoins: {fileID: 454665175}
   iapManager: {fileID: 1898587381}
   colorSchemeManager: {fileID: 759328299}
