@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
 
-public enum coinPurchaseLevels { fiveHundredCoins, twentyFiveHundredCoins, fiveThousandCoins, fiftyThousandCoins, fiveHundredThousandCoins};
+public enum coinPurchaseLevels { twoThousandCoins, fiveThousandCoins};
 public class IAPManager : MonoBehaviour, IStoreListener
 {
 	public static IAPManager instance;
@@ -13,6 +13,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
 	private static IExtensionProvider storeExtensionProvider;
 
 	private string fiveThousandCoins = "com.bluesphere.tanghulu.5kCoins";
+	private string twoThousandCoins = "com.bluesphere.tanghulu.2kCoins";
+
+	public StoreScreenController storeScreenController;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +30,8 @@ public class IAPManager : MonoBehaviour, IStoreListener
 		if(IsInitialized()) return;
 		var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
 
-		builder.AddProduct(fiveThousandCoins, ProductType.NonConsumable); 
+		builder.AddProduct(fiveThousandCoins, ProductType.Consumable); 
+		builder.AddProduct(twoThousandCoins, ProductType.Consumable); 
 
 		UnityPurchasing.Initialize(this, builder);
 	}
@@ -46,9 +50,11 @@ public class IAPManager : MonoBehaviour, IStoreListener
 				storeController.InitiatePurchase(product);
 			}
 			else {
+				storeScreenController.ShowPurchaseError("Not purchasing product, either is not found or not available");
 				Debug.Log("BuyProductID: FAIL. Not purchasing product, either is not found or not available");
 			}
 		} else {
+			storeScreenController.ShowPurchaseError("Manager not initalized");
 			Debug.Log("BuyProductID FAIL, Not initialized");
 		}
 	}
@@ -56,12 +62,14 @@ public class IAPManager : MonoBehaviour, IStoreListener
 	public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs args) {
 		if(String.Equals(args.purchasedProduct.definition.id, GetPurchaseString(coinPurchaseLevels.fiveThousandCoins), StringComparison.Ordinal)) {
 			Debug.Log("Bought five k");
+			SaveDataManager.instance.UpdatePlayerCoins(5000);
+			storeScreenController.CoinsUpdated();
 		}
-		/*if(String.Equals(args.purchasedProduct.definition.id, jlpt5, StringComparison.Ordinal)) {
-			Debug.Log("Purchased jlpt5");
-			Debug.Log("Adding code " + jlpt5);
-			ContentManager.instance.AddLevelPack(jlpt5);
-		}*/
+		else if(String.Equals(args.purchasedProduct.definition.id, GetPurchaseString(coinPurchaseLevels.twoThousandCoins), StringComparison.Ordinal)) {
+			Debug.Log("Bought two k");
+			SaveDataManager.instance.UpdatePlayerCoins(2000);
+			storeScreenController.CoinsUpdated();
+		}
 		else {
 			Debug.LogError("Purchase failed");
 		}
@@ -70,6 +78,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
 	public void OnPurchaseFailed(Product product, PurchaseFailureReason failureReason) {
 		Debug.Log(string.Format("OnPurchaseFailed: FAIL. Product: '{0}', PurchaseFailureReason: {1}", product.definition.storeSpecificId, failureReason));
+		storeScreenController.ShowPurchaseError(failureReason.ToString());
 	}
 
 	public void OnInitialized(IStoreController controller, IExtensionProvider extensions) {

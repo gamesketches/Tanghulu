@@ -22,7 +22,7 @@ MonoBehaviour:
     type: 3}
   mainColorSprite: {fileID: -1803295085279033223, guid: 699db280c2a634fbda2095327af43e3e,
     type: 3}
-  pricePoint: 1
+  pricePoint: 2
   mainColor: {r: 0.1254902, g: 0.32941177, b: 0.53333336, a: 1}
   storeSprite: {fileID: -6977095014907658880, guid: 39e9a602f0b0144fba545504c754e95b,
     type: 3}

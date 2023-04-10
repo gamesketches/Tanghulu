@@ -21,6 +21,8 @@ public class StoreScreenController : MonoBehaviour
 
     public ColorScheme[] colorSchemes;
 
+    public TextMeshProUGUI purchaseErrorText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,7 @@ public class StoreScreenController : MonoBehaviour
         }
         coinPurchaseMenu.gameObject.SetActive(false);
         schemePurchaseMenu.gameObject.SetActive(false);
+        purchaseErrorText.text = "";
     }
 
     public void ReturnToTitleScreen() {
@@ -47,6 +50,7 @@ public class StoreScreenController : MonoBehaviour
 
     public void OpenCoinPurchaseMenu() {
         coinPurchaseMenu.gameObject.SetActive(true);
+        purchaseErrorText.text = "";
     }
 
     public void CloseCoinPurchaseMenu() {
@@ -100,45 +104,37 @@ public class StoreScreenController : MonoBehaviour
     int GetSchemePrice(int schemeId) { 
         switch(colorSchemes[schemeId].pricePoint) {
             case SchemePricePoint.FiveHundred:
-                return 500;
+                return -500;
             case SchemePricePoint.OneThousand:
-                return 1000;
+                return -1000;
             case SchemePricePoint.TwoThousand:
-                return 2000;
+                return -2000;
             case SchemePricePoint.ThreeThousand:
-                return 3000;
+                return -3000;
             case SchemePricePoint.FourThousand:
-                return 4000;
+                return -4000;
             case SchemePricePoint.FiveThousand:
-                return 5000;
+                return -5000;
             default:
                 return 0;
         }
     }
 
-    public void Purchase500Coins() { 
-        iapManager.BuyProductID(coinPurchaseLevels.fiveThousandCoins);
-        coinPurchaseMenu.gameObject.SetActive(false);
-    }
-
-    public void Purchase2500Coins() { 
-        iapManager.BuyProductID(coinPurchaseLevels.fiveThousandCoins);
-        coinPurchaseMenu.gameObject.SetActive(false);
+    public void Purchase2000Coins() { 
+        iapManager.BuyProductID(coinPurchaseLevels.twoThousandCoins);
     }
 
     public void Purchase5kCoins() {
         iapManager.BuyProductID(coinPurchaseLevels.fiveThousandCoins);
-        coinPurchaseMenu.gameObject.SetActive(false);
-    }
-    
-    public void Purchase50kCoins() {
-        iapManager.BuyProductID(coinPurchaseLevels.fiftyThousandCoins);
-        coinPurchaseMenu.gameObject.SetActive(false);
-    }
-    
-    public void Purchase500kCoins() {
-        iapManager.BuyProductID(coinPurchaseLevels.fiveHundredThousandCoins);
-        coinPurchaseMenu.gameObject.SetActive(false);
     }
 
+    public void ShowPurchaseError(string errorString) {
+        purchaseErrorText.text = errorString;
+    }
+    
+    public void CoinsUpdated() { 
+        currentCoins.text = SaveDataManager.instance.GetPlayerCoins().ToString("000");
+        coinPurchaseMenu.gameObject.SetActive(false);
+        purchaseErrorText.text = "";
+    }
 }
