@@ -72,7 +72,6 @@ public class CustomerManager : MonoBehaviour
         //if(MultiplierDisplay.scoreMultiplier > 1) scoreString += " × " + MultiplierDisplay.scoreMultiplier.ToString(); 
         int score = customerSatisfaction * MultiplierDisplay.scoreMultiplier;
         StartCoroutine(ShowPointsScored(customer.transform.position, score.ToString()));
-        SFXManager.instance.PlaySoundEffect(SoundEffectType.Success);
         customer.Leave();
         activeCustomers.RemoveAt(customerIndex);
         for(int i = customerIndex; i < activeCustomers.Count; i++) {

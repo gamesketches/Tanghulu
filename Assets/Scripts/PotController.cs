@@ -127,7 +127,13 @@ public class PotController : MonoBehaviour
     public void UpdateDragging(bool newDragState) {
         dragging = newDragState;
         DisableTutorialArrows();
-        if (!dragging) lastPosition = Vector3.forward;
+        if (!dragging) {
+            SFXManager.instance.PlaySoundEffect(SoundEffectType.AimEnd);
+            lastPosition = Vector3.forward;
+        }
+        else {
+            SFXManager.instance.PlaySoundEffect(SoundEffectType.AimStart);
+        }
     }
 
     public FruitType[] GetOrder() { 

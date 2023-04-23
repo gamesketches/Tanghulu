@@ -112,6 +112,7 @@ public class GameManager : MonoBehaviour
     private void GameOver() {
         EndGame();
         gamePlaying = false;
+        SFXManager.instance.SwitchToMenuMusic();
         bool isHighScore = SaveDataManager.instance.GetHighScore() < score;
         resultScreen.CountUpScore(score, isHighScore);
         SaveDataManager.instance.UpdatePlayerCoins(score);
@@ -140,10 +141,12 @@ public class GameManager : MonoBehaviour
     }
 
     public void BackToHome() {
+        SFXManager.instance.SwitchToMenuMusic();
         LoadingScreenManager.instance.LoadScene(SceneType.TitleScreen, false, true);
     }
 
     public void BackToHomeCurtain() { 
+        SFXManager.instance.SwitchToMenuMusic();
         LoadingScreenManager.instance.LoadScene(SceneType.TitleScreen, true, true);
     }
 

@@ -33,6 +33,7 @@ public class ResultScreenController : MonoBehaviour
 
     private void OpenResultScreen() {
         canvas.enabled = true;
+        SFXManager.instance.BeginFadeMusic(1, 0.1f, curtainDownTime);
         curtainOnRoutine = MoveResultsScreenOn();
         StartCoroutine(MoveResultsScreenOn());
     }

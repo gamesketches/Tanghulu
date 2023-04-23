@@ -51,7 +51,10 @@ public class LoadingScreenManager : MonoBehaviour
 
         sceneLoadHandle.allowSceneActivation = false;
 
-        if (curtainDown) yield return MoveCurtain(true);
+        if (curtainDown) {
+          //  SFXManager.instance.BeginFadeMusic(1, 0.1f, curtainMoveTime);
+            yield return MoveCurtain(true);
+        }
         else curtainRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, bottomOfScreen, curtainRect.rect.size.y);
 
         while (sceneLoadHandle.progress < 0.9f)
@@ -60,9 +63,19 @@ public class LoadingScreenManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(curtainHoldTime);
+        if (screenType == SceneType.RotatingPot || screenType == SceneType.RotatingPotiPad) {
+            SFXManager.instance.SwitchToGameplayMusic();
+        } else {
+            SFXManager.instance.SwitchToMenuMusic();
+        }
+
         sceneLoadHandle.allowSceneActivation = true;
 
-        if (curtainUp) yield return MoveCurtain(false);
+        if (curtainUp)
+        {
+         //   SFXManager.instance.BeginFadeMusic(0.1f, 1, curtainMoveTime);
+            yield return MoveCurtain(false);
+        }
         else curtainRect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, -Screen.height, curtainRect.rect.size.y);
         
         if(screenType != SceneType.TitleScreen)
@@ -72,6 +85,7 @@ public class LoadingScreenManager : MonoBehaviour
 
     private IEnumerator MoveCurtain(bool curtainDown) {
         float proportion;
+        SFXManager.instance.PlaySoundEffect(curtainDown ? SoundEffectType.CurtainDown : SoundEffectType.CurtainUp);
         for(float t = 0; t < curtainMoveTime; t += Time.deltaTime) {
             if (curtainDown) proportion = Mathf.SmoothStep(-Screen.height, bottomOfScreen, t / curtainMoveTime);
             else proportion = Mathf.SmoothStep(bottomOfScreen, -Screen.height, t / curtainMoveTime);

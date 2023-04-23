@@ -43,7 +43,6 @@ public class PokeableFruit : MonoBehaviour
                 transform.localScale = Vector3.one;
                 floating = false;
                 particles.Play();
-                SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeFruit);
             }
             else {
                 StartCoroutine(KnockFruitOff());

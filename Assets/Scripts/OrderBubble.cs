@@ -58,10 +58,13 @@ public class OrderBubble : MonoBehaviour
 
     public void ShowServeAnimation(ScoreType[] scoreReport) {
         StartCoroutine(ServeAnimation(scoreReport));
+        Debug.Log("Serve animation started");
     }
 
     public IEnumerator ServeAnimation(ScoreType[] scoreReport) {
         orderScoreController.ResetTotalScore(transform.position);
+        SFXManager.instance.PlaySoundEffect(SoundEffectType.Tally);
+        //bool playPerfect = true;
         for(int i = 0; i < scoringSprites.Length; i++) { 
             switch(scoreReport[i]) {
                 case ScoreType.Correct:
@@ -69,9 +72,11 @@ public class OrderBubble : MonoBehaviour
                     break;
                 case ScoreType.Misplaced:
                     scoringSprites[i].sprite = misplacedSprite;
+         //           playPerfect = false;
                     break;
                 case ScoreType.Bad:
                     scoringSprites[i].sprite = wrongSprite;
+          //          playPerfect = false;
                     break;
             }
             scoringSprites[i].color = Color.white;
@@ -79,6 +84,7 @@ public class OrderBubble : MonoBehaviour
             yield return new WaitForSeconds(scoringTimeBetween);
             orderScoreController.ShowUpdatedTotal(scoreReport[i]);
         }
+        //if (playPerfect) SFXManager.instance.PlaySoundEffect(SoundEffectType.Perfect);
     }
 
     Sprite GetFruitSprite(FruitType fruitType) {

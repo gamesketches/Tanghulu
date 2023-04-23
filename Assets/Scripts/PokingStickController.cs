@@ -76,6 +76,7 @@ public class PokingStickController : MonoBehaviour
     public void BeginAiming(Vector3 fingerStartPosition) {
         aiming = true;
         lastFingerPosition = fingerStartPosition;
+        SFXManager.instance.PlaySoundEffect(SoundEffectType.AimStart);
     }
 
     public void UpdateAim(Vector3 newFingerPosition) {
@@ -97,6 +98,11 @@ public class PokingStickController : MonoBehaviour
         if (!poking && GameManager.gamePlaying) {
             StartCoroutine(StickPokingAnimation());
         }
+    }
+
+    public void StopAiming() {
+        aiming = false;
+        SFXManager.instance.PlaySoundEffect(SoundEffectType.AimEnd);
     }
 
     private IEnumerator StickPokingAnimation() {
@@ -144,8 +150,8 @@ public class PokingStickController : MonoBehaviour
     {
         float initialSlowDown = duration * 0.4f;
         float pushDistance = 0.15f;
-        Debug.Log(initialSlowDown);
-        Debug.Log(Time.deltaTime);
+//        Debug.Log(initialSlowDown);
+ //       Debug.Log(Time.deltaTime);
         Vector3 startingFruitPos = fruitTransform.position;
         Vector3 offsetPosition = fruitTransform.position + (transform.up * pushDistance *3);
         for(float t = 0; t < initialSlowDown; t += Time.deltaTime) {
@@ -156,6 +162,7 @@ public class PokingStickController : MonoBehaviour
             yield return null;
         }
         pokeMultiplier = 0;
+        SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeFruit);
         yield return new WaitForSeconds(fruitHitStop);
         fruitTransform.parent = transform;
         for (int i = transform.childCount - 1; i > 0; i--) {
