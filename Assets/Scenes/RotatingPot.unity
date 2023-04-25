@@ -1536,6 +1536,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7058912c9c043eabed17856d8011da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shrunkSize: 0.3
+  normalSize: 0.5
+  scaleTime: 0.2
+  shrinkColor: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
 --- !u!212 &1392071039
 SpriteRenderer:
   m_ObjectHideFlags: 0

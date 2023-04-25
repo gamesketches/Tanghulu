@@ -38,6 +38,7 @@ public class InputManager : MonoBehaviour
             else if (shootButton.CheckTouchPosition(worldPosition))
             {
                 pokingStick.PokeStick(worldPosition);
+                shootButton.ScaleButtonDown();
             }
             else if (potController.CheckTouchPosition(worldPosition))
             {
@@ -62,6 +63,8 @@ public class InputManager : MonoBehaviour
             }
             else 
                 potController.UpdateDragging(false);
+
+            shootButton.ScaleButtonUp();
         }
     }
 
@@ -80,6 +83,7 @@ public class InputManager : MonoBehaviour
                     }
                     else if(shootButton.CheckTouchPosition(worldPosition)) {
                         pokingStick.PokeStick(worldPosition);
+                        shootButton.ScaleButtonDown();
                     }
                     else if (potController.CheckTouchPosition(worldPosition))
                     {
@@ -105,6 +109,7 @@ public class InputManager : MonoBehaviour
                         potController.UpdateDragging(false);
                         potControllingId = -1;
                     }
+                    shootButton.ScaleButtonUp();
                     break;
             }
         }
