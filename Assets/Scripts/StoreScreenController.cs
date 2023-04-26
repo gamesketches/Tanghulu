@@ -32,12 +32,19 @@ public class StoreScreenController : MonoBehaviour
         //Button preferredSchemeButton = schemeButtons.GetChild(preferredColorScheme).GetComponent<Button>();
         //preferredSchemeButton.GetComponent<Image>().sprite = colorSchemes[preferredColorScheme].storeSpriteHighlighted;
         for(int i = 0; i < schemeButtons.childCount; i++) {
-            if(i == preferredColorScheme)
-                schemeButtons.GetChild(i).GetComponent<Image>().sprite = colorSchemes[i].storeSpriteHighlighted;
-            else if(SaveDataManager.instance.PlayerOwnsScheme(i)) 
-                schemeButtons.GetChild(i).GetChild(0).GetComponent<Image>().sprite = useSprite;
+            Image schemeButton = schemeButtons.GetChild(i).GetComponent<Image>();
+            Image useButton = schemeButton.transform.GetChild(0).GetComponent<Image>();
+            useButton.enabled = true;
+            if (i == preferredColorScheme)
+            {
+                schemeButton.sprite = colorSchemes[i].storeSpriteHighlighted;
+                //schemeButton.transform.GetChild(0).GetComponent<Image>().enabled = false;
+                useButton.enabled = false;
+            }
+            else if (SaveDataManager.instance.PlayerOwnsScheme(i))
+                useButton.sprite = useSprite;
             else
-                schemeButtons.GetChild(i).GetComponent<Image>().sprite = colorSchemes[i].storeSprite;
+                schemeButton.sprite = colorSchemes[i].storeSprite;
         }
         coinPurchaseMenu.gameObject.SetActive(false);
         schemePurchaseMenu.gameObject.SetActive(false);
@@ -85,12 +92,20 @@ public class StoreScreenController : MonoBehaviour
         }
     }
 
-    void UpdateSelectedScheme(int schemeId) { 
+    void UpdateSelectedScheme(int schemeId) {
+        int oldScheme = SaveDataManager.instance.GetPlayerPreferredColorScheme();
         for(int i = 0; i < schemeButtons.childCount; i++) {
-            if(i == schemeId)
+            if (i == schemeId)
+            {
                 schemeButtons.GetChild(i).GetComponent<Image>().sprite = colorSchemes[i].storeSpriteHighlighted;
+                schemeButtons.GetChild(i).GetChild(0).GetComponent<Image>().enabled = false;
+            }
             else
+            {
                 schemeButtons.GetChild(i).GetComponent<Image>().sprite = colorSchemes[i].storeSprite;
+                if (i == oldScheme)
+                    schemeButtons.GetChild(i).GetChild(0).GetComponent<Image>().enabled = true;
+            }
         }
         
         SaveDataManager.instance.SetPlayerPreferredColorScheme(schemeId);
