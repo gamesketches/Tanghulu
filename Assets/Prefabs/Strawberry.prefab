@@ -132,9 +132,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitType: 0
   appearTime: 0.4
-  scaleAmount: 0.03
+  scaleAmount: 0.092
   scaleSpeed: 6
   timeOffset: 0
+  pokeDuration: 0.15
+  pokeSlowdown: 0.025
+  squishSize: 0.9
+  pushDistance: 0.15
+  hitStop: 0.02
 --- !u!198 &6439599454710077487
 ParticleSystem:
   m_ObjectHideFlags: 0

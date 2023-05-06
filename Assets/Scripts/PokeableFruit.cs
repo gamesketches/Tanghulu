@@ -13,10 +13,11 @@ public class PokeableFruit : MonoBehaviour
     public float timeOffset;
 
     [Header("Poking attributes")]
-    float pokeDuration = 0.15f;
-    float pokeSlowdown = 0.06f;
-    float squishSize = 0.9f;
-    float pushDistance = 0.15f;
+    public float pokeDuration = 0.15f;
+    public float pokeSlowdown = 0.06f;
+    public float squishSize = 0.9f;
+    public float pushDistance = 0.15f;
+    public float hitStop = 0.04f;
 
     bool floating = false;
 
@@ -45,6 +46,7 @@ public class PokeableFruit : MonoBehaviour
                 particles.Play();
             }
             else {
+                SFXManager.instance.PlaySoundEffect(SoundEffectType.Knock);
                 StartCoroutine(KnockFruitOff());
             }
         }

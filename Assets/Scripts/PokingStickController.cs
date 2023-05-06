@@ -76,12 +76,18 @@ public class PokingStickController : MonoBehaviour
     public void BeginAiming(Vector3 fingerStartPosition) {
         aiming = true;
         lastFingerPosition = fingerStartPosition;
-        SFXManager.instance.PlaySoundEffect(SoundEffectType.AimStart);
+        //SFXManager.instance.PlaySoundEffect(SoundEffectType.AimStick);
     }
 
     public void UpdateAim(Vector3 newFingerPosition) {
         if (poking) return;
         float touchDistance = (newFingerPosition.x - lastFingerPosition.x) * touchDampValue;
+
+        float rawDistance = Mathf.Abs(newFingerPosition.x - lastFingerPosition.x);
+        if (Mathf.Approximately(rawDistance, 0)) SFXManager.instance.StopAimSound();
+        else SFXManager.instance.AddToAimDistance(rawDistance);
+            //SFXManager.instance.PlaySoundEffect(SoundEffectType.AimStick);
+
         lastFingerPosition = newFingerPosition;
         rotationProportion = Mathf.Clamp(rotationProportion + touchDistance, 0, 1);
         if (Mathf.Abs(rotationProportion - 0.5f) > arrowDisableTreshold)
@@ -97,12 +103,13 @@ public class PokingStickController : MonoBehaviour
         //if (Mathf.Abs(newFingerPosition.x - transform.position.x) > touchLimit) return;
         if (!poking && GameManager.gamePlaying) {
             StartCoroutine(StickPokingAnimation());
+            SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeStick);
         }
     }
 
     public void StopAiming() {
         aiming = false;
-        SFXManager.instance.PlaySoundEffect(SoundEffectType.AimEnd);
+        //SFXManager.instance.PlaySoundEffect(SoundEffectType.AimStickEnd);
     }
 
     private IEnumerator StickPokingAnimation() {
@@ -114,8 +121,15 @@ public class PokingStickController : MonoBehaviour
         Vector3 endPosition = startPosition + new Vector3(transform.up.x * pokeDistance, transform.up.y * pokeDistance,
                                                 transform.position.z);
         float pokingTime = pokingCurve.keys[pokingCurve.length - 1].time;
-        for(float t = 0; t < pokingTime * 2; t += Time.deltaTime * pokeMultiplier) {
-            if (t > pokingTime) stickCollider.enabled = false;
+        for(float t = 0; t < pokingTime; t += Time.deltaTime * pokeMultiplier) {
+            float proportion = pokingCurve.Evaluate(t);
+            transform.position = Vector3.Lerp(startPosition, endPosition, proportion);
+            yield return null;
+        }
+        stickCollider.enabled = false;
+        if (pokedFruits.Count == 0)
+            SFXManager.instance.PlaySoundEffect(SoundEffectType.Miss);
+        for(float t = pokingTime; t > 0; t -= (Time.deltaTime * pokeMultiplier * 1.35f)) {
             float proportion = pokingCurve.Evaluate(t);
             transform.position = Vector3.Lerp(startPosition, endPosition, proportion);
             yield return null;
@@ -140,18 +154,18 @@ public class PokingStickController : MonoBehaviour
     public bool AttachFruit(Transform newFruit) {
         PokeableFruit fruitObject = newFruit.GetComponent<PokeableFruit>();
         if (pokedFruits.Count >= maxFruits || pokedFruits.IndexOf(fruitObject) > -1) return false;
-        StartCoroutine(PierceFruit(pokeAnimationLength, newFruit));
+        StartCoroutine(PierceFruit(pokeAnimationLength, newFruit, fruitObject));
         pokedFruits.Add(fruitObject);
         fruitsPoked++;
         return true;
     }
 
-    private IEnumerator PierceFruit(float duration, Transform fruitTransform)
+    private IEnumerator PierceFruit(float duration, Transform fruitTransform, PokeableFruit fruitObject)
     {
-        float initialSlowDown = duration * 0.4f;
+        float initialSlowDown = fruitObject.pokeSlowdown;//duration * 0.4f;
+        Debug.Log("Slowdown: " + initialSlowDown);
         float pushDistance = 0.15f;
-//        Debug.Log(initialSlowDown);
- //       Debug.Log(Time.deltaTime);
+
         Vector3 startingFruitPos = fruitTransform.position;
         Vector3 offsetPosition = fruitTransform.position + (transform.up * pushDistance *3);
         for(float t = 0; t < initialSlowDown; t += Time.deltaTime) {
@@ -163,7 +177,8 @@ public class PokingStickController : MonoBehaviour
         }
         pokeMultiplier = 0;
         SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeFruit);
-        yield return new WaitForSeconds(fruitHitStop);
+        //yield return new WaitForSeconds(fruitHitStop);
+        yield return new WaitForSeconds(fruitObject.hitStop);
         fruitTransform.parent = transform;
         for (int i = transform.childCount - 1; i > 0; i--) {
             Transform childFruit = transform.GetChild(i);
@@ -172,18 +187,19 @@ public class PokingStickController : MonoBehaviour
             pushDistance += childFruit.lossyScale.y;
             StartCoroutine(SlideFruitOnStick(childFruit, childFruit.localPosition, newFruitPosition, duration));
         }
-        Vector3 squishVector = new Vector3(fruitSquishSize, fruitSquishSize, fruitSquishSize);
+        Vector3 squishVector = new Vector3(fruitObject.squishSize, fruitObject.squishSize, fruitObject.squishSize);
         /*for(float t = 0; t < fruitSlidingTime; t += Time.deltaTime) { 
             fruitTransform.localScale = Vector3.Lerp(Vector3.one, squishVector, t / fruitSlidingTime);
         }*/
 
         for(float t = 0; t < duration; t += Time.deltaTime) {
             float proportion = Mathf.PingPong(t, duration / 2) / (duration / 2);
-            pokeMultiplier = Mathf.SmoothStep(0, 1, proportion);//Mathf.PingPong(t, duration / 2) / (duration / 2)); 
+            pokeMultiplier = Mathf.SmoothStep(0, 1, proportion); 
             fruitTransform.localScale = Vector3.Lerp(Vector3.one, squishVector, proportion);
             //fruitTransform.localScale = Vector3.Lerp(squishVector, Vector3.one, t / duration);
             yield return null;
         }
+        fruitTransform.localScale = Vector3.one;
         pokeMultiplier = 0;
         yield return new WaitForSeconds(initialSlowDown);
         for(float t = 0; t < initialSlowDown; t += Time.deltaTime) {

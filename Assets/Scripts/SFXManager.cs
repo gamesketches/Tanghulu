@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public enum SoundEffectType { PokeFruit, Success, Tally, Footstep, TerribleResult, OkayResult, GoodResult, Perfect, CurtainDown, CurtainUp, AimStart, AimEnd};
+public enum SoundEffectType { PokeFruit, Success, Tally, Footstep, TerribleResult, 
+        OkayResult, GoodResult, Perfect, CurtainDown, CurtainUp, AimStick, RotatePot, FruitHit, Miss, PokeStick, Knock};
 public class SFXManager : MonoBehaviour
 {
     public static SFXManager instance;
 
+    public AudioClip pokeStick;
+    public AudioClip knockClip;
     public AudioClip[] pokeClips;
+    public AudioClip fruitHitClip;
 
     int pokeTracker;
 
@@ -20,11 +24,26 @@ public class SFXManager : MonoBehaviour
 
     public AudioClip tallyClip;
 
+    public AudioClip missClip;
+
     [Header("Threshold Chords")]
     public AudioClip terribleClip;
     public AudioClip okayClip;
     public AudioClip goodClip;
     public AudioClip perfectClip;
+
+    [Header("Aiming")]
+    public AudioSource aimingSrc;
+    float aimMovement;
+    IEnumerator stickClickRoutine;
+    public float aimClickThreshold;
+    public float minimumClickTime;
+
+    [Header("Rotating")]
+    public AudioSource potRotationSrc;
+    float potMovement;
+    IEnumerator potClickRoutine;
+    public float potClickThreshold;
 
     [Header("Sources and Mixers")]
     public AudioClip walkingClip;
@@ -32,7 +51,6 @@ public class SFXManager : MonoBehaviour
     public AudioMixerGroup SFXMixer;
     public AudioMixerGroup musicMixer;
 
-    public AudioSource aimingSrc;
 
     public AudioSource menuMusic;
 
@@ -51,6 +69,7 @@ public class SFXManager : MonoBehaviour
         instance = this;
         audioSourcePool = new List<AudioSource>();
         pokeTracker = 0;
+        aimMovement = 0;
         SwitchToMenuMusic();
     }
 
@@ -83,19 +102,29 @@ public class SFXManager : MonoBehaviour
             case SoundEffectType.CurtainUp:
                 PlaySound(curtainUp);
                 break;
-            case SoundEffectType.AimStart:
-                aimingSrc.Play();
+            case SoundEffectType.AimStick:
+                if (!aimingSrc.isPlaying) aimingSrc.Play();
                 break;
-            case SoundEffectType.AimEnd:
-                aimingSrc.Stop();
+            case SoundEffectType.RotatePot:
+                if (!potRotationSrc.isPlaying) potRotationSrc.Play();
+                break;
+            case SoundEffectType.Miss:
+                PlaySound(missClip);
+                break;
+            case SoundEffectType.PokeStick:
+                PlaySound(pokeStick);
+                break;
+            case SoundEffectType.Knock:
+                PlaySound(knockClip);
                 break;
         }
     }
 
     private void PlayPokingSound() {
-        AudioClip randomPoke = pokeClips[pokeTracker];
-        PlaySound(randomPoke);
-        pokeTracker = (pokeTracker + 1) % pokeClips.Length;
+        //AudioClip randomPoke = pokeClips[pokeTracker];
+        //PlaySound(randomPoke);
+        //pokeTracker = (pokeTracker + 1) % pokeClips.Length;
+        PlaySound(fruitHitClip);
     }
 
     private void PlaySuccessSound() {
@@ -141,6 +170,56 @@ public class SFXManager : MonoBehaviour
         openSource.Stop();
     }
 
+    public void AddToAimDistance(float amountToAdd) {
+        aimMovement += Mathf.Abs(amountToAdd);
+        if(stickClickRoutine == null) {
+            stickClickRoutine = PlayAimingSounds();
+            StartCoroutine(stickClickRoutine);
+        }
+    }
+
+    public void StopAimSound() {
+        aimMovement = aimMovement % aimClickThreshold;
+        if(stickClickRoutine != null) {
+            StopCoroutine(stickClickRoutine);
+            stickClickRoutine = null;
+        }
+    }
+
+    IEnumerator PlayAimingSounds() { 
+        while(aimMovement > aimClickThreshold) {
+            aimMovement -= aimClickThreshold;
+            aimingSrc.Play();
+            yield return new WaitForSeconds(minimumClickTime);
+        }
+        stickClickRoutine = null;
+    }
+
+    public void AddToRotateDistance(float amountToAdd) {
+        potMovement += Mathf.Abs(amountToAdd);
+        if(potClickRoutine == null && potMovement > potClickThreshold) {
+            potClickRoutine = PlayRotatingSounds();
+            StartCoroutine(potClickRoutine);
+        }
+        
+    }
+
+    public void StopRotateSound() {
+        potMovement = potMovement % potClickThreshold;
+        if(potClickRoutine != null) {
+            StopCoroutine(potClickRoutine);
+            potClickRoutine = null;
+        }
+    }
+
+    IEnumerator PlayRotatingSounds() { 
+        while(potMovement > potClickThreshold) {
+            potMovement -= potClickThreshold;
+            potRotationSrc.Play();
+            yield return new WaitForSeconds(minimumClickTime);
+        }
+        potClickRoutine = null;
+    }
     private AudioSource FindAudioSource() { 
         foreach(AudioSource src in audioSourcePool) { 
             if(!src.isPlaying) {

@@ -113,8 +113,14 @@ public class PotController : MonoBehaviour
             float oldPositionAngle = GetTheta(lastPosition);
             float newPositionAngle = GetTheta(newPosition);
             float difference = newPositionAngle - oldPositionAngle;
+
+            float distance = Vector3.Distance(newPosition, lastPosition);
+            if (Mathf.Approximately(distance, 0)) SFXManager.instance.StopRotateSound();
+            else SFXManager.instance.AddToRotateDistance(Mathf.Abs(distance));
+
             transform.Rotate(Vector3.forward, difference);
             shadowTransform.Rotate(Vector3.forward, difference);
+            if(Mathf.Abs(difference) > 1f) SFXManager.instance.PlaySoundEffect(SoundEffectType.RotatePot);
         }
         lastPosition = newPosition;
     }
@@ -127,13 +133,14 @@ public class PotController : MonoBehaviour
     public void UpdateDragging(bool newDragState) {
         dragging = newDragState;
         DisableTutorialArrows();
-        if (!dragging) {
-            SFXManager.instance.PlaySoundEffect(SoundEffectType.AimEnd);
+        lastPosition = Vector3.forward;
+        /*if (!dragging) {
+            SFXManager.instance.PlaySoundEffect(SoundEffectType.AimStickEnd);
             lastPosition = Vector3.forward;
         }
         else {
-            SFXManager.instance.PlaySoundEffect(SoundEffectType.AimStart);
-        }
+            SFXManager.instance.PlaySoundEffect(SoundEffectType.RotatePot);
+        }*/
     }
 
     public FruitType[] GetOrder() { 

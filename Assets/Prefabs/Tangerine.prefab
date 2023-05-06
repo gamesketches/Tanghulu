@@ -102,6 +102,11 @@ MonoBehaviour:
   scaleAmount: 0.03
   scaleSpeed: 6
   timeOffset: 0
+  pokeDuration: 0.15
+  pokeSlowdown: 0.095
+  squishSize: 0.8
+  pushDistance: 0.15
+  hitStop: 0.03
 --- !u!70 &8337566675158610151
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
