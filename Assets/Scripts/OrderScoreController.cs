@@ -77,10 +77,10 @@ public class OrderScoreController : MonoBehaviour
                 totalScore += GameManager.CorrectFruitValue;
                 break;
             case ScoreType.Misplaced:
-                totalScore = GameManager.MisplacedFruitValue;
+                totalScore += GameManager.MisplacedFruitValue;
                 break;
             case ScoreType.Bad:
-                totalScore = GameManager.IncorrectFruitValue;
+                totalScore += GameManager.IncorrectFruitValue;
                 break;
         }
         totalNumber.text = totalScore.ToString() + (MultiplierDisplay.scoreMultiplier > 1 ? " x " + MultiplierDisplay.scoreMultiplier.ToString() : "");

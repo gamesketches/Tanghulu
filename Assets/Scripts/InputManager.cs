@@ -34,7 +34,6 @@ public class InputManager : MonoBehaviour
             if (pokingStick.CheckTouchPosition(worldPosition))
             {
                 pokingStick.BeginAiming(worldPosition);
-                Debug.Log(worldPosition);
             }
             else if (shootButton.CheckTouchPosition(worldPosition))
             {

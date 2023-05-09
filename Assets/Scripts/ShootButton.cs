@@ -34,7 +34,6 @@ public class ShootButton : MonoBehaviour
 
     public void ScaleButtonUp() {
         lerpingRoutine = null;
-        Debug.Log("Scaling up");
         lerpingRoutine = ScaleButton(Vector3.one * normalSize, Color.white);
         StartCoroutine(lerpingRoutine);
     }

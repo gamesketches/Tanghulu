@@ -16,6 +16,11 @@ public class CustomerController : MonoBehaviour
     public float bounceRange;
     public float bounceSpeed;
 
+    [Header("Bounce tuning variables")]
+    public Vector2 bounceTimeRange;
+    public Vector2 bounceWaitTime;
+    IEnumerator bounceRoutine;
+
     [Header("Other tuning values")]
     public float bubbleOpenTime;
 
@@ -51,9 +56,28 @@ public class CustomerController : MonoBehaviour
             StartCoroutine(OpenBubble());
 
         transform.position = positionInLine;
+        bounceRoutine = BounceExcitedly();
+        StartCoroutine(bounceRoutine);
+    }
+
+    private IEnumerator BounceExcitedly() {
+        float waitTime = Random.Range(bounceWaitTime.x, bounceWaitTime.y);
+        float bouncingTime = Random.Range(bounceTimeRange.x, bounceTimeRange.y);
+        Vector3 startPos = transform.position;
+        float seed = Random.Range(0.75f, 0.82f);
+        while(true) {
+            yield return new WaitForSeconds(waitTime);
+            for(float t = 0; t < bouncingTime; t += Time.deltaTime) {
+                Vector3 newPos = startPos + new Vector3(0,Mathf.Abs(Mathf.Sin(Time.time * bounceSpeed * seed) * bounceRange), 0);
+                transform.position = newPos;
+                yield return null;
+            }
+            transform.position = startPos;
+        }
     }
 
     public void MoveToSpotInLine(Vector3 positionInLine) {
+        StopCoroutine(bounceRoutine);
         StartCoroutine(WalkOnScreen(positionInLine, false));
     }
 
@@ -71,6 +95,7 @@ public class CustomerController : MonoBehaviour
     }
 
     public IEnumerator ShowSatisfaction(FruitType[] preparedOrder) {
+        StopCoroutine(bounceRoutine);
         yield return customerBubble.ServeAnimation(CalculateSatisfactionReport(preparedOrder));
         int score = CalculateSatisfaction(preparedOrder);
         UpdateSprite(score);

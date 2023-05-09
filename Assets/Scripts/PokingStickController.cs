@@ -162,8 +162,7 @@ public class PokingStickController : MonoBehaviour
 
     private IEnumerator PierceFruit(float duration, Transform fruitTransform, PokeableFruit fruitObject)
     {
-        float initialSlowDown = fruitObject.pokeSlowdown;//duration * 0.4f;
-        Debug.Log("Slowdown: " + initialSlowDown);
+        float initialSlowDown = fruitObject.pokeSlowdown;
         float pushDistance = 0.15f;
 
         Vector3 startingFruitPos = fruitTransform.position;
@@ -177,7 +176,7 @@ public class PokingStickController : MonoBehaviour
         }
         pokeMultiplier = 0;
         SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeFruit);
-        //yield return new WaitForSeconds(fruitHitStop);
+
         yield return new WaitForSeconds(fruitObject.hitStop);
         fruitTransform.parent = transform;
         for (int i = transform.childCount - 1; i > 0; i--) {
@@ -185,7 +184,7 @@ public class PokingStickController : MonoBehaviour
             Vector3 newFruitPosition = childFruit.localPosition;
             newFruitPosition.y = (StickEnd(true) - pushDistance);
             pushDistance += childFruit.lossyScale.y;
-            StartCoroutine(SlideFruitOnStick(childFruit, childFruit.localPosition, newFruitPosition, duration));
+            StartCoroutine(SlideFruitOnStick(childFruit, childFruit.localPosition, newFruitPosition, duration * 0.6f));// initialSlowDown * 2.7f));//
         }
         Vector3 squishVector = new Vector3(fruitObject.squishSize, fruitObject.squishSize, fruitObject.squishSize);
         /*for(float t = 0; t < fruitSlidingTime; t += Time.deltaTime) { 
@@ -213,8 +212,7 @@ public class PokingStickController : MonoBehaviour
 
     private IEnumerator SlideFruitOnStick(Transform fruitTransform, Vector3 startPosition, Vector3 endPosition, float duration)
     {
-        //for(float t = 0; t < fruitSlidingTime; t += Time.deltaTime * pokeMultiplier) {
-        for(float t = 0; t < duration; t += Time.deltaTime * pokeMultiplier) {
+        for(float t = 0; t < duration; t += Time.deltaTime) {
             fruitTransform.localPosition = Vector3.Lerp(startPosition, endPosition, t / duration);
             yield return null;
         }
