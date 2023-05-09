@@ -108,7 +108,7 @@ MonoBehaviour:
   timeOffset: 0
   pokeDuration: 0.15
   pokeSlowdown: 0.1
-  squishSize: 0.6
+  squishSize: 1.2
   pushDistance: 0.15
   hitStop: 0.04
 --- !u!58 &3000937048762805942
