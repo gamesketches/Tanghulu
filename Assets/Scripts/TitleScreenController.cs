@@ -18,11 +18,13 @@ public class TitleScreenController : MonoBehaviour
     }
 
     public void StartGame() {
+        SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeStick);
         if (SystemInfo.deviceModel.StartsWith("iPad")) LoadingScreenManager.instance.LoadScene(SceneType.RotatingPotiPad);
         else LoadingScreenManager.instance.LoadScene(SceneType.RotatingPot);
     }
 
     public void OpenShop() {
+        SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeStick);
         LoadingScreenManager.instance.LoadScene(SceneType.StoreScreen); 
     }
 
@@ -36,5 +38,6 @@ public class TitleScreenController : MonoBehaviour
             SaveDataManager.instance.SetPlayerPrefersMute(true);
             mixerGroup.audioMixer.SetFloat("Volume", -80f);
             }
+        SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeStick);
     }
 }

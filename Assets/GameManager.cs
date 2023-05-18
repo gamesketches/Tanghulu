@@ -137,11 +137,13 @@ public class GameManager : MonoBehaviour
     }
 
     public void RestartGame() {
+        SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeStick);
         LoadingScreenManager.instance.LoadScene(SceneType.RotatingPot, false, true);
     }
 
     public void BackToHome() {
         SFXManager.instance.SwitchToMenuMusic();
+        SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeStick);
         LoadingScreenManager.instance.LoadScene(SceneType.TitleScreen, false, true);
     }
 
@@ -151,6 +153,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void GoToShop() {
+        SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeStick);
         LoadingScreenManager.instance.LoadScene(SceneType.StoreScreen, false, true);
     }
 }

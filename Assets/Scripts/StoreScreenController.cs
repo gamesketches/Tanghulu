@@ -16,6 +16,7 @@ public class StoreScreenController : MonoBehaviour
 
     public Image coinPurchaseMenu;
     public PurchaseSchemeView schemePurchaseMenu;
+    public TextMeshProUGUI schemePurchaseErrorText;
 
     int currentInspectedScheme;
 
@@ -38,7 +39,6 @@ public class StoreScreenController : MonoBehaviour
             if (i == preferredColorScheme)
             {
                 schemeButton.sprite = colorSchemes[i].storeSpriteHighlighted;
-                //schemeButton.transform.GetChild(0).GetComponent<Image>().enabled = false;
                 useButton.enabled = false;
             }
             else if (SaveDataManager.instance.PlayerOwnsScheme(i))
@@ -49,47 +49,59 @@ public class StoreScreenController : MonoBehaviour
         coinPurchaseMenu.gameObject.SetActive(false);
         schemePurchaseMenu.gameObject.SetActive(false);
         purchaseErrorText.text = "";
+        schemePurchaseErrorText.text = "";
     }
 
     public void ReturnToTitleScreen() {
+        SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeStick);
         LoadingScreenManager.instance.LoadScene(SceneType.TitleScreen);
     }
 
     public void OpenCoinPurchaseMenu() {
+        SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeStick);
         coinPurchaseMenu.gameObject.SetActive(true);
         purchaseErrorText.text = "";
     }
 
     public void CloseCoinPurchaseMenu() {
+        SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeStick);
         coinPurchaseMenu.gameObject.SetActive(false);
     }
 
     public void OpenSchemeMenu(int schemeId) {
+        SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeStick);
         if (SaveDataManager.instance.PlayerOwnsScheme(schemeId)) UpdateSelectedScheme(schemeId);
         else
         {
             schemePurchaseMenu.gameObject.SetActive(true);
-            schemePurchaseMenu.SetPurchaseButton(GetSchemePriceType(schemeId));
+            schemePurchaseMenu.Open(GetSchemePreviewImage(schemeId), GetSchemePriceType(schemeId));
             currentInspectedScheme = schemeId;
         }
     }
 
     public void CloseSchemeMenu() {
+        SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeStick);
+        schemePurchaseMenu.Close();
         schemePurchaseMenu.gameObject.SetActive(false);
     }
 
     public void PurchaseScheme() {
+        SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeStick);
         int numCoins = int.Parse(currentCoins.text);
         int schemePrice = GetSchemePrice(currentInspectedScheme);
-        //TODO: Remove before release!!
-        //schemePrice = 1;
-        if (numCoins > schemePrice) {
+        Debug.Log($"Number of coins {numCoins}, scheme price: {schemePrice}");
+        if (numCoins > Mathf.Abs(schemePrice)) {
             SaveDataManager.instance.UpdateOwnedColorSchemes(currentInspectedScheme);
             SaveDataManager.instance.UpdatePlayerCoins(schemePrice);
+            CoinsUpdated();
             UpdateSelectedScheme(currentInspectedScheme);
         } else {
-            Debug.Log("Not enough coins :<");
+            ShowSchemePurchaseError("Not enough coins");
         }
+    }
+
+    public void ShowSchemePurchaseError(string errorText) {
+        schemePurchaseErrorText.text = errorText;
     }
 
     void UpdateSelectedScheme(int schemeId) {
@@ -114,6 +126,10 @@ public class StoreScreenController : MonoBehaviour
 
     SchemePricePoint GetSchemePriceType(int schemeId) {
         return colorSchemes[schemeId].pricePoint;
+    }
+
+    Sprite GetSchemePreviewImage(int schemeId) { 
+        return colorSchemes[schemeId].storeSprite;
     }
 
     int GetSchemePrice(int schemeId) { 

@@ -12,7 +12,6 @@ public class SaveDataManager : MonoBehaviour
     {
         instance = this;
         //MakeCleanPlayerData();
-        LoadSaveData();
     }
 
     /// <summary>
@@ -105,6 +104,11 @@ public class SaveDataManager : MonoBehaviour
 
     private void MakeCleanPlayerData() {
         playerData = new PlayerData();
+        SavePlayerData();
+    }
+
+    private void ClearUnlockedPalettes() {
+        playerData.unlockedPalettes = new int[] { 0 };
         SavePlayerData();
     }
 }

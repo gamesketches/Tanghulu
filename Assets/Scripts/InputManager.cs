@@ -84,6 +84,7 @@ public class InputManager : MonoBehaviour
                     else if(shootButton.CheckTouchPosition(worldPosition)) {
                         pokingStick.PokeStick(worldPosition);
                         shootButton.ScaleButtonDown();
+                        SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeStick);
                     }
                     else if (potController.CheckTouchPosition(worldPosition))
                     {
