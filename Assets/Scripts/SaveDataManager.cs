@@ -12,6 +12,7 @@ public class SaveDataManager : MonoBehaviour
     {
         instance = this;
         //MakeCleanPlayerData();
+        LoadSaveData();
     }
 
     /// <summary>
@@ -62,8 +63,11 @@ public class SaveDataManager : MonoBehaviour
     }
 
     public void SetPlayerHighScore(int newHighScore) {
-        if(newHighScore > playerData.highScore)
+        if (newHighScore > playerData.highScore)
+        {
             playerData.highScore = newHighScore;
+            SavePlayerData();
+        }
     }
 
     public int GetHighScore() {

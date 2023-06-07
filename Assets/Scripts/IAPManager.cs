@@ -109,6 +109,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
 	}
 
 	public string GetPurchaseString(coinPurchaseLevels purchaseLevel) {
-		return "com.bluesphere.tanghulu." + purchaseLevel.ToString();
+		if (purchaseLevel == coinPurchaseLevels.twoThousandCoins) return twoThousandCoins;
+		else return fiveThousandCoins;
 	}
 }

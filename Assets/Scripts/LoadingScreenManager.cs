@@ -40,6 +40,7 @@ public class LoadingScreenManager : MonoBehaviour
         if (!loading)
         {
             loading = true;
+            //if (screenType == SceneType.RotatingPot) screenType = SceneType.RotatingPotiPad;
             StartCoroutine(LoadScreenWithCurtain(screenType, curtainDown, curtainUp));
         }
     }

@@ -89,12 +89,12 @@ public class StoreScreenController : MonoBehaviour
         SFXManager.instance.PlaySoundEffect(SoundEffectType.PokeStick);
         int numCoins = int.Parse(currentCoins.text);
         int schemePrice = GetSchemePrice(currentInspectedScheme);
-        Debug.Log($"Number of coins {numCoins}, scheme price: {schemePrice}");
         if (numCoins > Mathf.Abs(schemePrice)) {
             SaveDataManager.instance.UpdateOwnedColorSchemes(currentInspectedScheme);
             SaveDataManager.instance.UpdatePlayerCoins(schemePrice);
             CoinsUpdated();
             UpdateSelectedScheme(currentInspectedScheme);
+            CloseSchemeMenu();
         } else {
             ShowSchemePurchaseError("Not enough coins");
         }

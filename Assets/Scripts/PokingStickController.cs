@@ -135,7 +135,6 @@ public class PokingStickController : MonoBehaviour
             yield return null;
         }
         transform.position = startPosition;
-        poking = false;
         if (pokedFruits.Count == maxFruits)
         {
             CustomerController customer = GameManager.instance.VerifyFruit(GetFruits());
@@ -147,6 +146,7 @@ public class PokingStickController : MonoBehaviour
         else
         {
             transform.GetChild(0).gameObject.SetActive(true);
+            poking = false;
         }
         StickFinishedPoking();
     }
@@ -248,6 +248,7 @@ public class PokingStickController : MonoBehaviour
             fruitHUD.ClearDisplay();
             pokedFruits.Clear();
             fruitsPoked = 0;
+            poking = false;
         } else
         {
             transform.position = new Vector3(1000, 0);
