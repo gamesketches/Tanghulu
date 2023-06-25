@@ -29,6 +29,7 @@ public class PurchaseSchemeView : MonoBehaviour
     }
 
     public void SetPurchaseButton(SchemePricePoint coinPriceButton) {
+        Debug.Log(coinPriceButton);
         purchaseButton.sprite = coinPriceButtons[(int) coinPriceButton];
     }
 

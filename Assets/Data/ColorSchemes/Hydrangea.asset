@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ab3273001d448b8a3a9cf179736995, type: 3}
+  m_Name: Hydrangea
+  m_EditorClassIdentifier: 
+  banner: {fileID: -7619380327160339619, guid: 74e56ff770945408c9d85786db7adf6b, type: 3}
+  background: {fileID: 1727147491542056445, guid: 74e56ff770945408c9d85786db7adf6b,
+    type: 3}
+  tableSprite: {fileID: -5483128600175769834, guid: 74e56ff770945408c9d85786db7adf6b,
+    type: 3}
+  potTop: {fileID: 5052985159464417255, guid: 74e56ff770945408c9d85786db7adf6b, type: 3}
+  potBottom: {fileID: -3734333401505724631, guid: 74e56ff770945408c9d85786db7adf6b,
+    type: 3}
+  mainColorSprite: {fileID: -5483128600175769834, guid: 74e56ff770945408c9d85786db7adf6b,
+    type: 3}
+  pricePoint: 3
+  mainColor: {r: 0.15686275, g: 0.28627452, b: 0.29803923, a: 1}
+  storeSprite: {fileID: -2575346184098972372, guid: 74e56ff770945408c9d85786db7adf6b,
+    type: 3}
+  storeSpriteHighlighted: {fileID: 627489124044675695, guid: 74e56ff770945408c9d85786db7adf6b,
+    type: 3}

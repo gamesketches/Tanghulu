@@ -341,6 +341,7 @@ MonoBehaviour:
     type: 2}
   musicMixer: {fileID: -1516910555327284230, guid: a696a12befe674a6c94ee701c58fbfd4,
     type: 2}
+  masterMixer: {fileID: 24300002, guid: a696a12befe674a6c94ee701c58fbfd4, type: 2}
   menuMusic: {fileID: 221377358}
   gameplayMusic: {fileID: 221377360}
 --- !u!4 &221377357

@@ -39,6 +39,7 @@ public class StoreScreenController : MonoBehaviour
             if (i == preferredColorScheme)
             {
                 schemeButton.sprite = colorSchemes[i].storeSpriteHighlighted;
+                useButton.sprite = useSprite;
                 useButton.enabled = false;
             }
             else if (SaveDataManager.instance.PlayerOwnsScheme(i))

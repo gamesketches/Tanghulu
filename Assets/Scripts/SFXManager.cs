@@ -50,7 +50,7 @@ public class SFXManager : MonoBehaviour
 
     public AudioMixerGroup SFXMixer;
     public AudioMixerGroup musicMixer;
-
+    public AudioMixerGroup masterMixer;
 
     public AudioSource menuMusic;
 
@@ -70,6 +70,7 @@ public class SFXManager : MonoBehaviour
         audioSourcePool = new List<AudioSource>();
         pokeTracker = 0;
         aimMovement = 0;
+        if (SaveDataManager.instance.PlayerPrefersMute()) masterMixer.audioMixer.SetFloat("Volume", -80f);
         SwitchToMenuMusic();
     }
 

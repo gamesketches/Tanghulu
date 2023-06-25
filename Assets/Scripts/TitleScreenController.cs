@@ -13,8 +13,17 @@ public class TitleScreenController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (SaveDataManager.instance.PlayerPrefersMute()) soundButton.sprite = mutedButton;
-        else soundButton.sprite = soundOnButton;
+        if (SaveDataManager.instance.PlayerPrefersMute())
+        {
+            soundButton.sprite = mutedButton;
+            mixerGroup.audioMixer.SetFloat("Volume", -80f);
+        }
+        else
+        {
+            soundButton.sprite = soundOnButton;
+            mixerGroup.audioMixer.SetFloat("Volume", 0f);
+        }
+
     }
 
     public void StartGame() {
