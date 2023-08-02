@@ -191,6 +191,7 @@ public class PokingStickController : MonoBehaviour
             fruitTransform.localScale = Vector3.Lerp(Vector3.one, squishVector, t / fruitSlidingTime);
         }*/
 
+        fruitObject.PlayParticles();
         for(float t = 0; t < duration; t += Time.deltaTime) {
             float proportion = Mathf.PingPong(t, duration / 2) / (duration / 2);
             pokeMultiplier = Mathf.SmoothStep(0, 1, proportion); 

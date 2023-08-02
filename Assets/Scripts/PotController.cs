@@ -96,6 +96,7 @@ public class PotController : MonoBehaviour
                 newPos = transform.position + new Vector3(Random.Range(-1f, 1f) * potRadius, Random.Range(-1f, 1f) * potRadius, 0);
             }
         }
+        newPos.z = -0.1f;
         return newPos;
     }
 

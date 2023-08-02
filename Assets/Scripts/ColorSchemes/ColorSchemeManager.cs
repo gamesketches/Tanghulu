@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ColorSchemeObject { Banner, Background, TableSprite, PotTop, PotBottom, MainColor};
+public enum ColorSchemeObject { Banner, Background, TableSprite, PotTop, PotBottom, MainColor, MainColorColorChange};
 public class ColorSchemeManager : MonoBehaviour
 {
     public ColorScheme[] colorSchemes;

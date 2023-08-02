@@ -35,6 +35,9 @@ public class ColorSchemeCanvasObject : MonoBehaviour
             case ColorSchemeObject.MainColor:
                 coloredObject.sprite = curColorScheme.mainColorSprite;
                 break;
+            case ColorSchemeObject.MainColorColorChange:
+                coloredObject.color = curColorScheme.mainColor;
+                break;
         }
     }
     
